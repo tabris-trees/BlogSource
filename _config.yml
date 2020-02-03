@@ -81,8 +81,7 @@ theme: next
 deploy:
     type: git
     repo: 
-      github: https://github.com/essesy/essesy.github.io.git
-      coding: git@e.coding.net:tabristrees/tabristrees.git
+      github: git@github.com:essesy/essesy.github.io.git
 
 search:
   path: search.xml
