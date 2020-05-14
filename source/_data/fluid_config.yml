@@ -288,7 +288,7 @@ valine:
   appkey: fP55qHxXExV199K1jwieOiC3 # your leancloud application appkey
   notify: false # mail notifier, See: https://github.com/xCss/Valine/wiki
   verify: false # Verification code
-  placeholder: 神说要有光，于是你来到了这里！(≧∀≦)ゞ\nps：填写好君的名字和邮箱📫，🦉才能把信送到哦！ and ✍下你的地址，会有猫咪去踩点的！ # comment box placeholder
+  placeholder: 神说要有光，于是你来到了这里！(≧∀≦)ゞ\nps：填写好君的名字和邮箱📫，🦉才能把信送到哦！ \nand ✍下你的地址，会有猫咪去踩点的！ # comment box placeholder
   avatar: robohash # gravatar style https://valine.js.org/avatar.html
   pageSize: 5 # pagination size
   
