@@ -83,13 +83,20 @@ daovoice:  # 在线客服 Daovoice 参考：http://dashboard.daovoice.io
 
 aplayer:  # 音乐播放器，注意不能与 hexo-tag-aplayer 插件共用
   enable: true
-  autoplay: false  # 音频自动播放
+  autoplay: true  # 音频自动播放
   loop: 'all'  # 音频循环播放, 可选值: 'all', 'one', 'none'
-  order: 'random'  # 播放顺序，可选值: 'list', 'random'
+  order: 'list'  # 播放顺序，可选值: 'list', 'random'
   theme: '#b7daff'  # 主题色
   songs:  # 歌曲列表，必须传入下列各参数，其中 url 与 cover 在本地需存于 source 目录，更多参数见文档：https://aplayer.js.org/#/zh-Hans/?id=%E5%8F%82%E6%95%B0
-    - { name: '盛夏的果实', artist: '莫文蔚', url: 'http://m10.music.126.net/20200509123746/a401218f8ddd98b74d21bdaebdf84426/ymusic/da1a/69dd/330e/cad0d0e85cacb9e30021416826a53969.mp3', cover: 'https://hexo-1301133429.cos.ap-chengdu.myqcloud.com/20200509122028.jpg' }
+    - { name: '盛夏的果实', artist: '🈚忘记了', url: 'https://tabristrees.imfast.io/musci/%E6%AD%A3%E5%9C%A8%E6%92%AD%E6%94%BE-%20%E7%9B%9B%E5%A4%8F%E7%9A%84%E6%9E%9C%E5%AE%9E%20-%20liuki.mp3', cover: 'https://hexo-1301133429.cos.ap-chengdu.myqcloud.com/20200509122028.jpg' }
     #- { name: 'name', artist: 'artist', url: 'https://...url.mp3', cover: 'https://...cover.jpg' }
+    - { name: '七点钟', artist: '齐豫', url: 'https://tabristrees.imfast.io/musci/%E4%B8%83%E7%82%B9%E9%92%9F-%E9%BD%90%E8%B1%AB.mp3', cover: 'https://p3.music.126.net/8_lV-tipW2L76Mcy8HWjwg==/129742372083361.jpg?param=300y300' }
+    - { name: '一生所爱', artist: '卢冠廷', url: 'https://tabristrees.imfast.io/musci/%E4%B8%80%E7%94%9F%E6%89%80%E7%88%B1-%E5%8D%A2%E5%86%A0%E5%BB%B7-%E5%90%89%E4%BB%96.mp3', cover: 'https://p3.music.126.net/_48Jq9ttf6Hf9VwDBxG6TQ==/7934075906675270.jpg?param=300y300' }
+    - { name: '心愿', artist: '四个女生', url: 'https://tabristrees.imfast.io/musci/%E5%BF%83%E6%84%BF-%E5%9B%9B%E4%B8%AA%E5%A5%B3%E7%94%9F.mp3', cover: 'https://p3.music.126.net/-QgrpnBhavRcLtaBaad5Lw==/52776558150270.jpg?param=300y300' }
+    - { name: '十点半的地铁live', artist: '李健', url: 'https://tabristrees.imfast.io/musci/%E6%AD%A3%E5%9C%A8%E6%92%AD%E6%94%BE-%20%E5%8D%81%E7%82%B9%E5%8D%8A%E7%9A%84%E5%9C%B0%E9%93%81%20%28live%29%20-%20%E6%9D%8E%E5%81%A5.mp3', cover: 'https://p3.music.126.net/64oU_90n8lR7pEJ_dExIPw==/109951163903238311.jpg?param=300y300' }
+    - { name: '乌兰巴托的夜', artist: '谭维维', url: 'https://tabristrees.imfast.io/musci/%E4%B9%8C%E5%85%B0%E5%B7%B4%E6%89%98%E7%9A%84%E5%A4%9C-%E8%B0%AD%E7%BB%B4%E7%BB%B4-live.mp3', cover: 'https://p3.music.126.net/DprdNIWpRWYZJak4Q-cS-Q==/2891715582273535.jpg?param=300y300' }
+    #- { name: 'name', artist: 'artist', url: 'https://...url.mp3', cover: 'https://...cover.jpg' }
+
 
 #---------------------------
 # 页头
@@ -100,7 +107,8 @@ navbar:
   menu:  # 可自行增减，key 用来关联 languages/*.yml，如不存在关联则显示 key 本身的值；icon 是 css class，可以省略；增加 name 可以强制显示指定名称
     - { key: 'home', link: '/', icon: 'iconfont icon-home-fill' }
     - { key: 'archive', link: '/archives/', icon: 'iconfont icon-archive-fill' }
-    - { key: 'category', link: '/categories/', icon: 'iconfont icon-category-fill', submenu: [
+    - { key: 'category', link: '#', icon: 'iconfont icon-category-fill', submenu: [
+      { key: '全部', link: '/categories/', icon: 'icofont-abc' },
       { key: '生活', link: '/categories/生活/', icon: 'icofont-love' },
       { key: '🖊笔记', link: '/categories/笔记/', icon: 'icofont-notebook' }
     ]}
