@@ -8,8 +8,9 @@
 </div>
 
 <div style="position:bottom">
-  <iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width=330 height=86 src="//music.163.com/outchain/player?type=2&id=1361625093&auto=1&height=66"></iframe>
+  <iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width=330 height=86 src="////music.163.com/outchain/player?type=2&id=1424400271&auto=1&height=66"></iframe>
 </div>
+<!--侧边栏网易云音乐-->
 
 {%- if theme.site_state %}
 <div class="site-state-wrap motion-element">

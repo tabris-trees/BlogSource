@@ -1,0 +1,416 @@
+#---------------------------
+# Hexo Fluid
+# Author: Fluid-dev organization
+# Github: https://github.com/fluid-dev/hexo-theme-fluid
+#
+# Docs：https://hexo.fluid-dev.com/docs/guide/
+#---------------------------
+
+
+#---------------------------
+# 全局
+# Site
+#---------------------------
+favicon: https://trees-1301133429.cos.ap-nanjing.myqcloud.com/tabris.png # 网站标签页的 icon
+
+apple_touch_icon: https://trees-1301133429.cos.ap-nanjing.myqcloud.com/tabris.png # 用于苹果设备的 icon
+
+title_join_string: ' - '  # 浏览器标签页中的标题分隔符，效果： 文章名 - 站点名
+
+force_https: false  # 强制所有链接升级为 HTTPS（适用于图片等资源出现 HTTP 混入报错）
+
+highlight: # 代码高亮
+  enable: true
+  theme: tomorrow-night-eighties # available: github-v2 | tomorrow | tomorrow-night | tomorrow-night-eighties，更多主题可从 https://jmblog.github.io/color-themes-for-google-code-prettify/ 获取，保存为 `*.min.css` 到 `source/lib/prettify/`，在其中 .prettyprint{ background: ***; ...} 的background 值后加上 !important，例如：.prettyprint{background:#fafbfc!important; ...}
+  copy_btn: true  # 是否开启复制代码的按钮
+
+fun_features: # 一些好玩的功能
+  typing: # 为 subtitle 添加打字机效果
+    enable: true
+    typeSpeed: 70  # 打印速度，数字越大越慢
+    cursorChar: "_" # 游标字符
+    loop: false # 是否循环播放效果
+  anchorjs: # 为文章内容中的标题添加锚图标
+    enable: true
+    element: h1,h2,h3,h4,h5,h6
+    placement: right # icon放置的位置： left | right
+    visible: hover # 默认悬浮显示，可选：hover（鼠标在元素上悬浮时显示） | always（一直显示） | touch（移动端触摸显示）
+    icon: "" # 可选：§ | # | ❡ 等，留空则为默认效果
+  mouse_click:  # 鼠标点击动效
+    enable: true
+    style: love # 目前设置两个值：values（价值观词汇） | love（爱心）
+
+color:  # 主题颜色配置，不一定能每一处都生效，可能会被局部样式覆盖，这种情况建议用自定义 css 解决。配色可以在这获得启发： https://www.webdesignrankings.com/resources/lolcolors/
+  body_bg_color: "#eee"             # body 背景色
+  navbar_bg_color: "#2f4154"        # 顶部菜单背景色
+  navbar_text_color: "white"        # 顶部菜单字体色
+  text_color: "#3c4858"             # 全局字体色
+  sec_text_color: "#718096"         # 全局次级字体色（摘要、简介等位置）
+  post_text_color: "#2c3e50"        # 文章正文字体色
+  post_heading_color: "#1a202c"     # 文章标题标签字体色（h1 h2 h3...）
+  link_color: "#3c4858"             # 超链接字体色
+  link_hover_color: "#1abc9c"       # 超链接悬浮时字体色
+  link_hover_bg_color: "#ebedef"    # 超链接悬浮背景色
+  board_color: "#fff"               # 主面板背景色
+
+font:  # 主题字体配置
+  font_size: 16px                   # 全局字号
+  font_family:                      # 全局字体
+  code_font_size: 85%               # 代码的字号
+
+custom_js:   # 指定自定义 js 文件路径，路径是相对 source 目录，如 /js/custom.js，支持列表
+custom_css:   # 指定自定义 css 文件路径，路径是相对 source 目录，如 /css/custom.css，支持列表
+custom_html: ''  # 自定义底部 HTML 内容（位于 footer 上方），也可用于外部引入 js css 这些操作，注意不要和 post.custom 配置冲突
+
+web_analytics:  # 网页访问统计
+  enable: true
+  baidu:  # 百度统计的Key，参见 https://tongji.baidu.com/sc-web/10000033910/home/site/getjs?siteId=13751376 代码获取中 hm.js? 后边的字符串
+  google: UA-166333226-1 # Google统计的Tracking ID，参见 https://analytics.google.com/analytics/web/
+  tencent:  # 腾讯统计的H5 App id，参见 https://mta.qq.com/h5/manage/ctr_app_manage (开启高级功能才有cid)
+    sid:
+    cid:
+  tajs:   # 腾讯统计早期版站点统计sID，参见 https://ta.qq.com/#/site/list
+  woyaola:  # 51.la站点统计ID，参见 https://www.51.la/user/site/index
+  cnzz:  # 友盟/cnzz站点统计web_id，参见 https://web.umeng.com/main.php?c=site&a=show
+
+lazyload: # 对页面中的图片进行懒加载处理，可见范围外的图片不会加载
+  enable: true
+  onlypost: true  # 仅在文章页使用懒加载，开启后如果自定义页面需要使用，可以在 Front-matter 里指定 `lazyload: true`
+
+daovoice:  # 在线客服 Daovoice 参考：http://dashboard.daovoice.io
+  enable: false # 是否开启在线客服聊天
+  appid: ''  # 应用ID设置
+
+aplayer:  # 音乐播放器，注意不能与 hexo-tag-aplayer 插件共用
+  enable: true
+  autoplay: false  # 音频自动播放
+  loop: 'all'  # 音频循环播放, 可选值: 'all', 'one', 'none'
+  order: 'random'  # 播放顺序，可选值: 'list', 'random'
+  theme: '#b7daff'  # 主题色
+  songs:  # 歌曲列表，必须传入下列各参数，其中 url 与 cover 在本地需存于 source 目录，更多参数见文档：https://aplayer.js.org/#/zh-Hans/?id=%E5%8F%82%E6%95%B0
+    - { name: '盛夏的果实', artist: '莫文蔚', url: 'http://m10.music.126.net/20200509123746/a401218f8ddd98b74d21bdaebdf84426/ymusic/da1a/69dd/330e/cad0d0e85cacb9e30021416826a53969.mp3', cover: 'https://hexo-1301133429.cos.ap-chengdu.myqcloud.com/20200509122028.jpg' }
+    #- { name: 'name', artist: 'artist', url: 'https://...url.mp3', cover: 'https://...cover.jpg' }
+
+#---------------------------
+# 页头
+# Header
+#---------------------------
+navbar:
+  blog_title:  # 导航栏左侧的标题，为空则按 hexo config.title 显示
+  menu:  # 可自行增减，key 用来关联 languages/*.yml，如不存在关联则显示 key 本身的值；icon 是 css class，可以省略；增加 name 可以强制显示指定名称
+    - { key: 'home', link: '/', icon: 'iconfont icon-home-fill' }
+    - { key: 'archive', link: '/archives/', icon: 'iconfont icon-archive-fill' }
+    - { key: 'category', link: '/categories/', icon: 'iconfont icon-category-fill', submenu: [
+      { key: '生活', link: '/categories/生活/', icon: 'icofont-love' },
+      { key: '🖊笔记', link: '/categories/笔记/', icon: 'icofont-notebook' }
+    ]}
+    - { key: 'tag', link: '/tags/', icon: 'iconfont icon-tags-fill' }
+    - { key: 'about', link: '/about/', icon: 'iconfont icon-user-fill' }
+    - { key: 'links', link: '/links/', icon: 'iconfont icon-link-fill' } # 友链页，把前面#去掉即可展示
+    #- { key: '书📕の推荐', link: '/books/', icon: 'iconfont icon-douban-fill' }
+    #- { key: '番/剧の推荐', link: '/movies/', icon: 'iconfont icon-douban-fill' }
+    - { key: '豆瓣的推荐', link: '#', icon: 'iconfont icon-douban-fill', submenu: [
+      { key: '书📕の推荐', link: '/books/', icon: 'icofont-book' }, 
+      { key: '番/剧の推荐', link: '/movies/', icon: 'icofont-ui-movie' }
+    ]}
+    
+search: # 搜索栏
+  enable: true
+  path: /local-search.xml # 文件引用地址，默认是下方生成位置，也可以将生成后的 local-search.xml 上传到其它位置引用，如：https://www.example.com/local-search.xml
+  generate_path: /local-search.xml # 文件生成位置，必须为相对位置
+  field: post
+  content: true
+
+scroll_down_arrow:  # 向下滚动的箭头
+  enable: true
+  banner_height_limit: 90  # 头图高度不小于指定比例，才显示箭头
+  scroll_after_turning_page: true  # 翻页后自动滚动
+
+banner_parallax: true  # 头图滚动视差
+#---------------------------
+# 页脚
+# Footer
+#---------------------------
+footer:
+  statistics:  # 统计网站 PV、UV，使用的是不蒜子，显示在页脚  *不蒜子近期连接不稳定，谨慎开启
+    enable: true
+    pv_format: "流星🌠划过 {} 次"  # 显示的文本，{}是数字的占位符（必须包含)，下同
+    uv_format: "异乡来客👽 {} 人"
+
+  beian:  # The footer of China's website policy, other areas keep disable
+    enable: false
+    icp_text: 京ICP证123456号 # ICP证号
+    police_text: 京公网安备12345678号 # 公安备案号，不填则只显示ICP
+    police_code: 12345678 # 公安备案的编号，用于URL跳转查询
+    police_icon: /img/police_beian.png # 公安备案的图片. 为空时不显示备案图片
+
+scroll_top_arrow:  # 向顶部滚动的箭头
+  enable: true
+
+#---------------------------
+# 首页
+# Index Page
+#---------------------------
+index:
+  banner_img: https://trees-1301133429.cos.ap-nanjing.myqcloud.com/post/%E5%AD%A4%E7%8B%AC%E6%98%9F%E7%90%83.jpg  # 首页 Banner 头图，以下相同
+  banner_img_height: 100  # 头图高度，屏幕百分比，available: 0 - 100
+  banner_mask_alpha: 0.3  # 头图黑色蒙版的透明度，available: 0 - 1.0， 0 是完全透明（无蒙版），1 是完全不透明
+  post_default_img: '' # 默认的文章封面图，当没有指定 index_img 时会使用该图片，若都为空则不显示任何图片
+  slogan:  # 首页副标题的独立设置
+    enable: true  # 为 false 则不显示任何内容
+    text: '每个人都会找到爱，但为时已晚！——来自动感新势力EVA·Q主题曲《樱花流》歌词翻译' # 为空则按 hexo config.subtitle 显示
+  auto_excerpt:
+    enable: true
+  post_url_target: _self  # available: _blank | _self
+  post_meta: # 是否显示文章信息（时间、分类、标签）
+    date: true
+    category: true
+    tag: true
+
+# 通过 hexo new page 命令创建的页面
+# Custom Page
+page:
+  banner_img: https://hexo-1301133429.cos.ap-chengdu.myqcloud.com/20200509184707.jpg
+  banner_img_height: 70  # available: 0 - 100
+  banner_mask_alpha: 0.3  # available: 0 - 1.0
+
+#---------------------------
+# 文章页
+# Post Page
+#---------------------------
+post:  # 部分配置同时控制自定义页面，注意备注
+  banner_img: https://trees-1301133429.cos.ap-nanjing.myqcloud.com/blogweb/post.jpg
+  banner_img_height: 70  # available: 0 - 100
+  banner_mask_alpha: 0.3  # available: 0 - 1.0
+  meta:  # 文章标题下方的信息
+    date:  # 文章日期
+      enable: true
+      format: "dddd, MMMM Do YYYY, h:mm a"  # 格式参照 ISO-8601 日期格式化
+    wordcount:  # 字数统计
+      enable: true
+      format: "一共{} 字"  # 显示的文本，{}是数字的占位符（必须包含)，下同
+    min2read:  # 阅读时间
+      enable: true
+      format: "大概需要{} 分钟"
+      words: 100  # 每分钟阅读多少字，如果是技术文章，建议降低
+    views:  # 阅读次数，统计基于不蒜子  *不蒜子近期连接不稳定，谨慎开启
+      enable: false
+      format: "{} 次"
+  updated:
+    enable: true
+    content: 更新于：
+  toc:  # 文章右侧目录
+    enable: true
+    headingSelector: h1,h2,h3,h4,h5,h6
+    collapseDepth: 0  # 层级的折叠深度，0 是全部折叠，6 是全部不折叠
+  copyright:  # 版权声明
+    enable: true
+    content: '本博客所有文章除特别声明外，均采用 <a href="https://zh.wikipedia.org/wiki/Wikipedia:CC_BY-SA_3.0%E5%8D%8F%E8%AE%AE%E6%96%87%E6%9C%AC" rel="nofollow noopener">CC BY-SA 3.0协议</a> 。转载请注明出处！'
+  prev_next:  # 文章底部上一篇下一篇功能
+    enable: true
+  custom:  # 文章底部自定义内容
+    enable: true
+    content: '<img src="https://hexo-1301133429.cos.ap-chengdu.myqcloud.com/20200509212356.jpg" class="rounded mx-auto d-block mt-5" style="width:150px; height:150px;">' # 自定义区域，支持 HTML，可自行插入赞赏码、公众号二维码等内容
+  comments:  # 评论
+    enable: true  # 开启评论
+    type: valine  # 指定使用的评论模块  available: disqus | valine | gitalk | utterances | changyan | livere  推荐 utterances
+  image_zoom:  # 文章图片可点击放大
+    enable: true  # 开启后文章默认可用，自定义页面如需使用，需在 Front-matter 中指定 `image_zoom: true`，并且图片使用该格式插入：<img src="..." zoom />
+  math:  # 数学公式，开启之前需要更换 Markdown 渲染器，否则复杂公式会有兼容问题，具体请见：https://hexo.fluid-dev.com/docs/guide/##latex-数学公式
+    enable: true  # 开启后文章默认可用，自定义页面如需使用，需在 Front-matter 中指定 `math: true`
+    specific: true  # 开启后，只有在文章 Front-matter 里指定 `math: true` 才会在文章页启动公式转换，以便在页面不包含公式时提高加载速度
+    engine: mathjax  # 公式引擎  available: mathjax | katex
+  mermaid:  # 流程图，基于 mermaid-js，文档：http://mermaid-js.github.io/mermaid/
+    enable: true  # 开启后文章默认可用，自定义页面如需使用，需在 Front-matter 中指定 `mermaid: true`
+    specific: true  # 开启后，只有在文章 Front-matter 里指定 `mermaid: true` 才会在文章页启动公式转换，以便在页面不包含公式时提高加载速度
+    options: { theme: 'default' }  # 接口选项，具体可见：http://mermaid-js.github.io/mermaid/#/mermaidAPI
+
+#---------------------------
+# 评论
+# Comments
+#---------------------------
+
+# 开启评论在上方的 post.comments 配置
+
+# utterances
+# You can install utterances with https://utteranc.es/ and generate your configuration
+utterances:
+  repo: essesy/hexocomment
+  issue_term: pathname
+  label: utterances
+  theme: github-light
+  crossorigin: anonymous
+
+# Disqus
+# 国内用户不要用，已被墙
+disqus:
+  shortname: # your shortname
+
+# Gitalk
+# You can get yout ClientID and ClientSecret from https://github.com/settings/applications/new
+# More info available at https://github.com/gitalk/gitalk#options
+gitalk:
+  clientID:                     # GitHub Application Client ID
+  clientSecret:                 # GitHub Application Client Secret
+  repo:                         # The repo to store comments
+  owner:                        # GitHub repository owner. Can be personal user or organization.
+  admin:                        # GitHub repo owner and collaborators, only these guys can initialize github issues, should be like "['admin']" or "['admin1','admin2']"
+  id: location.pathname         # The unique id of the page. Length must less than 50.
+  language: zh-CN               # Localization language key, en, zh-CN and zh-TW are currently available.
+  labels: "['Gitalk']"          # GitHub issue labels.
+  perPage: 15                   # Pagination size, with maximum 100.
+  pagerDirection: last          # Comment sorting direction, available values are last and first.
+  distractionFreeMode: false    # Facebook-like distraction free mode.
+  createIssueManually: true     # By default, Gitalk will create a corresponding github issue for your every single page automatically when the logined user is belong to the admin users. You can create it manually by setting this option to true.
+
+# Valine
+# You can get your appid and appkey from https://leancloud.cn
+# More info available at https://valine.js.org
+valine:
+  #appid: k6jOb0PxNGFzGX4TQH44pRgm-gzGzoHsz # your leancloud application appid
+  #appkey: e0U40FJkwUmM5zBmyBH0Ub3G # your leancloud application appkey
+  #notify: false # mail notifier, See: https://github.com/xCss/Valine/wiki
+  #verify: true # Verification code
+  #placeholder: 上帝说：“要有光！”，于是你来了!(请务必留下您的邮箱！！！) # comment box placeholder
+  #avatar: retro # gravatar style https://valine.js.org/avatar.html
+  #meta: ['nick', 'mail', 'link']  # guest info
+  #pageSize: 5 # pagination size
+
+  appid: 5SwkpbHGOJB2KgABwOdCNxyF-gzGzoHsz # your leancloud application appid
+  appkey: fP55qHxXExV199K1jwieOiC3 # your leancloud application appkey
+  notify: false # mail notifier, See: https://github.com/xCss/Valine/wiki
+  verify: false # Verification code
+  placeholder: 神说要有光，于是你来到了这里！(≧∀≦)ゞ\nps：填写好君的名字和邮箱📫，🦉才能把信送到哦！ and ✍下你的地址，会有猫咪去踩点的！ # comment box placeholder
+  avatar: robohash # gravatar style https://valine.js.org/avatar.html
+  pageSize: 5 # pagination size
+  
+
+# Changyan
+# You can get your appid from http://changyan.kuaizhan.com/setting/common/isv-mgr
+# Install: http://changyan.kuaizhan.com/static/help/f-fitself.html
+changyan:
+  appid: ''            # your changyan application appid        # 畅言ID
+  conf: ''             # conf                                   # 畅言设置
+  notify: false        # beian warning message                  # 备案提示
+  libopen: true        # open laboratory                        # 畅言实验室功能开关
+  cyEmoji: true        # comments emoji                         # 评论表情
+  cyWallsplugin: true  # Hot text matching                      # 热文配图
+  cyReping: true       # hot comments                           # 热门评论
+  cyReward: true       # reward                                 # 打赏
+  cyQing: true         # Light comment                          # 轻评论
+  cyHotusers: true     # User evaluation                        # 热评用户
+  cyHotnews: true      # Hot news                               # 热门新闻
+  cyHotnewswall: true  # News wall                              # 新闻墙
+  cyPk: ''             # Topic debate                           # 辩论
+  cyPoll: true         # vote                                   # 投票
+  cyBarrage: true      # Picture barrage                        # 图片弹幕
+  cyTvbarrage: true    # Video barrage                          # 视频弹幕
+
+# Livere 来必力
+# You can get your uid from https://www.livere.com/my_Livere
+livere:
+  uid: ''            # your livere application uid        # 来必力ID
+
+
+#---------------------------
+# 归档页
+# Archive Page
+#---------------------------
+archive:
+  banner_img: https://trees-1301133429.cos.ap-nanjing.myqcloud.com/blogweb/%E5%BD%92%E6%A1%A3.jpg
+  banner_img_height: 80  # available: 0 - 100
+  banner_mask_alpha: 0.3  # available: 0 - 1.0
+  subtitle: '欢迎来到银河系漫游计划总站！O(∩_∩)O哈哈~' # 打字机内容
+
+#---------------------------
+# 分类归档页
+# Categories Page
+#---------------------------
+category:
+  banner_img: https://trees-1301133429.cos.ap-nanjing.myqcloud.com/blogweb/%E8%A1%97%E5%8F%A3.jpeg
+  banner_img_height: 80  # available: 0 - 100
+  banner_mask_alpha: 0.3  # available: 0 - 1.0
+  subtitle: '平行宇宙的啦(*^▽^*)' # 打字机内容
+
+#---------------------------
+# 标签归档页
+# Tags Page
+#---------------------------
+tag:
+  banner_img: https://trees-1301133429.cos.ap-nanjing.myqcloud.com/blogweb/%E6%A0%87%E7%AD%BE.jpg
+  banner_img_height: 80  # available: 0 - 100
+  banner_mask_alpha: 0.3  # available: 0 - 1.0
+  subtitle: '打字机内容是什么鬼？' # 打字机内容
+  tagcloud: # 标签云
+    min_font: 15
+    max_font: 30
+    unit: px  # 字号单位
+    start_color: "#BBBBEE"
+    end_color: "#337ab7"
+
+
+#---------------------------
+# 关于页
+# About Page
+#---------------------------
+about:  # 以下仅为页面顶部的基本信息，更多内容请在 ./pages/about.md 中编辑，支持 markdown 和 HTML
+  banner_img: https://trees-1301133429.cos.ap-nanjing.myqcloud.com/blogweb/%E4%BD%BF%E5%BE%92.jpg
+  banner_img_height: 80  # available: 0 - 100
+  banner_mask_alpha: 0.3  # available: 0 - 1.0
+  subtitle: '不是创世纪是死海文书！！！' # 打字机内容
+  avatar: https://hexo-1301133429.cos.ap-chengdu.myqcloud.com/20200429094050.jpg # 头像
+  name: Tabris Trees Severus
+  introduce: 数学不好还想学天文/ 喵~~~(>^ω^<)喵 / 玩着泥巴看星星 # 支持 HTML
+  icons: # 更多图标可从 https://github.com/fluid-dev/static/blob/master/hexo-theme-fluid/iconfont.png 查找，class 代表图标的 css class
+    - { class: 'iconfont icon-github-fill', link: 'https://github.com/essesy' }
+    - { class: 'iconfont icon-douban-fill', link: 'https://www.douban.com/people/185757724' }
+    - { class: 'iconfont icon-wechat-fill', qrcode: 'https://trees-1301133429.cos.ap-nanjing.myqcloud.com/%E6%88%91%E7%9A%84%E5%BE%AE%E4%BF%A1.png' }  # 添加 qrcode 后，点击不再跳转，而是悬浮二维码，需要指定 image
+
+
+#---------------------------
+# 404页
+# 404 Page
+#---------------------------
+page404:
+  banner_img: /img/default.png
+  banner_img_height: 80  # available: 0 - 100
+  banner_mask_alpha: 0.3  # available: 0 - 1.0
+  subtitle: 'Page not found'  # 打字机内容
+
+
+#---------------------------
+# 友链页
+# Links Page
+#---------------------------
+links:
+  banner_img: https://trees-1301133429.cos.ap-nanjing.myqcloud.com/blogweb/%E5%8F%8B%E9%93%BE.jpg
+  banner_img_height: 80  # available: 0 - 100
+  banner_mask_alpha: 0.3  # available: 0 - 1.0
+  subtitle: '星门——通往异世界的入口' # 打字机内容
+  items:  # intro 与 image 可省略
+    - {
+      title: 'Fluid Docs',
+      intro: '主题使用指南',
+      link: 'https://hexo.fluid-dev.com/docs/',
+      image: '/img/favicon.png'
+    }
+    - {
+      title: 'Fluid Repo',
+      intro: '主题 GitHub 仓库',
+      link: 'https://github.com/fluid-dev/hexo-theme-fluid',
+      image: '/img/favicon.png'
+    }
+    - {
+      title: 'Fluid Changelog',
+      intro: '主题更新日志',
+      link: 'https://github.com/fluid-dev/hexo-theme-fluid/blob/master/Changelog.md',
+      image: '/img/favicon.png'
+    }
+    - {
+      title: 'Sanarous',
+      intro: '本站big bang之前的宇宙！',
+      link: 'https://bestzuo.cn',
+      image: 'https://gravatar.loli.net/avatar/48c8f1e79dd340e4b247820fee013082?size=80&d=https%3a%2f%2fgravatar.loli.net%2favatar%2f9e63c80900d106cbbec5a9f4ea433a3e.jpg%3fsize%3d80'
+    }
+
+ 

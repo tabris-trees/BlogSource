@@ -32,6 +32,10 @@
           {% block sidebar %}{% endblock %}
         {%- endif %}
       </div>
+      <!--<div display="block" style="position: fixed; opacity: 1;">
+        <iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width=330 height=86 src="//music.163.com/outchain/player?type=2&id=1361625093&auto=1&height=66"></iframe>
+      </div>
+      失败的自定义侧边栏外链播放器-->
     </main>
 
     <footer class="footer">
@@ -55,5 +59,18 @@
   {%- if theme.pjax %}
     </div>
   {%- endif %}
+  <script type="text/javascript" src="//libs.baidu.com/jquery/1.8.3/jquery.min.js"></script>
+<!-- 雪花特效 -->
+<!--<script type="text/javascript">
+  var windowWidth = $(window).width();
+  if (windowWidth > 480) {
+    document.write('<script type="text/javascript" src="/js/src/snow.js"><\/script>');
+  }
+</script>-->
+
+<!--<video id="v1" autoplay loop muted>
+    <source src="https://tiger.cdnja.co/v/4d/4dWbG.mp4?secure=RrwAtBPcQyGyljtD35WztQ&expires=1585110600" type="video/mp4"  />
+</video>-->
+
 </body>
 </html>

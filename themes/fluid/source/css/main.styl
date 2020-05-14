@@ -1,0 +1,90 @@
+// --------------------------------------
+// Fluid
+// https://github.com/fluid-dev/hexo-theme-fluid
+// --------------------------------------
+
+@import "_variables/base"
+
+@import "_functions/base"
+
+@import "_mixins/base"
+
+@import "_pages/pages"
+
+.v .veditor {
+    width: 100%;
+    min-height: 8.75em;
+    font-size: .875em;
+    background: transparent;
+    resize: vertical;
+    -webkit-transition: all .25s ease;
+    transition: all .25s ease;
+    background-image: url(https://cdn.jsdelivr.net/gh/honjun/cdn@1.6/img/other/comment-bg.png) !important;
+    background-size: contain !important;
+    background-repeat: no-repeat !important;
+    background-position: right !important;
+    background-color: rgba(255,255,255,0) !important;
+    resize: vertical;
+}
+
+.hexo-douban-item {
+    padding-bottom: 10px;
+    position: relative;
+    clear: both;
+    min-height: 170px;
+    padding: 10px 0;
+    border-bottom: 1px #ddd solid;
+    position: relative;
+    clear: both;
+    min-height: 160px;
+    padding: 10px 0;
+    padding-right: 10px;
+    box-shadow: 0 1px 2px 0 rgba(60,64,67,.3), 0 1px 3px 1px rgba(60,64,67,.15);
+    margin-top: 15px;
+    border-radius: 8px;
+}
+
+.hexo-douban-picture {
+    position: absolute;
+    left: 10px;
+    top: 10px;
+    width: 100px;
+}
+
+img {
+    vertical-align: middle;
+    border-style: none;
+    padding: 4px;
+    max-width: 100%;
+}
+
+.sub-menu {
+    display: none;
+    position: relative;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    background-color: rgba(0,0,0,0.2);
+    padding-left: 10px;
+    padding-right: 20px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    width: 130px;
+    height: auto;
+    box-shadow: -6px 6px 8px black;
+}
+
+.sub-menu .li {
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+.nav-item:hover .sub-menu {
+    display: block;
+}
+
+ul {
+    list-style: none;
+}
+
+li.nav-item {
+    padding: 0 15px;
+}

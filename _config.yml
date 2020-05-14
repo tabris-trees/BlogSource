@@ -15,7 +15,7 @@ timezone: ''
 ## If your site is put in a subdirectory, set url as 'http://yoursite.com/child' and root as '/child/'
 url: http://tabirstrees.top
 root: /
-permalink: posts/:title.html
+permalink: :year/:month/:day/:title/
 
 # abbrlink config
 abbrlink:
@@ -74,7 +74,7 @@ pagination_dir: page
 # Extensions
 ## Plugins: https://hexo.io/plugins/
 ## Themes: https://hexo.io/themes/
-theme: next
+theme: fluid
 
 # Deployment
 ## Docs: https://hexo.io/docs/deployment.html
@@ -88,3 +88,24 @@ search:
   field: post
   content: true
   format: html
+
+server:
+    port: 4001
+    compress: true
+    header: true
+
+
+# 豆瓣相关
+douban:
+  user: tabirstrees
+  builtin: true
+  book:
+    title: '🍁青青子衿，悠悠我心🍁'
+    quote: '我看过的和没看过的一些书；我了解的以及我不了解的一些思想；我体验过的甚至我没体验过的一些人生🌈'
+  movie:
+    title: '🎥我留下脚印，让后人来追寻。——德里克·贾曼🎥'
+    quote: '在风中，有人唱歌，有人跳舞，有人彼此相爱。电影就是这样的一种艺术，人生也是。🎬'
+  #game:
+    #title: 'This is my game title'
+    #quote: 'This is my game quote'
+  timeout: 10000

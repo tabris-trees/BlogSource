@@ -1,0 +1,47 @@
+search:
+  title: 搜索
+  keyword: 关键词
+  status:
+    success: v
+    error: x
+
+postTotal: 共计 %d 篇文章
+
+paginator:
+  pre: 上一页
+  next: 下一页
+
+post:
+  toc: 目录
+
+home:
+  title: 首页
+
+archive:
+  title: 归档
+  subtitle: 归档
+
+tag:
+  title: 标签
+  subtitle: 标签
+
+category:
+  title: 分类
+  subtitle: 分类
+
+about:
+  title: 关于
+  subtitle: 关于
+
+page404:
+  title: 页面走丢啦~
+  subtitle: 页面走丢啦~
+
+links:
+  title: 友链
+  subtitle: 友情链接
+
+menu:
+  Movies: 番/剧の推荐
+  Books: 书📕の推荐
+

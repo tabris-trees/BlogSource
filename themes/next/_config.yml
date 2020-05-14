@@ -250,7 +250,7 @@ post_meta:
   item_text: true
   created_at: true
   updated_at:
-    enable: false
+    enable: true
     another_day: true
   categories: true
 
@@ -510,7 +510,7 @@ math:
 
   # hexo-renderer-pandoc (or hexo-renderer-kramed) required for full MathJax support.
   mathjax:
-    enable: false
+    enable: true
     # See: https://mhchem.github.io/MathJax-mhchem/
     mhchem: false
 
@@ -1042,3 +1042,34 @@ mylinks:
     avatar: https://www.itrhx.com/images/trhx.png
     site: https://www.itrhx.com/
     info: Python、爬虫、前端 简介：求知若饥，虚心若愚！(这是大佬，很强的大佬)
+
+#分享
+# NeedMoreShare2
+# Dependencies: https://github.com/theme-next/theme-next-needmoreshare2
+# For more information: https://github.com/revir/need-more-share2
+# iconStyle: default | box
+# boxForm: horizontal | vertical
+# position: top / middle / bottom + Left / Center / Right
+# networks:
+# Weibo | Wechat | Douban | QQZone | Twitter | Facebook | Linkedin | Mailto | Reddit | Delicious | StumbleUpon | Pinterest
+# GooglePlus | Tumblr | GoogleBookmarks | Newsvine | Evernote | Friendfeed | Vkontakte | Odnoklassniki | Mailru
+needmoreshare:
+  enable: true
+  cdn:
+    js: //cdn.jsdelivr.net/gh/theme-next/theme-next-needmoreshare2@1/needsharebutton.min.js
+    css: //cdn.jsdelivr.net/gh/theme-next/theme-next-needmoreshare2@1/needsharebutton.min.css
+  postbottom:
+    enable: true
+    options:
+      iconStyle: box
+      boxForm: horizontal
+      position: bottomCenter
+      networks: Weibo,Wechat,Douban,QQZone,Twitter,Facebook
+  float:
+    enable: false
+    options:
+      iconStyle: box
+      boxForm: horizontal
+      position: middleRight
+      networks: Weibo,Wechat,Douban,QQZone,Twitter,Facebook
+
