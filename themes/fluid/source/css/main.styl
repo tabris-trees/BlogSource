@@ -89,3 +89,72 @@ ul {
 li.nav-item {
     padding: 0 15px;
 }
+
+.heimu {
+    color: black;
+    background-color: black;
+}
+
+.heimu:hover {
+    color: aliceblue;
+
+}
+
+.otherbox :first-child {
+    display: inline-block;
+    max-width: 80%;
+    width: auto;
+    background-color: #ccc;
+    font-size: 14px;
+    padding: 10px;
+    border-radius: 5px;
+    color: #000000;
+    position: relative;
+    margin: 10px;
+}
+.otherbox :before {
+    content: "";
+    width: 0;
+    height: 0;
+    border-width: 6px;
+    border-style: solid;
+    border-color: transparent #ccc transparent transparent;
+    position: absolute;
+    left: -12px;
+    top: 50%;
+    margin-top: -6px;
+}
+
+.mybox {
+  text-align: right;
+}
+
+.mybox :first-child {
+    display: inline-block;
+    width: auto;
+    max-width: 80%;
+    background-color: rgb(126, 235, 53);
+    font-size: 14px;
+    padding: 10px;
+    border-radius: 5px;
+    color: #000000;
+    position: relative;
+    margin: 10px;
+}
+.mybox :before {
+    content: "";
+    width: 0;
+    height: 0;
+    border-width: 6px;
+    border-style: solid;
+    border-color: transparent transparent transparent rgb(126, 235, 53);
+    position: absolute;
+    right: -12px;
+    top: 50%;
+    margin-top: -6px;
+}
+
+video {
+    width: 670px;
+}
+

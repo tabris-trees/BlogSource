@@ -18,6 +18,7 @@
     "hexo-generator-archive": "^1.0.0",
     "hexo-generator-category": "^1.0.0",
     "hexo-generator-index": "^1.0.0",
+    "hexo-generator-index-pin-top": "^0.2.2",
     "hexo-generator-searchdb": "^1.2.0",
     "hexo-generator-tag": "^1.0.0",
     "hexo-next-share": "github:theme-next/hexo-next-share",
@@ -27,6 +28,7 @@
     "hexo-renderer-stylus": "^1.1.0",
     "hexo-server": "^1.0.0",
     "hexo-symbols-count-time": "^0.7.0",
-    "hexo-wordcount": "^6.0.1"
+    "hexo-wordcount": "^6.0.1",
+    "video.js": "^7.7.6"
   }
 }
