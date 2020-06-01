@@ -8,8 +8,9 @@ page.banner_mask_alpha = theme.index.banner_mask_alpha
 %>
 
 <% page.posts.each(function (post) { %>
-  <div class="row mx-auto index-card" style="border-style: solid; border-radius: 20px; padding: 10px;">
+  <div class="row mx-auto index-card">
     <% var post_url = url_for(post.path), index_img = post.index_img || theme.index.post_default_img %>
+
     <% if(index_img) { %>
       <div class="col-12 col-md-4 m-auto index-img">
         <a href="<%- post_url %>" target="<%- theme.index.post_url_target %>">
@@ -19,6 +20,7 @@ page.banner_mask_alpha = theme.index.banner_mask_alpha
     <% } %>
     <div class="col-12 col-md-<%= index_img ? '8' : '12' %> mx-auto index-info">
       <a class="index-header" href="<%- post_url %>"><%= post.title %></a>
+      
 
       <a href="<%- post_url %>" class="index-excerpt">
         <% var excerpt = '' %>
@@ -45,11 +47,16 @@ page.banner_mask_alpha = theme.index.banner_mask_alpha
           </div>
         <% } %>
         <% if(theme.index.post_meta.tag && post.tags.length) { %>
-          <div class="post-meta">
+          <div class="post-meta mr-3">
             <i class="iconfont icon-tags"></i>
             <% post.tags.each(function(tag){ %>
               <a href="<%- url_for(tag.path) %>"><%= tag.name %></a>
             <% }) %>
+          </div>
+        <% } %>
+        <% if(post.top) {%>
+          <div class="post-top" style="color: crimson;">
+            <i class="icofont-hand-drawn-up"></i>置顶
           </div>
         <% } %>
       </div>

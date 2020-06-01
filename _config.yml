@@ -3,11 +3,11 @@
 ## Source: https://github.com/hexojs/hexo/
 
 # Site
-title: tabris的遥远星系
-subtitle: 这里是我的心，奇迹般万物生长
-description: python,machine learning,EVA,jiuzhou,and physic etc
-keywords: python,machine learning
-author: tabris trees
+title: 银海里泛摘天星
+subtitle: 晴耕雨读
+description: tabris的遥远星系
+keywords: Python,Machine Learning,物理,数学,地球科学,哲学,生活
+author: Tabris Trees Severus
 language: zh-CN
 timezone: ''
 
@@ -98,7 +98,7 @@ server:
 # 豆瓣相关
 douban:
   user: tabirstrees
-  builtin: true
+  builtin: false
   book:
     title: '🍁青青子衿，悠悠我心🍁'
     quote: '我看过的和没看过的一些书；我了解的以及我不了解的一些思想；我体验过的甚至我没体验过的一些人生🌈'
@@ -109,3 +109,7 @@ douban:
     #title: 'This is my game title'
     #quote: 'This is my game quote'
   timeout: 10000
+
+# 自动生成站点地图（SEO）
+sitemap:
+  path: sitemap.xml
