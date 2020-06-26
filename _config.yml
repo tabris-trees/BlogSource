@@ -97,14 +97,14 @@ server:
 
 # 豆瓣相关
 douban:
-  user: tabirstrees
-  builtin: false
+  user: tabristrees
+  builtin: true
   book:
     title: '🍁青青子衿，悠悠我心🍁'
     quote: '我看过的和没看过的一些书；我了解的以及我不了解的一些思想；我体验过的甚至我没体验过的一些人生🌈'
   movie:
     title: '🎥我留下脚印，让后人来追寻。——德里克·贾曼🎥'
-    quote: '在风中，有人唱歌，有人跳舞，有人彼此相爱。电影就是这样的一种艺术，人生也是。🎬'
+    quote: '在风中，有人唱歌，有人跳舞，有人彼此相爱。电影🎬就是这样的一种艺术，人生也是。'
   #game:
     #title: 'This is my game title'
     #quote: 'This is my game quote'

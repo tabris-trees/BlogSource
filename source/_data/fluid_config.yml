@@ -116,10 +116,10 @@ navbar:
     - { key: 'tag', link: '/tags/', icon: 'iconfont icon-tags-fill' }
     - { key: 'about', link: '/about/', icon: 'iconfont icon-user-fill' }
     - { key: 'links', link: '/links/', icon: 'iconfont icon-link-fill' } # 友链页，把前面#去掉即可展示
-    #- { key: '豆瓣的推荐', link: '#', icon: 'iconfont icon-douban-fill', submenu: [
-    #  { key: '书📕の推荐', link: '/books/', icon: 'icofont-book' }, 
-    #  { key: '番/剧の推荐', link: '/movies/', icon: 'icofont-ui-movie' }
-    #]}
+    - { key: '豆瓣的推荐', link: '#', icon: 'iconfont icon-douban-fill', submenu: [
+      { key: '书📕の推荐', link: '/books/', icon: 'icofont-book' }, 
+      { key: '番/剧の推荐', link: '/movies/', icon: 'icofont-ui-movie' }
+    ]}
     
 search: # 搜索栏
   enable: true
@@ -146,9 +146,9 @@ footer:
 
   beian:  # The footer of China's website policy, other areas keep disable
     enable: true
-    icp_text: 渝备案20006079号 # ICP证号
-    police_text:  # 公安备案号，不填则只显示ICP
-    police_code:  # 公安备案的编号，用于URL跳转查询
+    icp_text: 渝ICP备20006079号 # ICP证号
+    police_text: 渝公网安备 50023402000458号 # 公安备案号，不填则只显示ICP
+    police_code: 50023402000458 # 公安备案的编号，用于URL跳转查询
     police_icon: /img/police_beian.png # 公安备案的图片. 为空时不显示备案图片
 
 scroll_top_arrow:  # 向顶部滚动的箭头
@@ -219,7 +219,7 @@ post:  # 部分配置同时控制自定义页面，注意备注
     enable: true
     content: '<img src="https://hexo-1301133429.cos.ap-chengdu.myqcloud.com/20200509212356.jpg" class="rounded mx-auto d-block mt-5" style="width:150px; height:150px;">' # 自定义区域，支持 HTML，可自行插入赞赏码、公众号二维码等内容
   comments:  # 评论
-    enable: false  # 开启评论
+    enable: true  # 开启评论
     type: valine  # 指定使用的评论模块  available: disqus | valine | gitalk | utterances | changyan | livere  推荐 utterances
   image_zoom:  # 文章图片可点击放大
     enable: true  # 开启后文章默认可用，自定义页面如需使用，需在 Front-matter 中指定 `image_zoom: true`，并且图片使用该格式插入：<img src="..." zoom />
