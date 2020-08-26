@@ -111,14 +111,15 @@ navbar:
     - { key: 'category', link: '#', icon: 'iconfont icon-category-fill', submenu: [
       { key: '全部', link: '/categories/', icon: 'icofont-abc' },
       { key: '生活', link: '/categories/生活/', icon: 'icofont-love' },
-      { key: '🖊笔记', link: '/categories/笔记/', icon: 'icofont-notebook' }
+      { key: '笔记', link: '/categories/笔记/', icon: 'icofont-notebook' }
     ]}
     - { key: 'tag', link: '/tags/', icon: 'iconfont icon-tags-fill' }
     - { key: 'about', link: '/about/', icon: 'iconfont icon-user-fill' }
     - { key: 'links', link: '/links/', icon: 'iconfont icon-link-fill' } # 友链页，把前面#去掉即可展示
-    - { key: '豆瓣的推荐', link: '#', icon: 'iconfont icon-douban-fill', submenu: [
-      { key: '书📕の推荐', link: '/books/', icon: 'icofont-book' }, 
-      { key: '番/剧の推荐', link: '/movies/', icon: 'icofont-ui-movie' }
+    - { key: '有趣的东西', link: '#', icon: 'icofont-like', submenu: [
+      { key: '藏星星的树', link: 'https://zfile.tabirstrees.top',icon: 'icofont-cloud' },
+      #{ key: '书📕の推荐', link: '/books/', icon: 'icofont-book' }, 
+      #{ key: '番/剧の推荐', link: '/movies/', icon: 'icofont-ui-movie' }
     ]}
     
 search: # 搜索栏
@@ -159,7 +160,7 @@ scroll_top_arrow:  # 向顶部滚动的箭头
 # Index Page
 #---------------------------
 index:
-  banner_img: https://hexo-1301133429.cos.ap-chengdu.myqcloud.com/银河.png  # 首页 Banner 头图，以下相同
+  banner_img: https://hexo-1301133429.cos.ap-chengdu.myqcloud.com/200a616908a12b35593927ca7e6e20ab.png  # 首页 Banner 头图，以下相同
   banner_img_height: 100  # 头图高度，屏幕百分比，available: 0 - 100
   banner_mask_alpha: 0.3  # 头图黑色蒙版的透明度，available: 0 - 1.0， 0 是完全透明（无蒙版），1 是完全不透明
   post_default_img: '' # 默认的文章封面图，当没有指定 index_img 时会使用该图片，若都为空则不显示任何图片
