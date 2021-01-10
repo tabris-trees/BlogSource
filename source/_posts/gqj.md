@@ -4,10 +4,11 @@ date: 2020-07-14 15:07:05
 index_img: https://hexo-1301133429.cos.ap-chengdu.myqcloud.com/宫崎骏合集.png
 banner_img: https://hexo-1301133429.cos.ap-chengdu.myqcloud.com/宫崎骏合集.png
 tags: 
-- 电影
 - 动漫
+- 童话
 - 宫崎骏
 categories:
+- 兴趣
 - 动漫
 ---
 # 充满幻想的作品中热爱的幸福

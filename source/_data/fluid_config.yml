@@ -104,9 +104,10 @@ navbar:
     - { key: 'home', link: '/', icon: 'iconfont icon-home-fill' }
     - { key: 'archive', link: '/archives/', icon: 'iconfont icon-archive-fill' }
     - { key: 'category', link: '#', icon: 'iconfont icon-category-fill', submenu: [
-      { key: '全部', link: '/categories/', icon: 'icofont-abc' },
-      { key: '生活', link: '/categories/生活/', icon: 'icofont-love' },
-      { key: '笔记', link: '/categories/笔记/', icon: 'icofont-notebook' }
+      { key: '分类', link: '/categories/', icon: 'icofont-abc' },
+      { key: '碎碎念', link: '/categories/思考/', icon: 'icofont-love' },
+      { key: '知识', link: '/categories/知识/', icon: 'icofont-notebook' }
+      { key: '热爱', link: '/categories/兴趣/', icon: 'icofont-pulse' }
     ]}
     - { key: 'tag', link: '/tags/', icon: 'iconfont icon-tags-fill' }
     - { key: 'about', link: '/about/', icon: 'iconfont icon-user-fill' }
@@ -116,6 +117,7 @@ navbar:
       #{ key: '书📕の推荐', link: '/books/', icon: 'icofont-book' }, 
       #{ key: '番/剧の推荐', link: '/movies/', icon: 'icofont-ui-movie' }
     ]}
+# icofont图标可以在这里预览 : file:///E:/%E5%8E%8B%E7%BC%A9%E5%8C%85/icofont/demo.html
     
 search: # 搜索栏
   enable: true

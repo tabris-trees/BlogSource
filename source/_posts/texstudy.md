@@ -3,6 +3,7 @@ title: Latex 论文排版相关学习
 date: 2020-08-28 10:20:48
 index_img: https://hexo-1301133429.cos.ap-chengdu.myqcloud.com/20200828160435.png
 banner_img: https://hexo-1301133429.cos.ap-chengdu.myqcloud.com/20161123111920_M2RkP.thumb.700_0.jpeg
+math: ture
 tags:
 - Latex
 - 论文排版
