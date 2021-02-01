@@ -106,7 +106,7 @@ navbar:
     - { key: 'category', link: '#', icon: 'iconfont icon-category-fill', submenu: [
       { key: '分类', link: '/categories/', icon: 'icofont-abc' },
       { key: '碎碎念', link: '/categories/思考/', icon: 'icofont-love' },
-      { key: '知识', link: '/categories/知识/', icon: 'icofont-notebook' }
+      { key: '知识', link: '/categories/知识/', icon: 'icofont-notebook' },
       { key: '热爱', link: '/categories/兴趣/', icon: 'icofont-pulse' }
     ]}
     - { key: 'tag', link: '/tags/', icon: 'iconfont icon-tags-fill' }
