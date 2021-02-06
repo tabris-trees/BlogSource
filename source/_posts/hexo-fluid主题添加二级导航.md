@@ -18,13 +18,13 @@ categories:
 使用hexo博客的fluid主题已经有一段时间了，因为打算写的内容很杂，所从很早开始就想要做一个二级导航出来，这段时间一直在折腾这个东西！前几天给网站加上了豆瓣的📕书评和🎦电影栏目，发现这样要是以后再加点什么东西导航栏就放不下了。所以痛定思痛决定开始弄二级导航（~~鬼知道我为了做这个东西连即将要到来的考试和难到爆炸的课程设计都不管了~~）
 {% endnote %}
 
-这个也是测试效果的文字啦{% heimu 这是测试%}测试测试测试！！！
-
-{% liaotian mybox 'i love you!'%}
-{% liaotian otherbox '真的吗?'%}
-
-<div class="mybox"><div>hahaha真的吗😦</div></div>
-<div class="otherbox"><div>嗯，嗯~ o(*￣▽￣*)o</div></div>
+> 这个也是测试效果的文字啦{% heimu 这是测试%}测试测试测试！！！
+> 
+> {% liaotian mybox 'i love you!'%}
+> {% liaotian otherbox '真的吗?'%}
+> 
+> <div class="mybox"><div>hahaha真的吗😦</div></div>
+> <div class="otherbox"><div>嗯，嗯~ o(*￣▽￣*)o</div></div>
 
 # 开始搞事情😄O(∩_∩)O
 emmmmm，首先~~其实差不多只有这一步啦~~我们要做的就是更改文章生成的模板，fluid主题的话就打开主题目录下的`layout`文件夹中的`nav.ejs`文件，修改为如下的样式（其中注释的位置就是修改的主要位置，也是导航栏内容所在，你也可以按照自己的想法修改这个地方的内容）：
