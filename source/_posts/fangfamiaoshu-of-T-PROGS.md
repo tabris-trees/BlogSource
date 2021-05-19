@@ -10,6 +10,7 @@ banner_img:
 categories:
   - 知识
   - 软件操作
+math: true
 ---
 
 
