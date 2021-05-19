@@ -81,7 +81,7 @@ theme: fluid
 deploy:
     type: git
     repo: 
-      github: git@github.com:essesy/essesy.github.io.git
+      github: https://github.com/tabris-trees/essesy.github.io.git
 
 search:
   path: search.xml
