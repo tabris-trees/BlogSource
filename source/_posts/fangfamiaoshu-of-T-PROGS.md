@@ -8,8 +8,9 @@ date: 2021-05-19 02:16:26
 index_img:
 banner_img:
 categories:
-  - 知识
-  - 软件操作
+  - 学习
+  - 笔记
+  - 地下水数值模拟
 math: true
 ---
 

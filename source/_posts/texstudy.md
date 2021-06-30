@@ -8,7 +8,9 @@ tags:
 - Latex
 - 论文排版
 categories:
-- 技术
+- 学习
+- 笔记
+- LaTex
 ---
 
 # 1. 一点点关于Latex的介绍
