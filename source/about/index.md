@@ -2,56 +2,99 @@
 title: 关于作者
 date: 2020-01-18 23:02:22
 layout: about
+render: false
 ---
+
 # 关于名字
 Tabris是EVA（新世纪福音战士）中白发少年渚薰的英文名
 
-Trees是我本人的名字
+Trees是来自我本人的名字
 
-Severus来自霍格沃兹魔法学校的斯内普老师
-# 关于“我”
-本人目前在南京某四非高校读地质工程专业，然而我爱的是物理，所以正在打算跨考中科大天文学院（中科院南京紫金山天文台）`寻梦嘛，哈哈哈O(∩_∩)O哈哈~`。性格测试INTP，一度怀疑自己可能有双向情感障碍的症状，对自己的生活有那么一点点看法，喜欢做梦，有点点不切实际
+Severus来自霍格沃兹魔法学校的斯内普教授的名字
 
-<p class="note note-primary">总有一个今夏不再是谎言！！！</p>
+# 关于本人
+~~本人目前在南京某四非高校读地质工程专业，然而我爱的是物理，所以正在打算跨考中科大天文学院（中科院南京紫金山天文台）~~
 
-喜欢动漫，不喜欢追番，风格偏向于“黑、残、深”，像什么EVA、空之境界、寒蝉、恶魔人、心理测量者......等等都是我的菜；当然热血的也还可以啦！国产永远支持魁拔，星游记是我逝去的青春，莫莫再也没有第二季，相信总有一个今夏不再是谎言，TICO的夏天也再等不回来，嗨！还有点感伤hahahah！
+很遗憾，中科大没考上，但是调剂到了南科大做空间物理，研究兴趣应该会是太阳物理的方向，具体一点的话可能涉及到太阳风的加热机制。总的来说，算是运气极好了啊哈哈哈！
+
+2.5次元，OTAKU，不太喜欢追新番，旧世纪宅社以及庵野秀明的死忠粉。
+
+<p class="note note-primary">EVA，永远的神！！！</p>
+
 ![EVA萌](https://hexo-1301133429.cos.ap-chengdu.myqcloud.com/post/20200414104326211.png)
-爱好阅读，从哲学作品到修仙小说都觉得蛮好的，科幻作家最爱阿瑟·克拉克；信奉哈耶克的悲观，坚持马克思的积极，实际是恩格斯的践行者；“九州是一滴水，而我们希望它变成海洋”，而实际上它更像是我的一场梦；还有好多好像也说不完了
 
-接触的第一首音乐是矶村由纪子的“风居住的街道”，喜欢巴赫，最爱卡农的旋律，人类永恒的经典！爱电影电视剧，喜欢《2001太空漫游》、《指环王》系列以及《假如猫从世界上消失了》；一直觉得《白色巨塔》日本第一，《请回答1988》韩国最佳，《仙剑》国内最爱！
+虽然是想做自然科学的研究，但同样很喜欢看些社会学，哲学方面的书籍，经常对某些事情有一些自己的想法，同样希望把自己的生活能够过得比较诗意。很喜欢阿瑟·克拉克的科幻小说，算是最终学习空间物理的一大动力吧。
 
-这个网站最开始不知道是什么心态来做的，到现在觉得把一些事情分享到这个上面还是蛮好的，相当于自己的一个小空间。我会尽力打造一个属于自己的宇宙（创世主的感觉还是蛮好的，就是这个创世主有点垃圾哈哈哈哈！）之后会买自己的服务器，搭建自己的主题风格，至于目前，哈哈哈，技术不够就先搁置啦！
+这个网站最开始不知道是什么心态来做的，希望能够分享一些自己喜欢的东西，保留一些自己的想法，同时也想做一些相关学习的笔记，散布到信息浩如烟海的网络上，等待有缘人的发现。
 
-毕竟，星辰大海才是我的征途嘛！！！
+希望各位访客能够在此体会到星辰大海的浪漫！！！
 
 ![xingchendagai](https://trees-1301133429.cos.ap-nanjing.myqcloud.com/%E6%98%9F%E8%BE%B0%E5%A4%A7%E6%B5%B7.jpeg)
 
 ---
 # 🎇星系爆炸💥以来形成历史🎇
 
-**很久以前的事情了，具体时间已经不从考据😂**
+<html>
+<head>
+<meta charset="utf-8">
+<link rel="stylesheet" href="http://www.helloweba.com/demo/css/main.css" />
+<link rel="stylesheet" href="style.css" />
+</head>
 
-`建站/加入各种功能/使用next主题/使用fluid主题......等等`
+<body>
+<section id="cd-timeline" class="cd-container">
+	<div class="cd-timeline-block">
+		<div class="cd-timeline-img cd-picture">
+			<img src="https://hexo-1301133429.cos.ap-chengdu.myqcloud.com/star.svg" alt="Picture">
+		</div>
+		<div class="cd-timeline-content">
+			<p>建站/加入各种功能/使用next主题/使用fluid主题......等等</p>
+			<span class="cd-date">很久很久以前</span>
+		</div>
+	</div>
+    <div class="cd-timeline-block">
+		<div class="cd-timeline-img cd-picture">
+			<img src="https://hexo-1301133429.cos.ap-chengdu.myqcloud.com/star.svg" alt="Movie">
+		</div>
+		<div class="cd-timeline-content">
+			<p>加入豆瓣阅读/电影功能，改进链接直达（后删除）</p>
+            <img src="https://hexo-1301133429.cos.ap-chengdu.myqcloud.com/20200511215059.png" />
+			<span class="cd-date">2020-05-11</span>
+		</div>
+	</div>
+    <div class="cd-timeline-block">
+		<div class="cd-timeline-img cd-picture">
+			<img src="https://hexo-1301133429.cos.ap-chengdu.myqcloud.com/star.svg" alt="Picture">
+		</div>
+		<div class="cd-timeline-content">
+			<p>自定义加入二级导航/加入icofont图标库/音乐🎵库增加歌曲/加入网站运行时间🕐</p>
+			<span class="cd-date">2020-05-14</span>
+		</div>
+	</div>
+    <div class="cd-timeline-block">
+		<div class="cd-timeline-img cd-picture">
+			<img src="https://hexo-1301133429.cos.ap-chengdu.myqcloud.com/star.svg" alt="Picture">
+		</div>
+		<div class="cd-timeline-content">
+			<p>网站备案成功!说实话备案真的有点麻烦,很多过程第一次备案的人估计都会一脸懵逼,不过还好已经备案成功了</p>
+			<span class="cd-date">2020-06-25</span>
+		</div>
+	</div>
+    <div class="cd-timeline-block">
+		<div class="cd-timeline-img cd-picture">
+			<img src="https://hexo-1301133429.cos.ap-chengdu.myqcloud.com/star.svg" alt="Picture">
+		</div>
+		<div class="cd-timeline-content">
+			<p>一年没更新了，期间博客死过很多次，然后又被我一点一点的补回来了，少了很多东西，同时也多了很多的想法，希望之后的时间里可以陆陆续续的实现</p>
+			<span class="cd-date">2021-07-07</span>
+		</div>
+	</div>
+</section>
 
-**2020.05.11**
-
-`加入豆瓣阅读/电影功能，改进链接直达`
-
-![豆瓣](https://hexo-1301133429.cos.ap-chengdu.myqcloud.com/20200511215059.png)
-
-**2020.05.14**
-
-`自定义加入二级导航/加入icofont图标库/音乐🎵库增加歌曲/加入网站运行时间🕐`
-![20200514170146](https://hexo-1301133429.cos.ap-chengdu.myqcloud.com/20200514170146.png)
-
-**2020.05.19**
-
-`加入站点地图，可以被Google到了`
-
-**2020.05.22**
-
-`网站全新加入了对话功能,可以在右下角的蓝色按钮里直接联系到网站管理员，可以说是很方便了，同时在考虑要不要砍掉评论的功能😂`
-
-**2020.06.25**
-
-`网站备案成功!说实话备案真的有点麻烦,很多过程第一次备案的人估计都会一脸懵逼,不过还好已经备案成功了.`
+<div id="footer">
+    <p>Timelines Powered by helloweba.com
+    <a href="http://www.helloweba.com">www.helloweba.com</a>
+    </p>
+</div>
+</body>
+</html>
