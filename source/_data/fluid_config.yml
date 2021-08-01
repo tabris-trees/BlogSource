@@ -50,13 +50,13 @@ color:  # 主题颜色配置，不一定能每一处都生效，可能会被局�
   post_text_color: "#2c3e50"        # 文章正文字体色
   post_heading_color: "#1a202c"     # 文章标题标签字体色（h1 h2 h3...）
   link_color: "#3c4858"             # 超链接字体色
-  link_hover_color: "#1abc9c"       # 超链接悬浮时字体色
+  link_hover_color: "#a3daff"       # 超链接悬浮时字体色
   link_hover_bg_color: "#ebedef"    # 超链接悬浮背景色
   board_color: "#fff"               # 主面板背景色
 
 font:  # 主题字体配置
   font_size: 16px                   # 全局字号
-  font_family:                      # 全局字体
+  font-family:   # 全局字体
   code_font_size: 85%               # 代码的字号
 
 custom_js:   # 指定自定义 js 文件路径，路径是相对 source 目录，如 /js/custom.js，支持列表
@@ -103,20 +103,24 @@ navbar:
   menu:  # 可自行增减，key 用来关联 languages/*.yml，如不存在关联则显示 key 本身的值；icon 是 css class，可以省略；增加 name 可以强制显示指定名称
     - { key: 'home', link: '/', icon: 'iconfont icon-home-fill' }
     - { key: 'archive', link: '/archives/', icon: 'iconfont icon-archive-fill' }
+
     - { key: 'category', link: '/categories/', icon: 'iconfont icon-category-fill', submenu: [
       { key: '资源分享', link: '/categories/资源', icon: 'icofont-abc' },
       { key: '一些想法', link: '/categories/思考/', icon: 'icofont-love' },
       { key: '学习笔记', link: '/categories/笔记/', icon: 'icofont-notebook' },
       { key: '热爱生活', link: '/categories/生活/', icon: 'icofont-apple' }
     ]}
+
     - { key: 'tag', link: '/tags/', icon: 'iconfont icon-tags-fill' }
     - { key: 'about', link: '/about/', icon: 'iconfont icon-user-fill' }
     - { key: 'links', link: '/links/', icon: 'iconfont icon-link-fill' } # 友链页，把前面#去掉即可展示
-    - { key: '有趣的东西', link: '#', icon: 'icofont-like', submenu: [
+
+    - { key: '有趣的东西', link: '#', icon: 'iconfont icon-stack-overflow-fill', submenu: [
       { key: '藏星星的树', link: 'https://file.tabirstrees.top',icon: 'icofont-cloud' },
       #{ key: '书📕の推荐', link: '/books/', icon: 'icofont-book' }, 
       #{ key: '番/剧の推荐', link: '/movies/', icon: 'icofont-ui-movie' }
     ]}
+
 # icofont图标可以在这里预览 : file:///E:/%E5%8E%8B%E7%BC%A9%E5%8C%85/icofont/demo.html
     
 search: # 搜索栏

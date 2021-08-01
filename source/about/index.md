@@ -89,12 +89,15 @@ Severus来自霍格沃兹魔法学校的斯内普教授的名字
 			<span class="cd-date">2021-07-07</span>
 		</div>
 	</div>
+	<div class="cd-timeline-block">
+		<div class="cd-timeline-img cd-picture">
+			<img src="https://hexo-1301133429.cos.ap-chengdu.myqcloud.com/star.svg" alt="Picture">
+		</div>
+		<div class="cd-timeline-content">
+			<p>优化了首页的页面显示，增加了标签🏷的形式，准备在下次更换评论系统😀</p>
+			<span class="cd-date">2021-08-01</span>
+		</div>
+	</div>
 </section>
-
-<div id="footer">
-    <p>Timelines Powered by helloweba.com
-    <a href="http://www.helloweba.com">www.helloweba.com</a>
-    </p>
-</div>
 </body>
 </html>
