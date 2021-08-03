@@ -7,10 +7,8 @@ date: 2021-07-07 22:20:40
 index_img: https://hexo-1301133429.cos.ap-chengdu.myqcloud.com/20210707235432.png
 banner_img: 
 categories:
-- 学习
-- 笔记
-- 编程语言
-- Fortran
+- [学习,笔记,编程,Fortran]
+descripte: Fortran的循环,给自己看的
 ---
 
 ![Fortran](https://hexo-1301133429.cos.ap-chengdu.myqcloud.com/20210707235432.png)

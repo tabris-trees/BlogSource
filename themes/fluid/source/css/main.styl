@@ -11,160 +11,16 @@
 
 @import "_pages/pages"
 
-.v .veditor {
-    width: 100%;
-    min-height: 8.75em;
-    font-size: .875em;
-    background: transparent;
-    resize: vertical;
-    -webkit-transition: all .25s ease;
-    transition: all .25s ease;
-    background-image: url(https://cdn.jsdelivr.net/gh/honjun/cdn@1.6/img/other/comment-bg.png) !important;
-    background-size: contain !important;
-    background-repeat: no-repeat !important;
-    background-position: right !important;
-    background-color: rgba(255,255,255,0) !important;
-    resize: vertical;
-}
-
-.hexo-douban-item {
-    padding-bottom: 10px;
-    position: relative;
-    clear: both;
-    min-height: 170px;
-    padding: 10px 0;
-    border-bottom: 1px #ddd solid;
-    position: relative;
-    clear: both;
-    min-height: 160px;
-    padding: 10px 0;
-    padding-right: 10px;
-    box-shadow: 0 1px 2px 0 rgba(60,64,67,.3), 0 1px 3px 1px rgba(60,64,67,.15);
-    margin-top: 15px;
-    border-radius: 8px;
-}
-
-.hexo-douban-picture {
-    display: flexbox;
-    position: absolute;
-    left: 10px;
-    top: 10px;
-    width: auto;
-}
-
-img {
-    vertical-align: middle;
-    border-style: none;
-    /* padding: 4px; */
-    max-width: 100%;
-}
-
-.sub-menu {
-    display: none;
-    position: relative;
-    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
-    background-color: rgba(0,0,0,0.2);
-    padding-left: 10px;
-    padding-right: 20px;
-    padding-top: 10px;
-    padding-bottom: 10px;
-    width: auto;
-    height: auto;
-    box-shadow: -6px 6px 8px black;
-}
-
-.sub-menu .li {
-    padding-top: 10px;
-    padding-bottom: 10px;
-}
-
-.nav-item:hover .sub-menu {
-    display: block;
-}
-
-ul {
-    list-style: none;
-}
-
-li.nav-item {
-    padding: 0 5px;
+.icon {
+    width: 17px;
+    height: 100%;
 }
 
 .heimu {
-    color: black;
-    background-color: black;
+    background-color: black
+    color: black
+    transition: background-color 0.5s
 }
 
 .heimu:hover {
-    color: aliceblue;
-
-}
-
-.otherbox :first-child {
-    display: inline-block;
-    max-width: 80%;
-    width: auto;
-    background-color: #ccc;
-    font-size: 14px;
-    padding: 10px;
-    border-radius: 5px;
-    color: #000000;
-    position: relative;
-    margin: 10px;
-}
-.otherbox :before {
-    content: "";
-    width: 0;
-    height: 0;
-    border-width: 6px;
-    border-style: solid;
-    border-color: transparent #ccc transparent transparent;
-    position: absolute;
-    left: -12px;
-    top: 50%;
-    margin-top: -6px;
-}
-
-.mybox {
-  text-align: right;
-}
-
-.mybox :first-child {
-    display: inline-block;
-    width: auto;
-    max-width: 80%;
-    background-color: rgb(126, 235, 53);
-    font-size: 14px;
-    padding: 10px;
-    border-radius: 5px;
-    color: #000000;
-    position: relative;
-    margin: 10px;
-}
-.mybox :before {
-    content: "";
-    width: 0;
-    height: 0;
-    border-width: 6px;
-    border-style: solid;
-    border-color: transparent transparent transparent rgb(126, 235, 53);
-    position: absolute;
-    right: -12px;
-    top: 50%;
-    margin-top: -6px;
-}
-
-video {
-    display: flex;
-    width: -webkit-fill-available;
-    max-width: 670px;
-}
-
-.MathJax_Display {
-    overflow: auto;
-    }
-
-.icon {
-    width: 17px;
-    height: 100%;  
-}
+    background-color: #fff}

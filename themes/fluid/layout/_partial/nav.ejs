@@ -2,6 +2,7 @@
   <div class="container">
     <a class="navbar-brand"
        href="<%- url_for() %>">&nbsp;<strong><%- theme.navbar.blog_title || config.title %></strong>&nbsp;</a>
+
     <button id="navbar-toggler-btn" class="navbar-toggler" type="button" data-toggle="collapse"
             data-target="#navbarSupportedContent"
             aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -11,41 +12,52 @@
     <!-- Collapsible content -->
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
       <ul class="navbar-nav ml-auto text-center">
-        <% for(const each of theme.navbar.menu) { %>
-          <% if (!each.link) continue %>
+        <% for(const each of theme.navbar.menu || []) { %>
+          <% if (!each.submenu && !each.link) continue %>
           <% var text = each.name || __(each.key + '.title') %>
           <% if (text.indexOf('.title') !== -1) {
             text = each.key
           } %>
-          <li class="nav-item">
-            <a class="nav-link" href="<%= url_for(each.link) %>">
-              <%- each.icon ? '<i class="' + each.icon + '"></i>' : '' %>
-              <%- text %></a>
-
-              <!--这里判断有没有二级菜单，有的话遍历出二级菜单（就是竖着的那部分）-->
-              <% if (each.submenu) { %>
-                <ul class="sub-menu">
-                  <!--//遍历出二级菜单（就是竖着的那部分）-->
-                  <% for (const submenu of each.submenu){ %>
-                    <li>
-                      <!--//a标签里当然是输出二级菜单的路径咯-->
-                      <a href="<%- url_for(submenu.link) %>">
-                        <!--//i标签里输出二级菜单的icon的class咯-->
-                        <%- each.icon ? '<i class="' + submenu.icon + '"></i>' : '' %>
-                        <!--//这里输出二级菜单名咯-->
-                        <%= submenu.key %>
-                      </a>
-                    </li>
-                  <% } %>
-                </ul>
-              <% } %>
-
-          </li>
+          <% if (each.submenu) { %>
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" target="_self" role="button"
+                 data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                <%- each.icon ? '<i class="' + each.icon + '"></i>' : '' %>
+                <%- text %>
+              </a>
+              <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                <% for(const subEach of each.submenu || []) { %>
+                  <% if (!subEach.link) continue %>
+                  <% var subText = subEach.name || __(subEach.key + '.title') %>
+                  <% if (subText.indexOf('.title') !== -1) {
+                    subText = subEach.key
+                  } %>
+                  <a class="dropdown-item" href="<%= url_for(subEach.link) %>">
+                    <%- subEach.icon ? '<i class="' + subEach.icon + '"></i>' : '' %>
+                    <%- subText %>
+                  </a>
+                <% } %>
+              </div>
+            </li>
+          <% } else { %>
+            <li class="nav-item">
+              <a class="nav-link" href="<%= url_for(each.link) %>">
+                <%- each.icon ? '<i class="' + each.icon + '"></i>' : '' %>
+                <%- text %>
+              </a>
+            </li>
+          <% } %>
         <% } %>
         <% if(theme.search.enable) { %>
           <li class="nav-item" id="search-btn">
-            <a class="nav-link" data-toggle="modal" data-target="#modalSearch">&nbsp;&nbsp;<i
-                class="iconfont icon-search"></i>&nbsp;&nbsp;</a>
+            <a class="nav-link" target="_self" data-toggle="modal" data-target="#modalSearch">&nbsp;<i
+                class="iconfont icon-search"></i>&nbsp;</a>
+          </li>
+        <% } %>
+        <% if(theme.dark_mode && theme.dark_mode.enable) { %>
+          <li class="nav-item" id="color-toggle-btn">
+            <a class="nav-link" target="_self">&nbsp;<i
+                class="iconfont icon-dark" id="color-toggle-icon"></i>&nbsp;</a>
           </li>
         <% } %>
       </ul>

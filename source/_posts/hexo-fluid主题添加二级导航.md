@@ -7,8 +7,8 @@ tags:
 - hexo
 - web技术
 categories:
-- 学习
-- [笔记,网站]
+- [学习,笔记,网站]
+descripte: 为fluid主题添加二级导航
 ---
 
 ![6418A1E7501871AF561B89A22AB13D3F](https://hexo-1301133429.cos.ap-chengdu.myqcloud.com/6418A1E7501871AF561B89A22AB13D3F.png)

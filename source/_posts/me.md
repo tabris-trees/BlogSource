@@ -5,8 +5,7 @@ index_img: https://dingyue.nosdn.127.net/vQo64yBQ4vuUWQ8tLfOdBfU7QOOYoQ8vOPXwXbD
 banner_img: https://hexo-1301133429.cos.ap-chengdu.myqcloud.com/20200428233946.jpg
 tags: 自我
 categories:
-- 生活
-- 想法
+- [生活,想法]
 ---
 
 ![img_0183](https://hexo-1301133429.cos.ap-chengdu.myqcloud.com/20200428233849.png)

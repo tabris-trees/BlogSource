@@ -6,9 +6,8 @@ tags:
   - 地下水溶质运移模型
   - 地统计
 categories:
-  - 学习
-  - 笔记
-  - 地下水数值模拟
+  - [学习,笔记,地下水数值模拟]
+descripte: T-PROGS简介
 date: 2021-01-10 16:51:06
 math: true
 ---

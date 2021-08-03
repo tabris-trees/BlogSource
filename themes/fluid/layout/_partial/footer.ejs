@@ -1,22 +1,18 @@
-<footer class="mt-5">
-  <div class="text-center py-3">
-    <div>
-      <a href="https://hexo.io" target="_blank" rel="nofollow noopener"><span>Power by Hexo</span></a>
-      <i class="iconfont icon-love"></i>
-      <a href="https://github.com/fluid-dev/hexo-theme-fluid" target="_blank" rel="nofollow noopener">
-        <span>Modified from Fluid</span></a>
-    </div>
-    <a href="https://travellings.link/" target="blank" title="开往-友链接力"><img src="https://travellings.link/assets/logo.gif" alt="开往-友链接力" width="120"></a>
-    <%- partial('_partial/busuanzi.ejs') %>
-    <%- partial('_partial/beian.ejs') %>
-    <% if(theme.web_analytics.cnzz) { %>
-      <!-- cnzz Analytics Icon -->
-      <span id="cnzz_stat_icon_<%- theme.web_analytics.cnzz %>" style="display: none"></span>
-    <% } %>
-    <div>
-      <span id="timeDate">载入天数...</span>
-      <span id="times">载入时分秒...</span>
-      <script>
+<footer class="text-center mt-5 py-3">
+  <div class="footer-content">
+    <%- theme.footer.content %>
+  </div>
+  <a href="https://travellings.link/" target="blank" title="开往-友链接力"><img src="https://travellings.link/assets/logo.gif" alt="开往-友链接力" width="120"></a>
+  <%- partial('_partial/statistics.ejs') %>
+
+  <% if(theme.web_analytics.cnzz) { %>
+    <!-- cnzz Analytics Icon -->
+    <span id="cnzz_stat_icon_<%- theme.web_analytics.cnzz %>" style="display: none"></span>
+  <% } %>
+  <div>
+    <span id="timeDate">载入天数...</span>
+    <span id="times">载入时分秒...</span>
+    <script>
       var now = new Date();
       function createtime(){
           var grt= new Date("01/15/2020 00:00:00");//此处修改你的建站时间或者网站上线时间
@@ -42,10 +38,7 @@
           document.getElementById("times").innerHTML = hnum + "&nbsp小时&nbsp" + mnum + "&nbsp分&nbsp" + snum + "&nbsp秒";
       }
       setInterval("createtime()",250);
-      </script>
-    </div>
+    </script>
   </div>
+  <%- partial('_partial/beian.ejs') %>
 </footer>
-
-<!-- SCRIPTS -->
-<%- partial('_partial/scripts.ejs') %>

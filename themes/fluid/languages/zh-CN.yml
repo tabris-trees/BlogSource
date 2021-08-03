@@ -13,6 +13,8 @@ paginator:
 
 post:
   toc: 目录
+  pre: 上一篇
+  next: 下一篇
 
 home:
   title: 首页
@@ -40,8 +42,3 @@ page404:
 links:
   title: 友链
   subtitle: 友情链接
-
-menu:
-  Movies: 番/剧の推荐
-  Books: 书📕の推荐
-
