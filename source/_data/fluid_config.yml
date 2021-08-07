@@ -725,8 +725,8 @@ valine:
 # Derived from Valine, with self-hosted service and new features
 # See: https://waline.js.org/
 waline:
-  serverURL: ''
-  placeholder: 说点什么
+  serverURL: 'https://hexo-waline-g4gx2flea-tabris-trees.vercel.app/'
+  placeholder: 神说要有光，于是你来到了这里😎！！！
   path: window.location.pathname
   avatar: retro
   meta: ['nick', 'mail', 'link']
@@ -862,6 +862,9 @@ about:
     - { class: "iconfont icon-github-fill", link: "https://github.com/tabris-trees", tip: "GitHub" }
     - { class: "iconfont icon-douban-fill", link: "https://www.douban.com/people/185757724", tip: "豆瓣" }
     - { class: "iconfont icon-wechat-fill", qrcode: "https://trees-1301133429.cos.ap-nanjing.myqcloud.com/%E6%88%91%E7%9A%84%E5%BE%AE%E4%BF%A1.png" }
+  comments: 
+    enable: true
+    type: twikoo
 
 #---------------------------
 # 自定义页
@@ -949,7 +952,7 @@ links:
     # 指定的插件，需要同时设置对应插件的必要参数
     # The specified plugin needs to set the necessary parameters at the same time
     # Options: utterances | disqus | gitalk | valine | waline | changyan | livere | remark42 | twikoo | cusdis
-    type: valine
+    type: waline
 
 
 #---------------------------
