@@ -8,7 +8,7 @@ tags:
 - Latex
 - 论文排版
 categories:
-- [学习,笔记,编程,LaTex]
+- [笔记,编程,LaTex]
 descripte: LaTex简介
 ---
 

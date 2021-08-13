@@ -7,7 +7,7 @@ tags:
 - hexo
 - web技术
 categories:
-- [学习,笔记,网站]
+- [资源,模板]
 descripte: 为fluid主题添加二级导航
 ---
 
@@ -25,7 +25,8 @@ descripte: 为fluid主题添加二级导航
 
 # 开始搞事情😄O(∩_∩)O
 emmmmm，首先~~其实差不多只有这一步啦~~我们要做的就是更改文章生成的模板，fluid主题的话就打开主题目录下的`layout`文件夹中的`nav.ejs`文件，修改为如下的样式（其中注释的位置就是修改的主要位置，也是导航栏内容所在，你也可以按照自己的想法修改这个地方的内容）：
-```
+
+```html
 <nav id="navbar" class="navbar fixed-top  navbar-expand-lg navbar-dark scrolling-navbar">
   <div class="container">
     <a class="navbar-brand"
@@ -81,14 +82,14 @@ emmmmm，首先~~其实差不多只有这一步啦~~我们要做的就是更改�
     </div>
   </div>
 </nav>
-
 ```
 # 修改css配置，让它好看点
 
 如果不修改css配置其实也是可以的，只不过很丑就对了。
 
 所以我们打开主题目录下`source/css/mian.styl`，本来应该在子项对应的部分添加，但是考虑到（~~好吧，╮(╯-╰)╭，其实是我懒~~）慢慢找实在是太麻烦了，所以我们直接在main文件里添加（这部分你可以先`hexo s`打开浏览器进行调试到你喜欢的样式，然后再复制相应的样式表到文件中）如下代码：
-```
+
+```css
 .sub-menu {
     display: none;
     position: relative;
@@ -128,7 +129,8 @@ li.nav-item {
 
 打开主题配置文件`fluid_config.yml`，在菜单部分以“_分类_”菜单为例我们做如下的改动
 submenu指定二级菜单，和一级菜单类似，**最后用[]括起来！！！**
-```
+
+```yaml
 navbar:
   blog_title:  # 导航栏左侧的标题，为空则按 hexo config.title 显示
   menu:  # 可自行增减，key 用来关联 languages/*.yml，如不存在关联则显示 key 本身的值；icon 是 css class，可以省略；增加 name 可以强制显示指定名称；submenu指定二级菜单，和一级菜单类似，最后用[]括起来！！！
