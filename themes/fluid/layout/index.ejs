@@ -72,15 +72,12 @@ page.banner_mask_alpha = theme.index.banner_mask_alpha
         <% } %> -->
         <% if(theme.index.post_meta.tag && post.tags.length) { %>
           <div class="post-meta mr-3 post-tags">
-            <% var number2 = 0 %>
+
             <% post.tags.each(function(tag){ %>              
-              <% number2 += 1 %>
-              <% if(number2 > 1) { %>
-                <svg t="1627804859140" class="icon" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="3627" width="200" height="200"><path d="M209.1 651.9c-13.3 0-24.2-10.8-24.2-24.2v-80.5c0-13.3 10.8-24.2 24.2-24.2s24.2 10.8 24.2 24.2v80.5c0 13.4-10.8 24.2-24.2 24.2z" fill="#3778FF" p-id="3628"></path><path d="M305.8 795.1l188.1-200.4c9.1-9.8 26.1-9.8 35.2 0l47.3 50.4 31.7-33.8 181.5 193.4V112.2H305.8v682.9z" fill="#91B4FF" p-id="3629"></path><path d="M813.2 957.5c-6.6 0-13-2.7-17.6-7.6L510.9 646.5 226.1 949.9c-6.8 7.2-17.2 9.6-26.5 5.9-9.2-3.6-15.3-12.6-15.3-22.5V703.6c0-13.3 10.8-24.2 24.2-24.2s24.2 10.8 24.2 24.2v168.7l260.6-277.6c9.1-9.8 26.1-9.8 35.2 0l260.6 277.6V112.2H232.7V456c0 13.3-10.8 24.2-24.2 24.2s-24.2-10.8-24.2-24.2V88c0-13.3 10.8-24.2 24.2-24.2h604.7c13.3 0 24.2 10.8 24.2 24.2v845.3c0 9.9-6.1 18.8-15.3 22.5-2.9 1.2-5.9 1.7-8.9 1.7z" fill="#3778FF" p-id="3630"></path></svg>
-              <% } %>
-              <i class="post-eachtag">
+              <svg t="1627804859140" class="icon" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="3627" width="200" height="200"><path d="M209.1 651.9c-13.3 0-24.2-10.8-24.2-24.2v-80.5c0-13.3 10.8-24.2 24.2-24.2s24.2 10.8 24.2 24.2v80.5c0 13.4-10.8 24.2-24.2 24.2z" fill="#3778FF" p-id="3628"></path><path d="M305.8 795.1l188.1-200.4c9.1-9.8 26.1-9.8 35.2 0l47.3 50.4 31.7-33.8 181.5 193.4V112.2H305.8v682.9z" fill="#91B4FF" p-id="3629"></path><path d="M813.2 957.5c-6.6 0-13-2.7-17.6-7.6L510.9 646.5 226.1 949.9c-6.8 7.2-17.2 9.6-26.5 5.9-9.2-3.6-15.3-12.6-15.3-22.5V703.6c0-13.3 10.8-24.2 24.2-24.2s24.2 10.8 24.2 24.2v168.7l260.6-277.6c9.1-9.8 26.1-9.8 35.2 0l260.6 277.6V112.2H232.7V456c0 13.3-10.8 24.2-24.2 24.2s-24.2-10.8-24.2-24.2V88c0-13.3 10.8-24.2 24.2-24.2h604.7c13.3 0 24.2 10.8 24.2 24.2v845.3c0 9.9-6.1 18.8-15.3 22.5-2.9 1.2-5.9 1.7-8.9 1.7z" fill="#3778FF" p-id="3630"></path></svg>
+              <p class="post-eachtag">
                 <a href="<%- url_for(tag.path) %>"><%= tag.name %></a>
-              </i>
+              </p>
             <% }) %>
           </div>
         <% } %>
@@ -90,34 +87,3 @@ page.banner_mask_alpha = theme.index.banner_mask_alpha
 <% }) %>
 
 <%- partial('_partial/paginator') %>
-
-
-<!-- <script>
-  (function(){
-      //1、随机色的函数-rgb
-      function getRandomColor(){
-          var rgb='rgb('+Math.floor(Math.random()*200)+','
-                   +Math.floor(Math.random()*230)+','
-                   +Math.floor(Math.random()*255)+')';
-          console.log(rgb);
-          return rgb;
-      }
-
-      // 随机浅色获取
-      // function getRandomColor2() {
-      //   return '#' +
-      //     (function(color) {
-      //       return(color += '0123401234abcabc' [Math.floor(Math.random() * 16)]) &&
-      //         (color.length == 6) ? color : arguments.callee(color);
-      //     })('');
-      // }
-
-//    获取按钮
-      // var btn_one=document.querySelector("#btn-one");
-      var poat_tag=document.querySelectorAll(".post-eachtag");
-      for(var i=0;i<poat_tag.length;i++){
-                poat_tag[i].style.backgroundColor=getRandomColor();
-            }
-      // post_tag.style.backgroundColor=getRandomColor();
-    })()
-</script> -->
