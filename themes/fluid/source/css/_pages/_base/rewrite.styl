@@ -165,6 +165,9 @@
   a
     color var(--post-link-color)
 
+  hr
+    height .2em
+    margin 2rem 0
 
   strong
     font-weight bold
@@ -225,16 +228,21 @@
       border-top-left-radius 0
       border-bottom-left-radius 0
 
+  hr
+    height 0
+    margin 2rem 0
+    background-color initial
+    border-top-width 2px
+    border-top-style solid
+    border-top-color rgba(0, 0, 0, .1)
 
-
-  figure.highlight
+figure.highlight
   position relative
 
   table
     border 0
     margin 0
     width auto
-    display -webkit-box
     border-radius 3px
 
   td
@@ -537,40 +545,3 @@ mjx-container, .mjx-container
   white-space nowrap
   overflow hidden
   text-overflow ellipsis
-
-
-/* 美化 hr 样式 */
-hr {
-    position: relative;
-    left: 0px;
-    margin: 2rem auto;
-    width: calc(100% - 4px);
-    border: 2px dashed #a4d8fa;
-    background: #fff;
-}
-
-hr {
-    box-sizing: content-box;
-    height: 0;
-    overflow: visible;
-}
-
-hr:before {
-    position: absolute;
-    top: -10px;
-    left: 5%;
-    z-index: 1;
-    color: #49b1f5;
-    content: '\f0c4';
-    font: normal normal normal 14px/1 FontAwesome;
-    font-size: 20px;
-    -webkit-transition: all 1s ease-in-out;
-    -moz-transition: all 1s ease-in-out;
-    -o-transition: all 1s ease-in-out;
-    -ms-transition: all 1s ease-in-out;
-    transition: all 1s ease-in-out;
-}
-
-hr:hover::before{
-	left: 95%;
-}
