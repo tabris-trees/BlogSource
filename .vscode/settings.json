@@ -1,3 +1,6 @@
 {
-    
+    "[markdown]": {
+        "editor.wordWrap": "on",
+        "editor.quickSuggestions": true
+    }
 }
