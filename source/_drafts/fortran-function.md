@@ -65,7 +65,7 @@ end subroutine sub
 
 ---
 
-# 自定义函数
+# 自定义函数🍉
 
 自定义函数和子程序大体上是相同的，除了以下两点：
 
@@ -98,7 +98,7 @@ end
 
 ---
 
-# 全局变量（COMMON）
+# 全局变量（COMMON）🍎
 
 `COMMON`是Fortran 77中使用“全局变量”的办法，用来定义一块共享的内存空间，其一般的结构如下：
 
@@ -147,7 +147,7 @@ end block data name ! 和此前一样，可以只写end或者end block data
 
 ---
 
-# 函数中的变量
+# 函数中的变量🍑
 
 这里的函数包括了自定义函数和子程序两种类似的结构，这一节主要是参数传递过程中的注意事项和部分特殊的参数传递过程。所谓注意事项，最重要的一点无非是要注意“<span style="background: yellow;">参数类型是否正确</span>”
 
@@ -259,7 +259,7 @@ end
 
 ---
 
-# 参数的特殊使用方法
+# 参数的特殊使用方法🍇
 
 ## 参数属性
 
@@ -331,4 +331,269 @@ call sub(1,2,3)
 
 {% note seccess %}
 也许有时候我们需要设置函数参数的默认值，在Fortran中似乎没有什么好用的命令，但是通过在子程序中设置`if`结构依然可以做到相关的要求。即：做一个有无输入的逻辑判断，没有外界输入时就程序内部赋予一个默认值。
+{% endnote %}
+
+---
+
+# 特殊的函数类型🍌
+
+{% note primary %}
+Fortran 90中，除了一般使用的正常函数之外，还可以特别指定成`RECURSIVE`、`PURE`、`ELEMENTAL`三种类型之一。`RECURSIVE`是让函数自己调用自己，也就是“递归”；后两者是用来做并行处理以及设置数组时使用的。
+{% endnote %}
+
+## 递归（`RECURSIVE`）
+
+能够递归的函数需要有一个必要条件，<span style='background: yellow;'>递归函数每次被调用执行时，函数中所声明的局部变量（非传递进来的参数或者没有做`save`的变量）都会使用不同的内存地址</span>。简单的说就是每次调用函数时变量都是独立存在的。
+
+```fortran
+recursive integer function func(var) result(ans)
+! 用recursive表示该函数可以递归
+! result（ans）表示该函数的返回值用ans变量代替原来的fact
+! result对于每一个自定义函数都可以使用，但是递归函数必须要有！
+```
+
+在不设置`recursive`的时候，也可以用一种“间接递归”的方法来完成递归，也就是现在函数中调用另外一个函数，再在这另一个函数中调用自己，但是这种方法在某些编译器环境下会出现错误，因为它会把每次调用函数的局部变量放在同一个内存地址。
+
+## 内部函数
+
+Fortran 90可以定义某些函数只能在特定的函数中被调用，其基本结构为：
+
+```Fortran
+program main \ subroutine sub \ function func
+    ...
+    ...
+    contains ! contains后面开始写局部函数
+        subroutine localsub ! 这里的函数只能在包含它的函数中被调用
+            ...
+            ...
+        end subroutine
+
+        function localfunc ! 同样只能在包含它的函数中被调用
+            ...
+            ...
+        end function
+end
+```
+
+## `PURE`函数
+
+在函数声明前加上`pure`代码即可，但是使用pure函数有诸多限制：
+  
+- pure函数的参数必须都是只读`intent(in)`属性；
+- pure子程序的每一个参数都要赋予属性；
+- pure函数不能使用`save`；
+- pure函数中所包含的内部函数也必须全都是pure函数
+- pure函数中不能使用`stop` \ `print`及跟输入输出相关的命令（`read` \ `write` \ `open` \ `close` \ `backspace` \ `endfile` \ `rewind` \ `inquire`等等）
+- pure函数只能读取不能改变全部变量的值
+
+上面的这些限制，全部都是为防止在并行计算时出现一些奇怪的结果。比如说，同时执行A、B函数，两者都有在屏幕上输出信息的功能，这个时候就可能出现两个函数的结果混合在一起的错误结果。
+
+## `ELEMENTAL`函数
+
+使用方法和pure函数相同，也可以用来做并行计算，限制也与pure函数相同，除此之外它还多了一个功能，对数组进行设置（同时也多了一个限制：<span style='background: yellow;'>参数不能是数组</span>。），下面举个栗子🌰：
+
+```fortran
+integer a(10)
+a=func(a)
+! 如果func是一个elemental函数，这段程序与下面的循环等价：
+do i=1,10
+    a(i) = func(a(i))
+end do
+```
+
+---
+
+# MODULE🍒
+
+## 主要结构
+
+`module`可以用来封装程序模块，通常用来把程序中具备相关功能的函数和变量封装到一起。其语法如下：
+
+```fortran
+module module_name ! 对模块的定义必须放到最前面
+    ...
+    ...
+end [module [module_name]]
+
+program main
+    use module_name ! 使用前面定义的模块
+    implicit none
+    ...
+    ...
+end
+
+subroutine sub
+    use module_name
+    implicit none
+    ...
+    ...
+end
+```
+
+上面的结构是在同一个文件中使用module模块，一般来说我们都是在一个代码文件中定义好所需要使用的函数和子程序，再在另一个文件中使用，这就类似于Python中的`import`模块的使用，这会在后面讲到。
+
+## MODULE中的函数
+
+在MODULE中编写函数，其结构如下：
+
+```fortran
+module module_name
+    ... ! 先写声明相关程序代码
+    ...
+contains ! contains 后开始写函数
+    subroutine sub_name
+        ...
+        ...
+    end subroutine [sub_name] ! subroutine 不能省
+
+    function func_name
+        ...
+        ...
+    end function [func_name] ! function 不能省
+end [module]
+```
+
+还有一个比较方便的一点是：在同一个MODULE中，函数可以直接使用其他地方所声明的变量：
+
+```Fortran
+module tool
+    implicit none
+    integer :: a ! 此处声明了a变量
+    ...
+    ...
+contains
+    subroutine add()
+        implicit none
+        a = a+1
+    ...
+    ......
+```
+
+## 一些不太常见的功能
+
+### `ENTRY`
+
+`ENTRY`：为函数提供一个新的入口，举个栗子🌰:
+
+```fortran
+program main
+    implicit none
+
+    call sub
+    call mid
+
+    stop
+end
+
+subroutine sub()
+    implicit none
+
+    write(*,*) "hello."
+    entry mid() ! 提供另一个入口
+    write(*,*) "Good morning!"
+
+    return
+end
+```
+
+其输出为：
+
+```terminal
+ hello.
+ Good morning!
+ Good morning!
+```
+
+### `RETURN`
+
+特殊的`RETURN`：提供额外的折返点，举个栗子🌰：
+
+```fortran
+program main
+    implicit none
+    real num
+
+    write(*,*)"please input a number："
+    read(*,*)num
+    call sub_return(num,*1,*2) ! 具体的折返点输入形式：‘*’ + 行代码
+    write(*,*)"Default return"
+    stop
+    1 write(*,*)"Return 1"
+    stop
+    2 write(*,*)"Return 2"
+    stop
+end
+
+subroutine sub_return(num,*,*) ! 后面的‘*’号表示输入的折返点参数，几个‘*’表示几个折返点
+    implicit none
+    real num
+
+    if (num >= 1) then
+        write(*,*)">=0"
+        return ! 返回到默认的折返点
+    else if (num < -1) then
+        write(*,*) "<-1"
+        return 1 ! 返回到特定的第一个折返点（行代码为1的位置）
+    else
+        write(*,*) "-1<=num<0"
+        return 2 ! 返回到特定的第二个折返点（行代码为2的位置）
+    end if
+end subroutine
+```
+
+分别运行三次，输入不同的值，其运行结果为：
+
+```terminal
+>>>
+ please input a number：
+2
+ >=0
+ Default return
+>>>
+ please input a number：
+-3
+ <-1
+ Return 1
+>>>
+ please input a number：
+-0.5
+ -1<=num<0
+ Return 2
+```
+
+---
+
+# 使用多个文件🥝
+
+{% note primary %}
+通常情况下，我们会把具有相关功能的函数编写到不同的文件中，这样做有以下几个好处：
+
+- 独立文件中的函数，可以拿给其他的程序使用；
+- 减少单个程序中的代码（此时与`MODULE`类似）；
+- 可以加快编译速度，修改其中一个文件时，编译器只需要重新编译这一个文件就好了（这一点要和编译器的使用结合起来）。
+
+{% endnote %}
+
+## `INCLUDE`
+
+`INCLUDE`命令可以在程序代码中插入另一个文件中的内容。现在假如我有两个文件：“mian.f90”以及“sub.f90”，后者中含有前者所需要使用的子程序代码，我们只需要在前者的代码中（**任何位置**）加入：
+
+```Fortran
+include 'sub.f90'
+```
+
+这样结果就相当于两个文件中的代码是写在同一个文件中的。
+
+## 函数库
+
+具有特殊功能的一组函数，可以编译成"*.LIB"来给其他人使用。这样的文件经过编译，没有办法读出里面的初始程序代码，但可以通过`use *.LIB`的方法来使用其中的各种函数（与Python的函数库类似）。
+
+---
+
+# 写在最后🍈
+
+{% note seccess %}
+五百多行，四天时间，这大概是我写的最多的一次了
+
+![我顶得住](https://file.tabirstrees.top/blogfile/EMO-wodingdezhu.jpg)
 {% endnote %}
