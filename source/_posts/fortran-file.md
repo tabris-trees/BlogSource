@@ -1,9 +1,15 @@
 ---
-title: fortran-file
+title: Fortran语言学习——文件
 tags:
-- 编程
-- Fortran
+  - 编程
+  - Fortran
+date: 2021-09-28 16:21:09
+index_img: https://hexo-1301133429.cos.ap-chengdu.myqcloud.com/20210707235432.png
+banner_img:
+categories: [笔记,编程,Fortran]
+descripte: 在Fortran中使用文件！！！
 ---
+
 
 {% note primary %}
 计算机有两项功能，一项是计算、处理数据；一项是保存数据。前面的内容都是在讨论如何处理数据，现在来讨论如何保存数据。
@@ -55,11 +61,11 @@ write(10,*) "hello,World!"
 6. err=label，文件打开错误时，程序会跳转到label所指的行代码继续执行；
 7. iostat=var，将文件打开的状态赋值给var变量（这意味着要对其进行声明）：
 
-       var > 0 : 读取操作发生错误；
-       var < 0 : 文件终了；
-       var = 0 : 文件读取正常。
+      - var > 0 : 读取操作发生错误；
+      - var < 0 : 文件终了；
+      - var = 0 : 文件读取正常。
 
-8. action='read'（**只读**）\'write'（**只写**）\'readwrite'（**读写皆可**，默认）。
+1. action='read'（**只读**）\'write'（**只写**）\'readwrite'（**读写皆可**，默认）。
 
 ## `WRITE`，`READ`的使用
 
@@ -80,24 +86,24 @@ write(10,*) "hello,World!"
 2. FILE=filename，文件名；
 3. IOSTAT=stat，查询文件读取情况，会设置一个整数给后面的变量：
    
-       stat>0   文件读取操作错误
-       stat=0   文件读取操作正常
-       stat<0   文件终了
+      - stat>0   文件读取操作错误
+      - stat=0   文件读取操作正常
+      - stat<0   文件终了
 
-4. ERR=errlabel，发生错误时会转移到复制的代码行继续执行程序；
-5. EXIST=exist，检查文件是否存在，返回布尔变量，真表示存在，假值表示不存在；
-6. OPEND=opened，检查文件是否用已经用open打开，返回布尔变量，真表示已经打开，假表示尚未打开；
-7. NUMBER=number，用文件名来查询这个文件所给定的代码；
-8. NAMED=named，查询文件是否取了名字，也就是检查文件是否为临时保存盘，返回值为逻辑数；
-9. ACCESS=access，检查文件的读取格式，返回一个字符串；
-10. SEQUENTIAL=sequential，查看文件是否使用顺序格式，会返回一个字符串；
-11. DIRECT＝direct，查看文件是否使用直接格式，会返回一个字符串；
-12. FORM=form，查看文件的保存方法，返回字符串；
-13. FORMATTED=fmt，查看文件是否是文本文件，返回字符串；
-14. UNFORMATTED=fmt，查看文件是否是二进制文件，返回字符串；
-15. RECL=length，返回open文件时recl栏的设置值
-16. NEXTREC=nr，返回下一次文件读写的位置；
-17. BLANK=blank，返回值是字符串，用来查看open文件时的blank参数所给定的字符串值；
+1. ERR=errlabel，发生错误时会转移到复制的代码行继续执行程序；
+2. EXIST=exist，检查文件是否存在，返回布尔变量，真表示存在，假值表示不存在；
+3. OPEND=opened，检查文件是否用已经用open打开，返回布尔变量，真表示已经打开，假表示尚未打开；
+4. NUMBER=number，用文件名来查询这个文件所给定的代码；
+5. NAMED=named，查询文件是否取了名字，也就是检查文件是否为临时保存盘，返回值为逻辑数；
+6. ACCESS=access，检查文件的读取格式，返回一个字符串；
+7.  SEQUENTIAL=sequential，查看文件是否使用顺序格式，会返回一个字符串；
+8.  DIRECT＝direct，查看文件是否使用直接格式，会返回一个字符串；
+9.  FORM=form，查看文件的保存方法，返回字符串；
+10. FORMATTED=fmt，查看文件是否是文本文件，返回字符串；
+11. UNFORMATTED=fmt，查看文件是否是二进制文件，返回字符串；
+12. RECL=length，返回open文件时recl栏的设置值
+13. NEXTREC=nr，返回下一次文件读写的位置；
+14. BLANK=blank，返回值是字符串，用来查看open文件时的blank参数所给定的字符串值；
     
 **以下是fortran 90的添加功能：**
 
@@ -116,8 +122,8 @@ write(10,*) "hello,World!"
 3. REWIND(UNIT=number, ERR=errlabel, IOSTAT=iostat)，把文件的读写位置倒回到文件开头；
 4. CLOSE(UNIT=number, STATUS=string, ERR=errlabel, IOSTAT=)，把文件关闭，不要进行读写操作；
    
-       STAT='KEEP'      会在文件关闭后，保留这个文件。是默认状态。
-       STAT='DELETE'    在文件关闭后，消除这个文件。
+      - STAT='KEEP'      会在文件关闭后，保留这个文件。是默认状态。
+      - STAT='DELETE'    在文件关闭后，消除这个文件。
 
 {% note danger %}
 - 程序结束时候会自动关闭文件，不过最好要养成自己关闭文件的习惯。
@@ -161,7 +167,9 @@ write(*, *) string
 
 结果是: 
          
-      2+ 3= 5
+```terminal
+2+ 3= 5
+```
 
 还可以经过`read`命令从字符串读入数据：
 
@@ -192,14 +200,18 @@ write(*,nml=nl_name) ! 输出nl_name这个 namelist
 
 输出 namelist 时不能带有格式，因为其格式在编译器中已经设置好了，由编译器决定，一般来说是：
 
-      &nl_name （&符号 + namelist的名字）
-      A       =           1,  （输出变量的名称、等号、内容）
-      B       =           2,  （变量之间用逗号或者空格进行分隔）
-      C       =           3
-      /  （最后用除号结束）
+```terminal
+&nl_name （&符号 + namelist的名字）
+A       =           1,  （输出变量的名称、等号、内容）
+B       =           2,  （变量之间用逗号或者空格进行分隔）
+C       =           3
+/  （最后用除号结束）
+```
 
 输入时也要按照类似的格式进行输入：
 
-      &nl_name a=1 b=2 c=3 /
+```terminal
+&nl_name a=1 b=2 c=3 /
+```
 
 输入时可以不输入所有的变量，也可以不按照顺序输入变量，甚至可以重复输入变量的值（以最后一次输入的值为准）。
