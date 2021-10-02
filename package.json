@@ -28,9 +28,11 @@
     "hexo-renderer-ejs": "^1.0.0",
     "hexo-renderer-kramed": "^0.1.2",
     "hexo-renderer-mathjax": "^0.6.0",
+    "hexo-renderer-pug": "^2.0.0",
     "hexo-renderer-stylus": "^1.1.0",
     "hexo-server": "^1.0.0",
     "hexo-symbols-count-time": "^0.7.0",
+    "hexo-theme-butterfly": "^3.8.4",
     "hexo-wordcount": "^6.0.1",
     "react": "^17.0.2",
     "video.js": "^7.7.6"

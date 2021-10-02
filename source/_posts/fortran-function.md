@@ -6,9 +6,9 @@ tags:
   - 函数语法
 date: 2021-09-13 22:49:53
 index_img: https://hexo-1301133429.cos.ap-chengdu.myqcloud.com/20210707235432.png
-banner_img:
+cover: https://hexo-1301133429.cos.ap-chengdu.myqcloud.com/20210707235432.png
 categories: [笔记,编程,Fortran]
-descripte: 在Fortran中使用函数！！！
+description: 在Fortran中使用函数！！！
 ---
 
 

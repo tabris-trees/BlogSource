@@ -2,12 +2,12 @@
 title: comment-mail-style
 date: 2021-08-13 11:42:08
 index_img: https://hexo-1301133429.cos.ap-chengdu.myqcloud.com/comment-mail-style20210813114545.png
-banner_img:
+cover: https://hexo-1301133429.cos.ap-chengdu.myqcloud.com/comment-mail-style20210813114545.png
 tags:
 - hexo
 - web技术
 categories: [资源,模板]
-descripte: 评论邮件📧通知样式模板(很丑,慎入!!!)
+description: 评论邮件📧通知样式模板(很丑,慎入!!!)
 ---
 
 {% note primary %}

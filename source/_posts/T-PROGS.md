@@ -1,13 +1,14 @@
 ---
 title: T-PROGS
 index_img: 'https://hexo-1301133429.cos.ap-chengdu.myqcloud.com/20210110170339.png'
+cover: https://hexo-1301133429.cos.ap-chengdu.myqcloud.com/20210110170339.png
 tags:
   - GMS
   - 地下水溶质运移模型
   - 地统计
 categories:
   - [笔记,地下水数值模拟]
-descripte: T-PROGS简介
+description: T-PROGS简介
 date: 2021-01-10 16:51:06
 math: true
 ---

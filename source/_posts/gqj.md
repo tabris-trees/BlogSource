@@ -2,14 +2,14 @@
 title: 宫崎骏电影合集(持续更新中......)
 date: 2020-07-14 15:07:05
 index_img: https://hexo-1301133429.cos.ap-chengdu.myqcloud.com/宫崎骏合集.png
-banner_img: https://hexo-1301133429.cos.ap-chengdu.myqcloud.com/宫崎骏合集.png
+cover: https://hexo-1301133429.cos.ap-chengdu.myqcloud.com/宫崎骏合集.png
 tags: 
 - 动漫
 - 童话
 - 宫崎骏
 categories:
 - [资源,动漫,宫崎骏]
-descripte: 充满幻想的作品中有着热爱的幸福(链接不可用)
+description: 充满幻想的作品中有着热爱的幸福(链接不可用)
 top: true
 ---
 # 充满幻想的作品中热爱的幸福

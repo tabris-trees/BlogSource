@@ -7,9 +7,9 @@ tags:
   - 数值模拟
 categories:
   - [资源,软件]
-descripte: 地下水领域用的软件GMS(链接不可用)
+description: 地下水领域用的软件GMS(链接不可用)
 date: 2021-02-06 13:45:55
-banner_img:
+cover: https://hexo-1301133429.cos.ap-chengdu.myqcloud.com/16213678437069085683738921793155.jpg
 ---
 
 ![GMS](https://hexo-1301133429.cos.ap-chengdu.myqcloud.com/16213678437069085683738921793155.jpg)

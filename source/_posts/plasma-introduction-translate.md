@@ -7,9 +7,9 @@ tags:
   - 文献翻译
 date: 2021-08-19 12:18:57
 index_img: https://hexo-1301133429.cos.ap-chengdu.myqcloud.com/plasma-introduction-translateindex-img.jpg
-banner_img:
+cover: https://hexo-1301133429.cos.ap-chengdu.myqcloud.com/plasma-introduction-translateindex-img.jpg
 categories: [笔记,等离子体物理]
-descripte: 等离子体物理基础(翻译)
+description: 等离子体物理基础(翻译)
 ---
 
 {% note primary %}
@@ -85,20 +85,27 @@ $$
 $$
 \lambda_{\mathrm{D}}=\left(\frac{\varepsilon_{0} k_{\mathrm{B}} T_{\mathrm{e}}}{e^{2} n_{\mathrm{e}}}\right)^{1 / 2}
 $$
-该长度的数值可以由下式给出：$\lambda_{\mathrm{D}} / \mathrm{m}=7.434 \times 10^{3}\left(k_{\mathrm{B}} T_{\mathrm{e}} / \mathrm{eV}\right)^{1 / 2} /\left(n_{\mathrm{e}} / \mathrm{m}^{-3}\right)^{1 / 2}$（见图二）
+该长度的数值可以由下式给出（见图二）:
+$$
+\lambda_{\mathrm{D}} / \mathrm{m}=7.434 \times 10^{3}\left(k_{\mathrm{B}} T_{\mathrm{e}} / \mathrm{eV}\right)^{1 / 2} /\left(n_{\mathrm{e}} / \mathrm{m}^{-3}\right)^{1 / 2}
+$$
 
 ![不同温度下德拜长度与电子数之间的关系](https://file.tabirstrees.top/blogfile/ITP/Debye%20length%20versus%20plasma%20density%20and%20electron%20temperature.jpg)
 
 <center>图二 不同温度下德拜长度与电子数之间的关系</center>
 
 另一方面，我们可能会问在给定长度$L$上等离子体可能偏离电中性的总量是多少$\Delta n = |n_e-n_i|$。再次强调，我们只有热能是可用的，（热能转化为电势能）因此有：
+
 $$
 \frac{1}{2} k_{\mathrm{B}} T_{\mathrm{e}} \approx \frac{1}{2} \frac{e^{2}}{\varepsilon_{0}} \cdot \Delta n \cdot L
 $$
-利用$k_{\mathrm{B}} T_{\mathrm{e}}$与$\lambda_D$的关系我们可以得到：
+
+利用$k_{\mathrm{B}}T_{\mathrm{e}}$ 与 $\lambda_D$ 的关系我们可以得到：
+
 $$
 \frac{\Delta n}{n} \approx\left(\frac{\lambda_{\mathrm{D}}}{L}\right)^{2}
 $$
+
 以此来估计$\Delta n$的大小。
 
 我们可以假设电中性的条件为$\Delta n \ll n_{\mathrm{e}} ,n_\mathrm{i}$，根据方程（10）这就等价于$L \gg \lambda_{\mathrm{D}}$。这意味着为了满足形成等离子体的条件，电离气体的延伸必须要远大于德拜-休克尔长度，等离子体的电中性被定义在一个宏观尺度上，如果我们从宏观尺度来看等离子体，会发现随着尺度的减小，其偏离电中性的程度逐渐增加。

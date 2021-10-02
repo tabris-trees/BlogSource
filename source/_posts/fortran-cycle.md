@@ -6,9 +6,10 @@ tags:
   - 循环语法
 date: 2021-08-12 10:19:52
 index_img: https://i.loli.net/2021/08/12/EL1VYP8nebFrvdS.png
+cover: https://i.loli.net/2021/08/12/EL1VYP8nebFrvdS.png
 categories:
 - [笔记,编程,Fortran]
-descripte: 在Fortran中使用循环语法
+description: 在Fortran中使用循环语法
 ---
 
 ![logo-fortran](https://file.tabirstrees.top/blogfile/logo-fortran.png)

@@ -5,9 +5,9 @@ tags:
   - Fortran
 date: 2021-09-03 11:16:48
 index_img: https://hexo-1301133429.cos.ap-chengdu.myqcloud.com/fortran-array-20210903111923.png
-banner_img:
+cover: https://hexo-1301133429.cos.ap-chengdu.myqcloud.com/fortran-array-20210903111923.png
 categories: [笔记,编程,Fortran]
-descripte: Fortran中数组（array）的操作！
+description: Fortran中数组（array）的操作！
 
 ---
 
