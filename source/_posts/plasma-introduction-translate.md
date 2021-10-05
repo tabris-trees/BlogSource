@@ -217,3 +217,23 @@ $$
 \vec{j}_{\mathrm{e}} = q n_{\mathrm{q}} \vec{v}_{\mathrm{D}} = q^2 n_{\mathrm{q}} \vec{E} = \sigma \vec{E} 
 
 $$
+这里我们用Allis的定义来替换 $\vec{v}_{\mathrm{D}}$ 同时以此来定义 **<span style='background: pink;'>电导率</span> $\sigma$**（通过这样定义的电导率始终都是一个正数）。在弱电离等离子体中，摩檫力由中性的带电粒子碰撞产生，对于电子来说，我们可以从动理论得到：
+$$
+
+b_{\mathrm{e}}=\left\langle 1 / m_{\mathrm{e}} v_{\mathrm{en}}\right\rangle=\left\langle 1 / m_{\mathrm{e}} Q_{\mathrm{en}} v_{\mathrm{e}}\right\rangle \propto 1 / \sqrt{m_{\mathrm{e}}}
+
+$$
+角括号代表的是基于电子分布函数的平均量， $\nu_{en}$ 是电子与中性粒子之间角动量转移碰撞的碰撞频率， $Q_{en}$ 是角动量转移时各自的 <span style='background: red;'>横截面（cross-section）</span> ， $\nu_{e}$ 是单个电子的速度，上式中的平均被定义为：
+$$
+
+\left\langle 1 / m_{\mathrm{e}} Q_{\mathrm{en}} v_{\mathrm{en}}\right\rangle=\iiint_{v_{\mathrm{s}}}\left(1 / m_{\mathrm{e}} Q_{\mathrm{en}} v_{\mathrm{en}}\right) f\left(\overline{v_{\mathrm{e}}}\right) \mathrm{d}^{3} v_{\mathrm{e}}
+
+$$
+
+{% note danger %}
+开始看不懂了，先去进修几天再回来看看能不能看懂。。。
+
+![渚薰的凝视](https://gss0.baidu.com/-Po3dSag_xI4khGko9WTAnF6hhy/zhidao/pic/item/2e2eb9389b504fc2be749c68e4dde71190ef6db7.jpg)
+
+
+{% endnote %}
