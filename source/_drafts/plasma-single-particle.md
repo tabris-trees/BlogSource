@@ -1,4 +1,4 @@
 ---
-title: plasma-single particle
+title: 等离子体单粒子运动的方程推导以及相关现象
 tags:
 ---
