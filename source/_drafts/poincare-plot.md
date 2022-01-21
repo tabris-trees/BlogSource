@@ -1,0 +1,4 @@
+---
+title: poincare plot
+tags:
+---
