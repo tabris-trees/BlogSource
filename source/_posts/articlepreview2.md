@@ -28,11 +28,11 @@ math: true
 
 # Arxiv 🍓
 
-## 1. The Super-Alfv$\rm{\'{e}}$nic Rotational Instability in accretion disks about black holes
+## 1. The Super-Alfvenic Rotational Instability in accretion disks about black holes
 
 >[The Super-Alfvenic Rotational Instability in accretion disks about black holes](https://arxiv.org/abs/2201.11551) —— Hans Goedbloed, Rony Keppens
 
-关于黑洞，中子星或者原行星等吸积盘不稳定性的理论通过最近 *Spectral Web* 的方法被重新审视，圆柱形的吸积盘微分方程是由前向和后向多普勒移动的连续阿尔芬谱方程 $\Omega^{\pm}_{A} \equiv m\Omega \pm \omega_{A} $ 所支配的，其中， $\omega_A$表示统计的阿尔芬频率。至关重要的一点是考虑非轴对称 $(m \neq 0)$ 以及多普勒框架(<span style='background: pink'>Doppler frames</span>)超级阿尔芬旋转（转动）(<span style='background: pink'>rotation</span>) $(|m\Omega| \gg |\omega_A|)$ 。连续体具有$\Omega^{+}_{A}$以及$\Omega^{-}_A$的回旋频率，从而不同的连续体之间重叠，激发出 <span style='background: yellow'>超级阿尔芬回旋不稳定性</span> (**SARIs**)。对小规模不均匀性的进一步分析表明：两个阿尔芬奇点(<span style='background: pink'>singularities</span>)使得不稳定性的模缩小到远小于吸积盘宽度的范围内。大尺度非均匀性的产生将导致完全出乎意料的结果，也就是波数 $|k| \gg |m|$，在一个实轴上的宽的邻域内任何复数形式的 $\omega$ 都是一个近似的“特（本）征值”。其与本征模之间的差异在于其激发模的互补(<span style='background: pink'>complementary</span>)能量很小，$W\_{com} \leq c$，$c$是计算的机器精度。这就产生了大量二维连续体的准离散模：*准连续 SARIs* 。我们推测，磁化吸积盘中三维湍流的发生不是由离散轴对称磁旋转不稳定性的激发控制的，而是由这些二维准离散非轴对称连续体的超阿尔芬回旋不稳定性模式的激发控制的。
+关于黑洞，中子星或者原行星等吸积盘不稳定性的理论通过最近 *Spectral Web* 的方法被重新审视，圆柱形的吸积盘微分方程是由前向和后向多普勒移动的连续阿尔芬谱方程 $\Omega^{\pm}\_{A} \equiv m\Omega \pm \omega\_{A} $ 所支配的，其中， $\omega\_A$表示统计的阿尔芬频率。至关重要的一点是考虑非轴对称 $(m \neq 0)$ 以及多普勒框架(<span style='background: pink'>Doppler frames</span>)超级阿尔芬旋转（转动）(<span style='background: pink'>rotation</span>) $(|m\Omega| \gg |\omega\_A|)$ 。连续体具有$\Omega^{+}\_{A}$以及$\Omega^{-}\_A$的回旋频率，从而不同的连续体之间重叠，激发出 <span style='background: yellow'>超级阿尔芬回旋不稳定性</span> (**SARIs**)。对小规模不均匀性的进一步分析表明：两个阿尔芬奇点(<span style='background: pink'>singularities</span>)使得不稳定性的模缩小到远小于吸积盘宽度的范围内。大尺度非均匀性的产生将导致完全出乎意料的结果，也就是波数 $|k| \gg |m|$，在一个实轴上的宽的邻域内任何复数形式的 $\omega$ 都是一个近似的“特（本）征值”。其与本征模之间的差异在于其激发模的互补(<span style='background: pink'>complementary</span>)能量很小，$W\_{com} \leq c$，$c$是计算的机器精度。这就产生了大量二维连续体的准离散模：*准连续 SARIs* 。我们推测，磁化吸积盘中三维湍流的发生不是由离散轴对称磁旋转不稳定性的激发控制的，而是由这些二维准离散非轴对称连续体的超阿尔芬回旋不稳定性模式的激发控制的。
 
 ![论文图选1](https://hexo-1301133429.cos.ap-chengdu.myqcloud.com/post/20220206174416.png)
 

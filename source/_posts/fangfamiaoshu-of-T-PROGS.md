@@ -8,7 +8,7 @@ date: 2021-05-19 02:16:26
 index_img: https://hexo-1301133429.cos.ap-chengdu.myqcloud.com/20210110170550.png
 cover: https://hexo-1301133429.cos.ap-chengdu.myqcloud.com/20210110170550.png
 categories:
-- [笔记,地下水数值模拟]
+- [科研,地下水数值模拟]
 description: '在T-PROGS中提供了五种方法方便我们构建马尔科夫链的转移概率矩阵，这五种方法各自适用于不同的情况，并且在操作上有着比较大的区别，现在通过对T-PROGS操作手册的翻译来大致介绍一下每一种方法的情况。'
 math: true
 ---

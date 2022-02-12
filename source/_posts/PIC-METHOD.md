@@ -6,7 +6,7 @@ tags:
 date: 2021-10-26 18:18:37
 index_img: https://tse3-mm.cn.bing.net/th/id/OIP-C.pwhXq_zNLgQ4rBYaBVqQrwHaDt?pid=ImgDet&rs=1
 cover: https://tse3-mm.cn.bing.net/th/id/OIP-C.pwhXq_zNLgQ4rBYaBVqQrwHaDt?pid=ImgDet&rs=1
-categories: [笔记,等离子体物理,模拟]
+categories: [科研,等离子体物理,模拟]
 description: 关于等离子体PIC模拟方法的理论知识(*^_^*)
 ---
 
