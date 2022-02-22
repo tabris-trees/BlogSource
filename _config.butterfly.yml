@@ -16,6 +16,7 @@ menu:
      Movie: /movies/ || fas fa-video
    链接(构建中...): /links/ || fas fa-link
    关于: /about/ || fas fa-heart
+   开往: https://travellings.link || fas fa-subway
 
 # Hide the child menu items in mobile sidebar
 hide_sidebar_menu_child: true
