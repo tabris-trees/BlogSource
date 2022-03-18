@@ -4,7 +4,7 @@ tags:
   - 等离子体
   - 波粒相互作用
 date: 2022-03-18 13:12:01
-index_img: https://pic4.zhimg.com/v2-3a14944ec6b1f6ebf7240431892a544f_r.jpg
+cover: https://pic4.zhimg.com/v2-3a14944ec6b1f6ebf7240431892a544f_r.jpg
 categories: [科研,等离子体物理,理论]
 description: 准线性理论推导阿尔芬波非共振加热过程中的温度各向异性(￣y▽￣)╭ Ohohoho.....
 ---
