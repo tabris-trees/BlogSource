@@ -27,11 +27,8 @@ cover: https://hexo-1301133429.cos.ap-chengdu.myqcloud.com/162136784370690856837
 为此，几番周折之后我找到了含有破解版的10.4.5版本，将其放到了我的onedrive网盘之中~~可以通过API权限的方式直接通过网页访问~~。
 
 {% note success %}
-[点击下载10.4.5版本](https://zfile.tabirstrees.top/directlink/3/%E8%BD%AF%E4%BB%B6/%E5%9C%B0%E4%B8%8B%E6%B0%B4%E6%95%B0%E5%80%BC%E6%A8%A1%E6%8B%9F%E8%BD%AF%E4%BB%B6/GMS/10.4.5/AquaveoGMS.zip)
+[点击下载10.4.5版本](https://tabristrees-my.sharepoint.com/:u:/g/personal/severus_tabristrees_onmicrosoft_com/ERSYHkUKfutGs-zfsKIuwe8BOPLpq_eXkqZd89zviOizkg?e=0CNJCH)
 该版本教程网址为：https://www.aquaveo.com/software/gms-learning-tutorialswww.aquaveo.com 基本上包括了所有的基础软件操作和可以实现的功能教程，也可以在这里找到所有对应的项目资源数据文件。
-
-[点击下载7.1版本（由学长提供）](https://zfile.tabirstrees.top/directlink/3/%E8%BD%AF%E4%BB%B6/%E5%9C%B0%E4%B8%8B%E6%B0%B4%E6%95%B0%E5%80%BC%E6%A8%A1%E6%8B%9F%E8%BD%AF%E4%BB%B6/GMS/GMS.rar)
-该版本的教程在安装时可以选择（默认）下载，安装完之后可以在安装目录下的tutorial文件夹中找到，包括了各种项目的数据资源文件。除此之外，学长提供的软件包里面还包括了一份中文翻译之后的软件教程，具体对应的版本还不是很清楚，不过基本都差不多能用，可以作为参考，推荐还是尽量阅读原始的英文教程。
 {% endnote %}
 
 有了这些东西之后可以相对快速的入门GMS，不用到处寻找软件教程以及相关书籍。but，这些tutorials都是全英文文档，对于不习惯看英文材料的同学可能不是很友好╮(╯▽╰)╭ 。
@@ -48,10 +45,10 @@ cover: https://hexo-1301133429.cos.ap-chengdu.myqcloud.com/162136784370690856837
 由于是开源软件，提供的都是Fortran语言的源代码，而USGS也相当~~“贴心”~~地提供了一系列关于如何使用的教程，我全部打包放在了我的云盘里一并提供在此：
 
 {% note success %}
-https://zfile.tabirstrees.top/directlink/3/%E8%BD%AF%E4%BB%B6/%E5%9C%B0%E4%B8%8B%E6%B0%B4%E6%95%B0%E5%80%BC%E6%A8%A1%E6%8B%9F%E8%BD%AF%E4%BB%B6/MODFLOW%E5%BC%80%E6%BA%90%E6%96%87%E4%BB%B6.zip
+文件被我脑抽删除了，链接无了o(╥﹏╥)o，还是去官网自己下载吧
 {% endnote %}
 
 # 总结一下嘛
 
-感觉写了一千多字<div class="heimu">可能还没有😂</div>的废话......下次一定整点有用的！
+感觉写了一千多字<span class="heimu">可能还没有😂</span>的废话......下次一定整点有用的！
 ![一张图而已，没什么好看的](http://image.tabirstrees.top/images/2021/02/06/E77C06B943FAD6398EAA3097BE3B80C1.jpg)
