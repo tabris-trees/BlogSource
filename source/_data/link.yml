@@ -6,11 +6,11 @@ class:
       link: https://foolishfox.cn
       avatar: https://cravatar.cn/avatar/808b2d2bcf421a7f3d99310c0dc3271a?d=identicon
       descr: Learing and Coding!
-    # 2:
-    #   name: xxxxxx
-    #   link: https://www.xxxxxxcn/
-    #   avatar: https://xxxxx/avatar.png
-    #   descr: xxxxxxx  
+    2:
+      name: Aifred
+      link: https://1024war.com/
+      avatar: https://1024war.top/wp-content/wphb-cache/gravatar/783/783f5f69553ef12f120c8bae62931204x300.jpg
+      descr: 我们的征途是星辰大海#  
 
 # class2:
 #   class_name: 链接无效

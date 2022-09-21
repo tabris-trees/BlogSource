@@ -44,3 +44,9 @@ EVA，永远的神！！！
 
 	Butterfly 主题升级到4.3.0
 {% endnote %}
+
+{% note info %}
+- 2022/07/30
+
+	更改了网站的字体(文字:`GenSen R`, `justfont`, `Nowar m`; 代码:`Fira code`)<span class='mohu'>似乎并没有起到效果(⊙o⊙)…</span>
+{% endnote %}

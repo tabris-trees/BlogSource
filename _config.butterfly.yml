@@ -554,13 +554,13 @@ activate_power_mode:
 
 # Mouse click effects: fireworks (鼠標點擊效果: 煙火特效)
 fireworks:
-  enable: true
+  enable: false
   zIndex: 9999 # -1 or 9999
   mobile: false
 
 # Mouse click effects: Heart symbol (鼠標點擊效果: 愛心)
 click_heart:
-  enable: false
+  enable: true
   mobile: false
 
 # Mouse click effects: words (鼠標點擊效果: 文字)
@@ -588,10 +588,10 @@ beautify:
 # Global font settings
 # Don't modify the following settings unless you know how they work (非必要不要修改)
 font:
-  global-font-size:
-  code-font-size:
-  font-family:
-  code-font-family:
+  global-font-size: 16px
+  code-font-size: 15px
+  font-family: GenSen R, justfont, Nowar m
+  code-font-family: 'Fira Code'
 
 # Font settings for the site title and site subtitle
 # 左上角網站名字 主頁居中網站名字
@@ -836,6 +836,12 @@ css_prefix: true
 # 插入代码到头部 </head> 之前 和 底部 </body> 之前
 inject:
   head:
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/tabris-trees/blogdepot/fonts.css" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/firacode@6.2.0/distr/fira_code.min.css" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/lxgw-wenkai-webfont@1.1.0/style.css" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/lxgw-wenkai-lite-webfont@1.1.0/style.css" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/lxgw-wenkai-tc-webfont@1.0.0/style.css" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/lxgw-wenkai-screen-webfont@1.1.0/style.css" />
     # - <link rel="stylesheet" href="/xxx.css">
   bottom:
     # - <script src="xxxx"></script>
