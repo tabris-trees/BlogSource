@@ -361,7 +361,7 @@ facebook_comments:
 # Twikoo
 # https://github.com/imaegoo/twikoo
 twikoo:
-  envId: https://hexo-comment-phi.vercel.app/
+  envId: https://twikoo.tabirstrees.top/
   region: ap-shanghai
   visitor: true
   option: window.location.pathname
