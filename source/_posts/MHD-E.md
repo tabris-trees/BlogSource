@@ -24,7 +24,7 @@ description: 基于王晓钢老师的《等离子体物理》第一章的内容�
 $$
 \begin{equation}
     \begin{aligned}
-        \frac{\partial{f}}{\partial{t}}+\bm{\dot{r}} \cdot \nabla f + \bm{\dot{v}} \cdot \frac{\partial f}{\partial \bm{v}} = 0
+        \frac{\partial{f}}{\partial{t}}+\vec{\dot{r}} \cdot \nabla f + \vec{\dot{v}} \cdot \frac{\partial f}{\partial \vec{v}} = 0
     \end{aligned}
 \end{equation}
 $$
@@ -36,7 +36,7 @@ $$
 $$
 \begin{equation}
     \begin{aligned}
-        \int \frac { \partial f } { \partial t } \mathrm{d} \bm{v}+ \int \bm{v} \cdot \frac { \partial f } { \partial \bm{r} } \mathrm{d} \bm{v} + \int \frac { q } { m } ( \bm{E} + \bm{v} \times \bm{B} ) \cdot \frac { \partial f } { \partial \bm{v} } \mathrm{d} \bm{v} = 0
+        \int \frac { \partial f } { \partial t } \mathrm{d} \vec{v}+ \int \vec{v} \cdot \frac { \partial f } { \partial \vec{r} } \mathrm{d} \vec{v} + \int \frac { q } { m } ( \vec{E} + \vec{v} \times \vec{B} ) \cdot \frac { \partial f } { \partial \vec{v} } \mathrm{d} \vec{v} = 0
     \end{aligned}
 \end{equation}
 $$
@@ -47,8 +47,8 @@ $$
 $$
 \begin{equation}
     \begin{aligned}
-        \int f \mathrm{d}\bm{v} &= n \\
-        \int f \bm{v} \mathrm{d}\bm{v} &= n\bm{u}
+        \int f \mathrm{d}\vec{v} &= n \\
+        \int f \vec{v} \mathrm{d}\vec{v} &= n\vec{u}
     \end{aligned}
 \end{equation}
 $$
@@ -56,31 +56,31 @@ $$
 方程（2）的前两项可以很简单的给出：
 $$
 \begin{equation}
-    \begin{gather*}
-        \int \frac{\partial f}{\partial t} \mathrm{d}\bm{v} = \frac{\partial n}{\partial t} \\[8pt]
-        \int \bm{v} \cdot \frac{\partial f}{\partial \bm{r}} \mathrm{d}\bm{v} = \frac{\partial }{\partial \bm{r}} \cdot (n\bm{u}) = \nabla \cdot (n\bm{u})
-    \end{gather*}
+    \begin{aligned}
+        \int \frac{\partial f}{\partial t} \mathrm{d}\vec{v} &= \frac{\partial n}{\partial t} \\[8pt]
+        \int \vec{v} \cdot \frac{\partial f}{\partial \vec{r}} \mathrm{d}\vec{v} &= \frac{\partial }{\partial \vec{r}} \cdot (n\vec{u}) = \nabla \cdot (n\vec{u})
+    \end{aligned}
 \end{equation}
 $$
 
-将第三项拆开，首先来看含有 $\bm{E}$ 的项：
+将第三项拆开，首先来看含有 $\vec{E}$ 的项：
 
 $$
 \begin{equation}
     \begin{aligned}
-        \int \frac{q}{m} \bm{E} \cdot \frac{\partial f}{\partial \bm{v}} \mathrm{d}\bm{v} = \frac{q}{m} \int \frac{\partial}{\partial \bm{v}} \cdot (f \bm{E})\ \mathrm{d}\bm{v} = \int_{\bm{S} \infty} f \bm{E} \cdot \mathrm{\bm{S}} = 0
+        \int \frac{q}{m} \vec{E} \cdot \frac{\partial f}{\partial \vec{v}} \mathrm{d}\vec{v} = \frac{q}{m} \int \frac{\partial}{\partial \vec{v}} \cdot (f \vec{E})\ \mathrm{d}\vec{v} = \int_{\vec{S} \infty} f \vec{E} \cdot \mathrm{\vec{S}} = 0
     \end{aligned}
 \end{equation}
 $$
 
 上述过程用到了在速度空间中的高斯定理，当 $v \rightarrow \infty$ 时，$f \rightarrow 0$ 的速度比 $v^{-2} \rightarrow 0$ 的速度更快对所有具有有限能量的分布是必要的，所以我们可以判断上式等于零。
 
-对于（2）式中左边的最后一项我们可以做出定性的分析，$\bm{v} \times \bm{B}$ 与 $\partial /\partial \bm{v}$ 的矢量方向必定是垂直的，所以：
+对于（2）式中左边的最后一项我们可以做出定性的分析，$\vec{v} \times \vec{B}$ 与 $\partial /\partial \vec{v}$ 的矢量方向必定是垂直的，所以：
 
 $$
 \begin{equation}
     \begin{aligned}
-        \int \frac{q}{m} (\bm{v} \times \bm{B}) \cdot \frac{\partial f}{\partial \bm{v}}\ \mathrm{d}\bm{v} = 0
+        \int \frac{q}{m} (\vec{v} \times \vec{B}) \cdot \frac{\partial f}{\partial \vec{v}}\ \mathrm{d}\vec{v} = 0
     \end{aligned}
 \end{equation}
 $$
@@ -90,19 +90,19 @@ $$
 $$
 \begin{equation}
     \begin{aligned}
-        \boxed{\frac{\partial n_\alpha}{\partial t} + \nabla \cdot (n_\alpha \bm{u}_\alpha) = 0}
+        \boxed{\frac{\partial n_\alpha}{\partial t} + \nabla \cdot (n_\alpha \vec{u}_\alpha) = 0}
     \end{aligned}
 \end{equation}
 $$
 
 下标 $\alpha$ 表示不同种类的粒子。
 
-基于同样的过程，对 Vlasov 方程取速度的二阶矩积分（方程的左右两边乘上 $m\bm{v}$ 然后积分）有：
+基于同样的过程，对 Vlasov 方程取速度的二阶矩积分（方程的左右两边乘上 $m\vec{v}$ 然后积分）有：
 
 $$
 \begin{equation}
     \begin{aligned}
-        m \int \bm{v} \frac{\partial f}{\partial t}\ \mathrm{d}\bm{v} + m \int \bm{v}(\bm{v} \cdot \nabla)f\ \mathrm{d}\bm{v} + q \int \bm{v} (\bm{E} + \bm{v} \times \bm{B}) \cdot \frac{\partial f}{\partial \bm{v}}\ \mathrm{d}\bm{v} = 0 
+        m \int \vec{v} \frac{\partial f}{\partial t}\ \mathrm{d}\vec{v} + m \int \vec{v}(\vec{v} \cdot \nabla)f\ \mathrm{d}\vec{v} + q \int \vec{v} (\vec{E} + \vec{v} \times \vec{B}) \cdot \frac{\partial f}{\partial \vec{v}}\ \mathrm{d}\vec{v} = 0 
     \end{aligned}
 \end{equation}
 $$
@@ -112,7 +112,7 @@ $$
 $$
 \begin{equation}
     \begin{aligned}
-        m \int \bm{v} \frac{\partial f}{\partial t}\ \mathrm{d}\bm{v} = m \frac{\partial (n \bm{u})}{\partial t}
+        m \int \vec{v} \frac{\partial f}{\partial t}\ \mathrm{d}\vec{v} = m \frac{\partial (n \vec{u})}{\partial t}
     \end{aligned}
 \end{equation}
 $$
@@ -120,22 +120,22 @@ $$
 $$
 \begin{equation}
     \begin{aligned}
-        \int \bm{v} (\bm{E} + \bm{v} \times \bm{B}) \cdot \frac{\partial f}{\partial \bm{v}}\ \mathrm{d}\bm{v} &= \int \frac{\partial}{\partial \bm{v}} \cdot \left[f \bm{v}(\bm{E} + \bm{v} \times \bm{B})\right] \mathrm{d}\bm{v} \\[8pt]
-        &- \int f \frac{\partial}{\partial \bm{v}} \cdot \left[\bm{v}(\bm{E}+\bm{v}\times\bm{B})\right] \mathrm{d}\bm{v} \\[8pt]
-        &= \int \frac{\partial}{\partial \bm{v}} \cdot \left[f \bm{v}(\bm{E} + \bm{v} \times \bm{B})\right] \mathrm{d}\bm{v} \\[8pt]
-        &- \int \left(\frac{\partial}{\partial \bm{v}} \cdot f \bm{v}\right)(\bm{E} + \bm{v} \times \bm{B}) \mathrm{d}\bm{v} \\[8pt]
-        &- \int \left(f \bm{v} \cdot \frac{\partial}{\partial \bm{v}}\right)(\bm{E} + \bm{v} \times \bm{B}) \mathrm{d}\bm{v}
+        \int \vec{v} (\vec{E} + \vec{v} \times \vec{B}) \cdot \frac{\partial f}{\partial \vec{v}}\ \mathrm{d}\vec{v} &= \int \frac{\partial}{\partial \vec{v}} \cdot \left[f \vec{v}(\vec{E} + \vec{v} \times \vec{B})\right] \mathrm{d}\vec{v} \\[8pt]
+        &- \int f \frac{\partial}{\partial \vec{v}} \cdot \left[\vec{v}(\vec{E}+\vec{v}\times\vec{B})\right] \mathrm{d}\vec{v} \\[8pt]
+        &= \int \frac{\partial}{\partial \vec{v}} \cdot \left[f \vec{v}(\vec{E} + \vec{v} \times \vec{B})\right] \mathrm{d}\vec{v} \\[8pt]
+        &- \int \left(\frac{\partial}{\partial \vec{v}} \cdot f \vec{v}\right)(\vec{E} + \vec{v} \times \vec{B}) \mathrm{d}\vec{v} \\[8pt]
+        &- \int \left(f \vec{v} \cdot \frac{\partial}{\partial \vec{v}}\right)(\vec{E} + \vec{v} \times \vec{B}) \mathrm{d}\vec{v}
     \end{aligned}
 \end{equation}
 $$
 
-与之前的分析类似，利用高斯定理可以得到前两个积分为零。又因为 $\partial/\partial \bm{v}$ 与 $\bm{v}$ 平行，即 $\bm{v} \cdot \partial/\partial \bm{v} = 1$，则：
+与之前的分析类似，利用高斯定理可以得到前两个积分为零。又因为 $\partial/\partial \vec{v}$ 与 $\vec{v}$ 平行，即 $\vec{v} \cdot \partial/\partial \vec{v} = 1$，则：
 
 $$
 \begin{equation}
     \begin{aligned}
-        q \int \bm{v} (\bm{E} + \bm{v} \times \bm{B}) \cdot \frac{\partial f}{\partial \bm{v}}\ \mathrm{d}\bm{v} &= -q \int f(\bm{E}+\bm{v}\times\bm{B})\mathrm{d}\bm{v} \\[8pt]
-        &= -q n (\bm{E}+\bm{u}\times\bm{B})
+        q \int \vec{v} (\vec{E} + \vec{v} \times \vec{B}) \cdot \frac{\partial f}{\partial \vec{v}}\ \mathrm{d}\vec{v} &= -q \int f(\vec{E}+\vec{v}\times\vec{B})\mathrm{d}\vec{v} \\[8pt]
+        &= -q n (\vec{E}+\vec{u}\times\vec{B})
     \end{aligned}
 \end{equation}
 $$
@@ -145,39 +145,39 @@ $$
 $$
 \begin{equation}
     \begin{aligned}
-        m \int \bm{v}(\bm{v} \cdot \nabla)f\ \mathrm{d}\bm{v} = m \int \nabla \cdot (\bm{vv}) f \mathrm{d}\bm{v}-m \int \bm{v}(\nabla \cdot \bm{v})f\ \mathrm{d}\bm{v}
+        m \int \vec{v}(\vec{v} \cdot \nabla)f\ \mathrm{d}\vec{v} = m \int \nabla \cdot (\vec{vv}) f \mathrm{d}\vec{v}-m \int \vec{v}(\nabla \cdot \vec{v})f\ \mathrm{d}\vec{v}
     \end{aligned}
 \end{equation}
 $$
 
-但在六维相空间中，$\nabla$ 与 $\bm{v}$ 是无关的，所以 $\nabla \cdot \bm{v} = 0$。则上式变为：
+但在六维相空间中，$\nabla$ 与 $\vec{v}$ 是无关的，所以 $\nabla \cdot \vec{v} = 0$。则上式变为：
 
 $$
 \begin{equation}
     \begin{aligned}
-        m \int \bm{v}(\bm{v} \cdot \nabla)f\ \mathrm{d}\bm{v} = m \nabla \cdot \int f\bm{vv}\mathrm{d}\bm{v} = \nabla \cdot nm\overline{\bm{vv}}
+        m \int \vec{v}(\vec{v} \cdot \nabla)f\ \mathrm{d}\vec{v} = m \nabla \cdot \int f\vec{vv}\mathrm{d}\vec{v} = \nabla \cdot nm\overline{\vec{vv}}
     \end{aligned}
 \end{equation}
 $$
 
-对等离子体中的每一个粒子速度分为随流体运动的平均流体速度 $\bm{u}$ 和热速度 $\bm{\theta }$，即 $\bm{v} = \bm{u}+\bm{\theta}$， 如此一来，（13）式变为：
+对等离子体中的每一个粒子速度分为随流体运动的平均流体速度 $\vec{u}$ 和热速度 $\vec{\theta }$，即 $\vec{v} = \vec{u}+\vec{\theta}$， 如此一来，（13）式变为：
 
 $$
 \begin{equation}
     \begin{aligned}
-        \nabla \cdot nm\overline{\bm{vv}} = \nabla \cdot (nm\bm{uu}) + \nabla \cdot (nm\overline{\bm{\theta\theta}}) + \nabla \cdot (2nm\bm{u}\overline{\bm{\theta}})
+        \nabla \cdot nm\overline{\vec{vv}} = \nabla \cdot (nm\vec{uu}) + \nabla \cdot (nm\overline{\vec{\theta\theta}}) + \nabla \cdot (2nm\vec{u}\overline{\vec{\theta}})
     \end{aligned}
 \end{equation}
 $$
 
-平均热速度 $\overline{\bm{\theta}}$ 显然为零，同时我们将 $nm\overline{\bm{\theta\theta}}$ 定义为 **压力张量** $\bm{P}$。则通过一阶矩积分我们得到：
+平均热速度 $\overline{\vec{\theta}}$ 显然为零，同时我们将 $nm\overline{\vec{\theta\theta}}$ 定义为 **压力张量** $\vec{P}$。则通过一阶矩积分我们得到：
 
 $$
 \begin{equation}
     \begin{aligned}
-        m \frac{\partial (n \bm{u})}{\partial t} &+ \nabla \cdot (nm\bm{uu}) + \nabla \cdot \bm{P} - qn(\bm{E}+\bm{u}\times\bm{B}) \\[8pt]
-        &= m \frac{\partial n}{\partial t} \bm{u} + nm \frac{\partial \bm{u}}{\partial t}+ (\nabla \cdot nm\bm{u}) \bm{u} \\[8pt]
-        &+ nm\bm{u} \cdot \nabla \bm{u} +\nabla \cdot \bm{P} - qn(\bm{E}+\bm{u}\times\bm{B}) \\[8pt]
+        m \frac{\partial (n \vec{u})}{\partial t} &+ \nabla \cdot (nm\vec{uu}) + \nabla \cdot \vec{P} - qn(\vec{E}+\vec{u}\times\vec{B}) \\[8pt]
+        &= m \frac{\partial n}{\partial t} \vec{u} + nm \frac{\partial \vec{u}}{\partial t}+ (\nabla \cdot nm\vec{u}) \vec{u} \\[8pt]
+        &+ nm\vec{u} \cdot \nabla \vec{u} +\nabla \cdot \vec{P} - qn(\vec{E}+\vec{u}\times\vec{B}) \\[8pt]
     \end{aligned}
 \end{equation}
 $$
@@ -187,7 +187,7 @@ $$
 $$
 \begin{equation}
     \begin{aligned}
-        m \frac{\partial n}{\partial t} \bm{u} + (\nabla \cdot nm\bm{u}) \bm{u} = m \bm{u} \left( \frac{\partial n}{\partial t} + \nabla \cdot n\bm{u} \right) = 0
+        m \frac{\partial n}{\partial t} \vec{u} + (\nabla \cdot nm\vec{u}) \vec{u} = m \vec{u} \left( \frac{\partial n}{\partial t} + \nabla \cdot n\vec{u} \right) = 0
     \end{aligned}
 \end{equation}
 $$
@@ -197,19 +197,19 @@ $$
 $$
 \begin{equation}
     \begin{aligned}
-        \boxed{n_\alpha m_\alpha \left( \frac{\partial\bm{u}_\alpha}{\partial t} + \bm{u}_\alpha \cdot \nabla \bm{u}_\alpha \right) = n_\alpha q_\alpha (\bm{E}+\bm{u}_\alpha \times \bm{B}) - \nabla \cdot \bm{P}_\alpha}
+        \boxed{n_\alpha m_\alpha \left( \frac{\partial\vec{u}_\alpha}{\partial t} + \vec{u}_\alpha \cdot \nabla \vec{u}_\alpha \right) = n_\alpha q_\alpha (\vec{E}+\vec{u}_\alpha \times \vec{B}) - \nabla \cdot \vec{P}_\alpha}
     \end{aligned}
 \end{equation}
 $$
 
-**上述过程中我们可以看到，零阶矩得到的连续性方程中包含有一阶矩得到的动量方程中的项—— $\nabla \cdot (nm\bm{u})$ ，而动量方程中又包含了二阶矩得到的量—— $\nabla \cdot \bm{P}$ ，以此类推可以无限递推下去，各阶矩之间是相互耦合的，因此我们需要在二阶矩处做出截断。**
+**上述过程中我们可以看到，零阶矩得到的连续性方程中包含有一阶矩得到的动量方程中的项—— $\nabla \cdot (nm\vec{u})$ ，而动量方程中又包含了二阶矩得到的量—— $\nabla \cdot \vec{P}$ ，以此类推可以无限递推下去，各阶矩之间是相互耦合的，因此我们需要在二阶矩处做出截断。**
 
-即不再进行动理学方程的二阶矩积分，而将动量方程中 $\nabla  \cdot \bm{P}$ 变成 $\nabla p_\alpha$，并利用下面的 **状态方程** 进行计算：
+即不再进行动理学方程的二阶矩积分，而将动量方程中 $\nabla  \cdot \vec{P}$ 变成 $\nabla p_\alpha$，并利用下面的 **状态方程** 进行计算：
 
 $$
 \begin{equation}
     \begin{aligned}
-        \boxed{\frac{\partial p_\alpha}{\partial t} + \bm{u}_\alpha \cdot \nabla p_\alpha = - \gamma p_\alpha \nabla \cdot \bm{u}_\alpha}
+        \boxed{\frac{\partial p_\alpha}{\partial t} + \vec{u}_\alpha \cdot \nabla p_\alpha = - \gamma p_\alpha \nabla \cdot \vec{u}_\alpha}
     \end{aligned}
 \end{equation}
 $$
@@ -223,18 +223,18 @@ $$
 $$
 \begin{equation}
     \begin{aligned}
-        &n_\alpha m_\alpha\left(\frac{\partial \boldsymbol{u}_\alpha}{\partial t}+\boldsymbol{u}_\alpha \cdot \nabla \boldsymbol{u}_\alpha\right)= \\
-        &\quad=-\nabla p_\alpha+n_\alpha q_\alpha\left[\boldsymbol{E}+\frac{\boldsymbol{u}_\alpha \times \boldsymbol{B}}{c}\right]-\sum_\beta \nu_{\alpha \beta} n_\alpha m_{\alpha} \boldsymbol{u}_{\alpha}
+        &n_\alpha m_\alpha\left(\frac{\partial \vec{u}_\alpha}{\partial t}+\vec{u}_\alpha \cdot \nabla \vec{u}_\alpha\right)= \\
+        &\quad=-\nabla p_\alpha+n_\alpha q_\alpha\left[\vec{E}+\frac{\vec{u}_\alpha \times \vec{B}}{c}\right]-\sum_\beta \nu_{\alpha \beta} n_\alpha m_{\alpha} \vec{u}_{\alpha}
     \end{aligned}
 \end{equation}
 $$
 
-动量方程中涉及到的 $\bm{E}$ 和 $\bm{B}$ 需要用控制电磁场的 Maxwell 方程组来进行闭合，根据不同的情况我们需要使用电磁方程组中不同的方程。考虑电磁场的波动时需要 **安培（Ampere）定律**：
+动量方程中涉及到的 $\vec{E}$ 和 $\vec{B}$ 需要用控制电磁场的 Maxwell 方程组来进行闭合，根据不同的情况我们需要使用电磁方程组中不同的方程。考虑电磁场的波动时需要 **安培（Ampere）定律**：
 
 $$
 \begin{equation}
     \begin{aligned}
-        \boxed{\nabla \times \bm{B} = \frac{4 \pi}{c} \bm{J} \left(+ \frac{1}{c} \frac{\partial \bm{E}}{\partial t}\right) = \frac{4 \pi}{c} \sum_\alpha n_\alpha q_\alpha \bm{u}_\alpha \left(+ \frac{1}{c} \frac{\partial \bm{E}}{\partial t}\right)}
+        \boxed{\nabla \times \vec{B} = \frac{4 \pi}{c} \vec{J} \left(+ \frac{1}{c} \frac{\partial \vec{E}}{\partial t}\right) = \frac{4 \pi}{c} \sum_\alpha n_\alpha q_\alpha \vec{u}_\alpha \left(+ \frac{1}{c} \frac{\partial \vec{E}}{\partial t}\right)}
     \end{aligned}
 \end{equation}
 $$
@@ -244,7 +244,7 @@ $$
 $$
 \begin{equation}
     \begin{aligned}
-        \boxed{\nabla \cdot \bm{B} = 0}
+        \boxed{\nabla \cdot \vec{B} = 0}
     \end{aligned}
 \end{equation}
 $$
@@ -254,7 +254,7 @@ $$
 $$
 \begin{equation}
     \begin{aligned}
-        \boxed{\nabla \cdot \bm{E} = 4\pi \sum_\alpha n_\alpha q_\alpha}
+        \boxed{\nabla \cdot \vec{E} = 4\pi \sum_\alpha n_\alpha q_\alpha}
     \end{aligned}
 \end{equation}
 $$
@@ -264,7 +264,7 @@ $$
 $$
 \begin{equation}
     \begin{aligned}
-        \boxed{\nabla \times \bm{E} = -\frac{1}{c} \frac{\partial \bm{B}}{\partial t}}
+        \boxed{\nabla \times \vec{E} = -\frac{1}{c} \frac{\partial \vec{B}}{\partial t}}
     \end{aligned}
 \end{equation}
 $$
@@ -276,24 +276,24 @@ $$
 一般来说，双流体模型同时考察离子和电子的运动情况，但由于两者之间的质量差距（质子质量是电子质量的1836倍）导致两者物理量变化的时间尺度相差也很大，有时候电子完全改变自己的运动状态，但离子基本还没开始动，这在推导德拜长度的过程中也可以窥探一二。由于时间尺度的问题，在计算过程中对时间步长的要求需要很小，这样计算离子的运动就要很长的计算时间，但我们知道随着计算时间的增加计算的误差也在累积，最终导致计算存在很强的数值不稳定性。
 
 在这样的背景下，我们干脆取极限情况下的近似，即 $m_e/m_i \to 0$，并且
-1. **完全忽略掉离子的运动** 从而有：$\bm{J} = -n_e e \bm{u}_e$。同时如果忽略掉位移电流，在这种近似下我们可以推出：
+1. **完全忽略掉离子的运动** 从而有：$\vec{J} = -n_e e \vec{u}_e$。同时如果忽略掉位移电流，在这种近似下我们可以推出：
 $$
 \begin{equation}
     \begin{aligned}
-        \nabla \cdot \bm{J} = \nabla \cdot (\nabla \times \bm{B}) = \underbrace{- e \nabla \cdot (n_e \bm{u}_e)  = e \frac{\partial n_e}{\partial t}}_{\text{连续性方程}} = 0
+        \nabla \cdot \vec{J} = \nabla \cdot (\nabla \times \vec{B}) = \underbrace{- e \nabla \cdot (n_e \vec{u}_e)  = e \frac{\partial n_e}{\partial t}}_{\text{连续性方程}} = 0
     \end{aligned}
 \end{equation}
 $$
 即电子的密度近似不随时间改变，若初始时刻电子分布是均匀的，那这种均匀状态将一直持续下去。在此基础上我们进一步假设
 
-2. **电子是“不可压缩”的** ，即：$\nabla \cdot \bm{u}_e = 0$。这对于磁约束等离子体来说是合适的，这一假设直接保证了电子密度是不随空间分布变化的。
+2. **电子是“不可压缩”的** ，即：$\nabla \cdot \vec{u}_e = 0$。这对于磁约束等离子体来说是合适的，这一假设直接保证了电子密度是不随空间分布变化的。
 
-再引入哈密顿力学中的 **电子流体正则动量** $\bm{P}_e = m_e \bm{u}_e - e \bm{A}/c$，定义 $\nabla \times \bm{P}_e\equiv \bm{\Omega}_e$ 为“广义涡旋”，对动量方程（式（19））取旋度，加上前面的假设有：
+再引入哈密顿力学中的 **电子流体正则动量** $\vec{P}_e = m_e \vec{u}_e - e \vec{A}/c$，定义 $\nabla \times \vec{P}_e\equiv \vec{\Omega}_e$ 为“广义涡旋”，对动量方程（式（19））取旋度，加上前面的假设有：
 
 $$
 \begin{equation}
     \begin{aligned}
-        \boxed{\frac{\partial \bm{\Omega}_e}{\partial t} = \nabla \times (\bm{u}_e \times \bm{\Omega}_e) - \frac{e \nu_{ei}}{c} \rm{d}_e^2 \nabla^2 \bm{B}}
+        \boxed{\frac{\partial \vec{\Omega}_e}{\partial t} = \nabla \times (\vec{u}_e \times \vec{\Omega}_e) - \frac{e \nu_{ei}}{c} \rm{d}_e^2 \nabla^2 \vec{B}}
     \end{aligned}
 \end{equation}
 $$
@@ -302,19 +302,19 @@ $$
 
 $$
 \begin{equation*}
-    \begin{gather*}
-        \bm{\Omega}_e = -e (1-\rm{d}_e^2 \nabla^2) \bm{B}/c \\[8pt]
-        \rm{d}_e = c/\omega_{pe}
-    \end{gather*}
+    \begin{aligned}
+        \vec{\Omega}_e &= -e (1-\rm{d}_e^2 \nabla^2) \vec{B}/c \\[8pt]
+        \rm{d}_e &= c/\omega_{pe}
+    \end{aligned}
 \end{equation*}
 $$
 
-式（25）被称为“电子磁流体方程”。<span class='mohu'>看起来是挺复杂的，我也不知道为什么这么复杂，但</span>如果物理量变化的空间特征尺度远远大于电子的趋肤深度，即 $\rm{d}_e^2 \nabla^2 \ll 1,\ \bm{\Omega}_e \approx -e\bm{B}/c$，并忽略碰撞，上述方程可以被简化为：
+式（25）被称为“电子磁流体方程”。<span class='mohu'>看起来是挺复杂的，我也不知道为什么这么复杂，但</span>如果物理量变化的空间特征尺度远远大于电子的趋肤深度，即 $\rm{d}_e^2 \nabla^2 \ll 1,\ \vec{\Omega}_e \approx -e\vec{B}/c$，并忽略碰撞，上述方程可以被简化为：
 
 $$
 \begin{equation}
     \begin{aligned}
-        \frac{\partial \bm{B}}{\partial t} = \nabla \times (\bm{u}_e \times \bm{B})
+        \frac{\partial \vec{B}}{\partial t} = \nabla \times (\vec{u}_e \times \vec{B})
     \end{aligned}
 \end{equation}
 $$
@@ -326,27 +326,27 @@ $$
 $$
 \begin{equation}
     \begin{aligned}
-        n_e m_e \left(\frac{\partial \bm{u}_e}{\partial t}+\bm{u}_e \cdot \nabla\bm{u}_e\right) = -\nabla p_e - e n_e \left[\bm{E}+\frac{\bm{u}_e \times \bm{B}}{c}\right] + \frac{\nu_e m_e}{e} \bm{J}
+        n_e m_e \left(\frac{\partial \vec{u}_e}{\partial t}+\vec{u}_e \cdot \nabla\vec{u}_e\right) = -\nabla p_e - e n_e \left[\vec{E}+\frac{\vec{u}_e \times \vec{B}}{c}\right] + \frac{\nu_e m_e}{e} \vec{J}
     \end{aligned}
 \end{equation}
 $$
 
-其中 $\bm{J} = -e n_e \bm{u}_e$，这被称为 **广义欧姆定律**，因为它给出了电场和电流之间的关系，将其改成与一般的欧姆定律更像的形式为：
+其中 $\vec{J} = -e n_e \vec{u}_e$，这被称为 **广义欧姆定律**，因为它给出了电场和电流之间的关系，将其改成与一般的欧姆定律更像的形式为：
 
 $$
 \begin{equation}
     \begin{aligned}
-        \bm{E} + \frac{\bm{u}_e \times \bm{B}}{c} = - \frac{m_e \left(\frac{\partial}{\partial t}+\bm{u}_e \cdot \nabla\right) (e n_e \bm{u}_e)}{e^2 n_e} - \frac{\nabla p_e}{e n_e} + \frac{\nu_e m_e}{e^2 n_e} \bm{J}
+        \vec{E} + \frac{\vec{u}_e \times \vec{B}}{c} = - \frac{m_e \left(\frac{\partial}{\partial t}+\vec{u}_e \cdot \nabla\right) (e n_e \vec{u}_e)}{e^2 n_e} - \frac{\nabla p_e}{e n_e} + \frac{\nu_e m_e}{e^2 n_e} \vec{J}
     \end{aligned}
 \end{equation}
 $$
 
-将等离子体电子振荡频率 $\omega_{pe} = e^2 n_e/4\pi m_e$ 以及电流 $\bm{J}$ 的表达式代入上式，并定义 $\eta \equiv 4\pi \nu_e/\omega_{pe}^2$，相当于 **电阻**，因此我们可以得到：
+将等离子体电子振荡频率 $\omega_{pe} = e^2 n_e/4\pi m_e$ 以及电流 $\vec{J}$ 的表达式代入上式，并定义 $\eta \equiv 4\pi \nu_e/\omega_{pe}^2$，相当于 **电阻**，因此我们可以得到：
 
 $$
 \begin{equation}
     \begin{aligned}
-        \boxed{\bm{E} + \frac{\bm{u}_e \times \bm{B}}{c} = \eta \bm{J} - \frac{\nabla p_e}{e n_e} + \frac{4\pi}{\omega_{pe}^2} \left(\frac{\partial}{\partial t} + \bm{u}_e \cdot \nabla \right) \bm{J}}
+        \boxed{\vec{E} + \frac{\vec{u}_e \times \vec{B}}{c} = \eta \vec{J} - \frac{\nabla p_e}{e n_e} + \frac{4\pi}{\omega_{pe}^2} \left(\frac{\partial}{\partial t} + \vec{u}_e \cdot \nabla \right) \vec{J}}
     \end{aligned}
 \end{equation}
 $$
@@ -360,19 +360,19 @@ $$
 $$
 \begin{equation}
     \begin{aligned}
-        \bm{E} + \frac{\bm{u}_e \times \bm{B}}{c} = -\frac{\nabla p_e}{e n_e} - \eta n_e e \bm{u}_e
+        \vec{E} + \frac{\vec{u}_e \times \vec{B}}{c} = -\frac{\nabla p_e}{e n_e} - \eta n_e e \vec{u}_e
     \end{aligned}
 \end{equation}
 $$
 
 其中 $\eta$ 可以算是碰撞造成的“等效电阻”，因为电子质量的趋于零按照原本的定义算出来 $\eta$ 也为零，但实际的碰撞却还是存在的。可以发现，如果我们对上式取旋度就能得到式（26），也可以说是这个忽略了电子惯性项的模型显然满足特征尺度远大于电子趋肤深度的假设。
 
-同时，根据 $\bm{J} = e(n_i \bm{u}_i - n_e \bm{u}_e)$ 以及电中性假设 $n_i \approx n_e$，上式我们可以写成：
+同时，根据 $\vec{J} = e(n_i \vec{u}_i - n_e \vec{u}_e)$ 以及电中性假设 $n_i \approx n_e$，上式我们可以写成：
 
 $$
 \begin{equation}
     \begin{aligned}
-        \bm{E} + \left(\frac{\bm{u}_i \times \bm{B}}{c} - \frac{\bm{J} \times \bm{B}}{e n_e c}\right) = - \frac{\nabla p_e}{e n_e} - (\eta n_e e \bm{u}_i - \eta \bm{J})
+        \vec{E} + \left(\frac{\vec{u}_i \times \vec{B}}{c} - \frac{\vec{J} \times \vec{B}}{e n_e c}\right) = - \frac{\nabla p_e}{e n_e} - (\eta n_e e \vec{u}_i - \eta \vec{J})
     \end{aligned}
 \end{equation}
 $$
@@ -382,7 +382,7 @@ $$
 $$
 \begin{equation}
     \begin{aligned}
-        \boxed{\bm{E} + \frac{\bm{u}_i \times \bm{B}}{c} = \frac{\bm{J} \times \bm{B}}{e n_e c} - \frac{\nabla p_e}{e n_e} + \eta (\bm{J} - n_e e \bm{u}_i)}
+        \boxed{\vec{E} + \frac{\vec{u}_i \times \vec{B}}{c} = \frac{\vec{J} \times \vec{B}}{e n_e c} - \frac{\nabla p_e}{e n_e} + \eta (\vec{J} - n_e e \vec{u}_i)}
     \end{aligned}
 \end{equation}
 $$
@@ -410,16 +410,17 @@ $$
    $$
    \begin{equation}
     \begin{aligned}
-        n^{-1/3} \ll \lambda_{\rm{D}} \ll L_{\text{H}},\ \omega_{\text{H}} \ll \omega_{p e},\ \Rightarrow \sum_{\alpha} n_{\alpha} q_{\alpha} \to 0
+        n^{-1/3} \ll \lambda_{\rm{D}} \ll L_{\text{H}},\ \omega {\text{H}} \ll \omega_{p e},\ \Rightarrow \sum_{\alpha} n_{\alpha} q_{\alpha} \to 0
     \end{aligned}
    \end{equation}
-   $$这一假设比较复杂，它实际上是保证等离子体是弱耦合等离子体，但弱耦合等离子体有时也被假设成“无碰撞”等离子体，这时候就和前面的局域热力学平衡假设矛盾，需要进一步讨论，我们这里暂且不表。
+   $$
+   这一假设比较复杂，它实际上是保证等离子体是弱耦合等离子体，但弱耦合等离子体有时也被假设成“无碰撞”等离子体，这时候就和前面的局域热力学平衡假设矛盾，需要进一步讨论，我们这里暂且不表。
 
 4. 非相对论假设：这个比较简单，因为我们考虑的流体假设速度一般比较慢，不满足相对论条件，所以有：
    $$
    \begin{equation}
     \begin{aligned}
-        \omega/k \sim L_{\text{H}}/\tau_{\text{H}} \sim V_{\text{typical}} \ll c \Rightarrow \frac{1}{c} \frac{\partial \bm{E}}{\partial t} \to 0
+        \omega/k \sim L_{\text{H}}/\tau_{\text{H}} \sim V_{\text{typical}} \ll c \Rightarrow \frac{1}{c} \frac{\partial \vec{E}}{\partial t} \to 0
     \end{aligned}
    \end{equation}
    $$
@@ -441,7 +442,7 @@ $$
   $$
   \begin{equation}
     \begin{aligned}
-        \bm{u} = \frac{n_i m_i \bm{u}_i + n_e m_e \bm{u}_e}{n_i m_i + n_e m_e} = \bm{u}_i + \frac{m_e}{m_i} \bm{u}_e \approx \bm{u}_i
+        \vec{u} = \frac{n_i m_i \vec{u}_i + n_e m_e \vec{u}_e}{n_i m_i + n_e m_e} = \vec{u}_i + \frac{m_e}{m_i} \vec{u}_e \approx \vec{u}_i
     \end{aligned}
   \end{equation}
   $$
@@ -459,7 +460,7 @@ $$
   $$
   \begin{equation}
     \begin{aligned}
-        \bm{J} = n e (\bm{u}_i - \bm{u}_e)
+        \vec{J} = n e (\vec{u}_i - \vec{u}_e)
     \end{aligned}
   \end{equation}
   $$
@@ -470,7 +471,7 @@ $$
   $$
   \begin{equation}
     \begin{aligned}
-        \boxed{\frac{\partial n}{\partial t} + \nabla  \cdot (n \bm{u}) = 0}
+        \boxed{\frac{\partial n}{\partial t} + \nabla  \cdot (n \vec{u}) = 0}
     \end{aligned}
   \end{equation}
   $$
@@ -479,7 +480,7 @@ $$
   $$
   \begin{equation}
     \begin{aligned}
-        \boxed{n m_i \left( \frac{\partial \bm{u}}{\partial t} + \bm{u} \cdot \nabla \bm{u} \right) = \underbrace{- \nabla p + \frac{\bm{J} \times \bm{B}}{c} = - \nabla p + \frac{(\nabla \times \bm{B}) \times \bm{B}}{4 \pi}}_{\text{安培定律}}}
+        \boxed{n m_i \left( \frac{\partial \vec{u}}{\partial t} + \vec{u} \cdot \nabla \vec{u} \right) = \underbrace{- \nabla p + \frac{\vec{J} \times \vec{B}}{c} = - \nabla p + \frac{(\nabla \times \vec{B}) \times \vec{B}}{4 \pi}}_{\text{安培定律}}}
     \end{aligned}
   \end{equation}
   $$
@@ -489,17 +490,17 @@ $$
 $$
 \begin{equation}
     \begin{aligned}
-        \bm{E} + \frac{\bm{u} \times \bm{B}}{c} = \frac{\bm{J} \times \bm{B}}{e n c} - \frac{\nabla p_e}{n e} + \eta \bm{J} + \frac{4 \pi}{\omega^2_{p e}} \left( \frac{\partial}{\partial t} + \bm{u}_e \cdot \nabla \right) \bm{J} - \frac{\nu_{e} m_e}{e} \bm{u} - \frac{m_e}{e} \left( \frac{\partial}{\partial t} + \bm{u}_e \cdot \nabla \right)  \bm{u}
+        \vec{E} + \frac{\vec{u} \times \vec{B}}{c} = \frac{\vec{J} \times \vec{B}}{e n c} - \frac{\nabla p_e}{n e} + \eta \vec{J} + \frac{4 \pi}{\omega^2_{p e}} \left( \frac{\partial}{\partial t} + \vec{u}_e \cdot \nabla \right) \vec{J} - \frac{\nu_{e} m_e}{e} \vec{u} - \frac{m_e}{e} \left( \frac{\partial}{\partial t} + \vec{u}_e \cdot \nabla \right)  \vec{u}
     \end{aligned}
 \end{equation}
 $$
 
-上式已经将 $\bm{u} \approx \bm{u}_i$ 代入，这就是最一般形式的广义欧姆定律，通常认为电流主要是由电子携带的，这样就可以忽略最后两项离子的贡献而得到最常用到的广义欧姆定律：
+上式已经将 $\vec{u} \approx \vec{u}_i$ 代入，这就是最一般形式的广义欧姆定律，通常认为电流主要是由电子携带的，这样就可以忽略最后两项离子的贡献而得到最常用到的广义欧姆定律：
 
 $$
 \begin{equation}
     \begin{aligned}
-        \bm{E} + \frac{\bm{u} \times \bm{B}}{c} = \frac{\bm{J} \times \bm{B}}{e n c} - \frac{\nabla p_e}{n e} + \eta \bm{J} + \frac{4 \pi}{\omega^2_{p e}} \left( \frac{\partial}{\partial t} + \bm{u}_e \cdot \nabla \right) \bm{J}
+        \vec{E} + \frac{\vec{u} \times \vec{B}}{c} = \frac{\vec{J} \times \vec{B}}{e n c} - \frac{\nabla p_e}{n e} + \eta \vec{J} + \frac{4 \pi}{\omega^2_{p e}} \left( \frac{\partial}{\partial t} + \vec{u}_e \cdot \nabla \right) \vec{J}
     \end{aligned}
 \end{equation}
 $$
@@ -511,7 +512,7 @@ $$
 $$
 \begin{equation}
     \begin{aligned}
-        \boxed{\bm{E} + \frac{\bm{u} \times \bm{B}}{c} = 0}
+        \boxed{\vec{E} + \frac{\vec{u} \times \vec{B}}{c} = 0}
     \end{aligned}
 \end{equation}
 $$
@@ -521,7 +522,7 @@ $$
 $$
 \begin{equation}
     \begin{aligned}
-        \frac{\partial  \bm{B}}{\partial t} = \nabla \times (\bm{u} \times \bm{B})
+        \frac{\partial  \vec{B}}{\partial t} = \nabla \times (\vec{u} \times \vec{B})
     \end{aligned}
 \end{equation}
 $$
@@ -531,7 +532,7 @@ $$
 $$
 \begin{equation}
     \begin{aligned}
-        \boxed{\frac{\partial p}{\partial t} + \bm{u} \cdot \nabla p = - \gamma p \nabla \cdot \bm{u}}
+        \boxed{\frac{\partial p}{\partial t} + \vec{u} \cdot \nabla p = - \gamma p \nabla \cdot \vec{u}}
     \end{aligned}
 \end{equation}
 $$
