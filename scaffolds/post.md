@@ -1,5 +1,5 @@
 ---
-title: {{ title }}
+title: 
 date: {{ date }}
 cover:
 tags:
