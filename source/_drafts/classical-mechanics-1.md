@@ -276,4 +276,12 @@ $$
 \end{equation}
 $$
 
-对于存在相互作用的自由质点系(质点系内存在相互作用, 但整个质点系不受到任何外力作用), 
+对于存在相互作用的自由质点系(质点系内存在相互作用, 但整个质点系不受到任何外力作用), 需要考虑相互作用对拉格朗日量的影响, 这一项必然包含多个质点的坐标, 即:
+
+$$
+\begin{equation}
+    \begin{aligned}
+        \mathcal{L} = \sum_{\alpha}\frac{1}{2} m_{\alpha} v_{\alpha}^{2} + V(\boldsymbol{r}_1, \boldsymbol{r}_2, \boldsymbol{r}_3, \cdots, \boldsymbol{r}_{N}, t)
+    \end{aligned}
+\end{equation}
+$$
