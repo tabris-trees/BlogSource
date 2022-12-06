@@ -10,7 +10,6 @@ tags:
 categories:
 - [资源,动漫,宫崎骏]
 description: 充满幻想的作品中有着热爱的幸福(链接不可用)
-top: true
 ---
 # 充满幻想的作品中热爱的幸福
 > {% note info %}
