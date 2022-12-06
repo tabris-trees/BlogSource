@@ -1,11 +1,17 @@
 ---
-title: 经典力学速通 1 （理论物理速通系列第一卷）
 tags:
-- 理论物理
-- 经典力学
-- 最小作用量原理
-- 拉格朗日力学
+  - 理论物理
+  - 经典力学
+  - 最小作用量原理
+  - 拉格朗日力学
+date: 2022-12-06 15:56:31
+title: 理论物理速成——经典力学 I
+cover: https://hexo-1301133429.cos.ap-chengdu.myqcloud.com/post/classical-mechanics-1-cover.jpg
+categories: [笔记, 理论物理, 经典力学]
+description: 1. 最小作用量原理是怎么来的; 2. 拉格朗日函数是怎么来的; 3. 最小作用量原理、拉格朗日函数、牛顿经典力学原理之间的自洽
 ---
+
+![classical-mechanics-1-cover](https://hexo-1301133429.cos.ap-chengdu.myqcloud.com/post/classical-mechanics-1-cover.jpg)
 
 # <center>第一部分 拉格朗日力学原理</center>
 
@@ -281,7 +287,36 @@ $$
 $$
 \begin{equation}
     \begin{aligned}
-        \mathcal{L} = \sum_{\alpha}\frac{1}{2} m_{\alpha} v_{\alpha}^{2} + V(\boldsymbol{r}_1, \boldsymbol{r}_2, \boldsymbol{r}_3, \cdots, \boldsymbol{r}_{N}, t)
+        \mathcal{L} = \sum_{\alpha}\frac{1}{2} m_{\alpha} v_{\alpha}^{2} + G(\boldsymbol{r}_1, \boldsymbol{r}_2, \boldsymbol{r}_3, \cdots, \boldsymbol{r}_{N}, t)
     \end{aligned}
 \end{equation}
 $$
+
+其中, 我们将第一部分无相互作用质点系的拉格朗日函数表示为 $T$, 根据之前牛顿力学的结论我们知道这实际上就是质点系的动能, 后续我们将给出它的一般含义. 而后面相互作用对拉格朗日量的影响我们设定为只和所有质点在同一时刻的位置有关, 并且这种相互作用时瞬时传递的, 只有这样才能满足伽利略相对性原理, 这在朗道的书中有更详细的描述, 同时由于时间的各向同性, 证明我们的力学系统是可逆的, 这一点是所有经典力学成立的前提.
+
+通过上面的拉格朗日函数的形式, 结合运动满足的拉格朗日方程, 有:
+
+$$
+\begin{equation}
+    \begin{aligned}
+        \frac{\partial \mathcal{L}}{\partial \boldsymbol{r}_{\alpha}} &= \frac{\mathrm{d}}{\mathrm{d}t}\frac{\partial \mathcal{L}}{\partial \boldsymbol{v}_{\alpha}} \\
+        \implies \frac{\partial G}{\partial \boldsymbol{r}_{\alpha}} &= m_{\alpha} \boldsymbol{a}_{\alpha} = \boldsymbol{F}_{\alpha}
+    \end{aligned}
+\end{equation}
+$$
+
+对上述过程如果令 $G = -V$, 那就直接回到了之前牛顿力学的形式, 即:
+$$
+\boldsymbol{F} = - \frac{\partial V}{\partial \boldsymbol{r}}
+$$
+其中, $V$ 就是势能函数, 表示质点系中的相互作用. 同时拉格朗日函数形式变成了:
+
+$$
+\begin{equation}
+    \begin{aligned}
+        \mathcal{L} = T - V
+    \end{aligned}
+\end{equation}
+$$
+
+这就是我们常见的拉格朗日函数形式了.
