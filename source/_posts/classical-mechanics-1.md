@@ -1,11 +1,18 @@
 ---
-title: 经典力学速通 1 （理论物理速通系列第一卷）
 tags:
-- 理论物理
-- 经典力学
-- 最小作用量原理
-- 拉格朗日力学
+  - 理论物理
+  - 经典力学
+  - 最小作用量原理
+  - 拉格朗日力学
+date: 2022-12-06 15:56:31
+title: 理论物理速成——经典力学 I
+cover: https://hexo-1301133429.cos.ap-chengdu.myqcloud.com/post/classical-mechanics-1-cover.jpg
+categories: [笔记, 理论物理, 经典力学]
+description: 1. 最小作用量原理是怎么来的; 2. 拉格朗日函数是怎么来的; 3. 最小作用量原理、拉格朗日函数、牛顿经典力学原理之间的自洽
+math: true
 ---
+
+![classical-mechanics-1-cover](https://hexo-1301133429.cos.ap-chengdu.myqcloud.com/post/classical-mechanics-1-cover.jpg)
 
 # <center>第一部分 拉格朗日力学原理</center>
 
@@ -28,7 +35,7 @@ Highlight：
 
 ### 从能量谈起
 
-关于物体的运动或者说物体的状态, **"能量"** 是一个绝对绕不开的名词, 人们从日常生活中提炼的第一个深刻思想便是**能量守恒**, 最早追溯到莱布尼兹, 他指出: 以落体运动来说，物体升起的高度是与初速度的平方成正比，因之作用在物体上的力的效应必定是与其重量所给予的速度平方而不是速度成正比的，这就是机械能守恒的最早的形式^[[谈谈“能量”概念的形成](https://blog.sciencenet.cn/blog-39472-1093627.html)], 即重力势能和动能的相互转化. 物理学的发展过程中提出过很多种能量的概念, 但最终回到粒子层面就只存在两种能量的形式:
+关于物体的运动或者说物体的状态, **"能量"** 是一个绝对绕不开的名词, 人们从日常生活中提炼的第一个深刻思想便是**能量守恒**, 最早追溯到莱布尼兹, 他指出: 以落体运动来说，物体升起的高度是与初速度的平方成正比，因之作用在物体上的力的效应必定是与其重量所给予的速度平方而不是速度成正比的，这就是机械能守恒的最早的形式, 即重力势能和动能的相互转化. 物理学的发展过程中提出过很多种能量的概念, 但最终回到粒子层面就只存在两种能量的形式:
 
 - 动能
 - 势能
@@ -101,7 +108,7 @@ $$
 \end{equation}
 $$
 
-也就是说作用量 $\mathcal{A}$ 实际上是函数 $\mathcal{{L}}$ 的积分, 通过变分法求出满足使得 $\mathcal{A}$ 得极小值的函数 $\mathcal{L}$ 即可, 其对应的运动形式就是自然在无数条轨迹中选择的那一条.
+也就是说作用量 $\mathcal{A}$ 实际上是函数 $\mathcal{L}$ 的积分, 通过变分法求出满足使得 $\mathcal{A}$ 得极小值的函数 $\mathcal{L}$ 即可, 其对应的运动形式就是自然在无数条轨迹中选择的那一条.
 
 ## 拉格朗日函数
 
@@ -115,8 +122,8 @@ $$
 \begin{equation}
     \begin{aligned}
         \begin{cases}
-           \boldsymbol{q}(t_0)  = \boldsymbol{q}_0, \boldsymbol{q}(t_1) = \boldsymbol{q}_1 \\
-           \delta \mathcal{A} = \delta \int_{t_0}^{t_1} \mathcal{L}(\boldsymbol{q}(t), \dot{\boldsymbol{q}}(t),t) \mathrm{d}t= 0
+           \mathbf{q}(t_0)  = \mathbf{q}_0, \mathbf{q}(t_1) = \mathbf{q}_1 \\
+           \delta \mathcal{A} = \delta \int_{t_0}^{t_1} \mathcal{L}(\mathbf{q}(t), \dot{\mathbf{q}}(t),t) \mathrm{d}t= 0
         \end{cases}
     \end{aligned}
 \end{equation}
@@ -127,7 +134,7 @@ $$
 $$
 \begin{equation}
     \begin{aligned}
-        \delta \mathcal{A} &= \delta \int_{t_0}^{t_1} \mathcal{L}(\boldsymbol{q}(t), \dot{\boldsymbol{q}}(t),t) \mathrm{d}t\\
+        \delta \mathcal{A} &= \delta \int_{t_0}^{t_1} \mathcal{L}(\mathbf{q}(t), \dot{\mathbf{q}}(t),t) \mathrm{d}t\\
         &= \int_{t_0}^{t_1} \sum_{i}\left( \frac{\partial \mathcal{L}}{\partial q_i} \delta q_i + \frac{\partial \mathcal{L}}{\partial \dot{q}_i} \delta \dot{q}_i \right) \mathrm{d}t\\
     \end{aligned}
 \end{equation}
@@ -177,7 +184,7 @@ $$
 
 对所有的 $i$ 都成立才行. 这就是 <span style='background: pink'>拉格朗日方程</span>, 它就是自然界选择的实际运动所满足的微分方程, 其中对运动进行描述的量 $\mathcal{L}$ 被称为 <span style='background: pink'>**拉格朗日量**</span> 或者 <span style='background: pink'>**拉格朗日函数**</span>. 可以指出的是, 一个拉格朗日函数对应了一个力学体系, 但一个力学体系却可以有多个拉格朗日函数来表述, 这是由于两个不同的拉格朗日函数各自得到的作用量的变分可能是一样的. 实际上表述出来为:
 
->$\mathcal{L} = \mathcal{L}(\boldsymbol{q}, \dot{\boldsymbol{q}}, t)$ 与 $$\mathcal{L}^\prime = \mathcal{L}(\boldsymbol{q}, \dot{\boldsymbol{q}}, t) + \frac{\mathrm{d}}{\mathrm{d} t}f(\boldsymbol{q}, t)$$ 描述的是同一个力学系统.
+$\mathcal{L} = \mathcal{L}(\mathbf{q}, \dot{\mathbf{q}}, t)$ 与 $$\mathcal{L}^\prime = \mathcal{L}(\mathbf{q}, \dot{\mathbf{q}}, t) + \frac{\mathrm{d}}{\mathrm{d} t}f(\mathbf{q}, t)$$ 描述的是同一个力学系统.
 
 ## 从拉格朗日力学到牛顿力学
 
@@ -190,18 +197,18 @@ $$
 $$
 \begin{equation}
     \begin{aligned}
-        \mathcal{L} = \mathcal{L}(\boldsymbol{v}^2) = \mathcal{L}(v^2)
+        \mathcal{L} = \mathcal{L}(\mathbf{v}^2) = \mathcal{L}(v^2)
     \end{aligned}
 \end{equation}
 $$
 
-同时, 由于拉格朗日函数不显含位置矢量, 即 $\partial \mathcal{L}/\partial \boldsymbol{r} = 0$, 其满足的拉格朗日方程就变成:
+同时, 由于拉格朗日函数不显含位置矢量, 即 $\partial \mathcal{L}/\partial \mathbf{r} = 0$, 其满足的拉格朗日方程就变成:
 
 $$
 \begin{equation}
     \begin{aligned}
-        &\frac{\mathrm{d}}{\mathrm{d}t}\frac{\partial \mathcal{L}}{\partial \dot{\boldsymbol{r}}} = 0 \\
-        &\implies \frac{\partial \mathcal{L}}{\partial \boldsymbol{v}} = \operatorname{const}\\
+        &\frac{\mathrm{d}}{\mathrm{d}t}\frac{\partial \mathcal{L}}{\partial \dot{\mathbf{r}}} = 0 \\
+        &\implies \frac{\partial \mathcal{L}}{\partial \mathbf{v}} = \operatorname{const}\\
     \end{aligned}
 \end{equation}
 $$
@@ -211,9 +218,9 @@ $$
 $$
 \begin{equation}
     \begin{aligned}
-        &\frac{\partial \mathcal{L}(\boldsymbol{v}^2)}{\partial \boldsymbol{v}} = \frac{\partial \mathcal{L}}{\partial \boldsymbol{v}} \cdot 2\boldsymbol{v} = \operatorname{const}\\
-        &\implies \operatorname{const} \cdot 2\boldsymbol{v} = \operatorname{const}\\
-        &\implies \boldsymbol{v} = \operatorname{const}
+        &\frac{\partial \mathcal{L}(\mathbf{v}^2)}{\partial \mathbf{v}} = \frac{\partial \mathcal{L}}{\partial \mathbf{v}} \cdot 2\mathbf{v} = \operatorname{const}\\
+        &\implies \operatorname{const} \cdot 2\mathbf{v} = \operatorname{const}\\
+        &\implies \mathbf{v} = \operatorname{const}
     \end{aligned}
 \end{equation}
 $$
@@ -225,7 +232,7 @@ $$
 $$
 \begin{equation}
     \begin{aligned}
-        \mathcal{L}^{\prime} = \mathcal{L}(v^{\prime 2}) = \mathcal{L}(v^{2} + 2 \boldsymbol{v} \cdot \boldsymbol{\epsilon} + \epsilon^{2})
+        \mathcal{L}^{\prime} = \mathcal{L}(v^{\prime 2}) = \mathcal{L}(v^{2} + 2 \mathbf{v} \cdot \mathbf{\epsilon} + \epsilon^{2})
     \end{aligned}
 \end{equation}
 $$
@@ -235,26 +242,26 @@ $$
 $$
 \begin{equation}
     \begin{aligned}
-        \mathcal{L}(v^{\prime 2}) = \mathcal{L}(v^{2}) + 2 \frac{\partial \mathcal{L}}{\partial v^{2}} \boldsymbol{v} \cdot \boldsymbol{\epsilon}
+        \mathcal{L}(v^{\prime 2}) = \mathcal{L}(v^{2}) + 2 \frac{\partial \mathcal{L}}{\partial v^{2}} \mathbf{v} \cdot \mathbf{\epsilon}
     \end{aligned}
 \end{equation}
 $$
 
 由于 $K$ 和 $K^{\prime}$ 都是惯性系, 所以应该满足关系:
 $$
-\mathcal{L}(v^{\prime 2}) = \mathcal{L}(v^{2}) + \frac{\mathrm{d}}{\mathrm{d} t} f(\boldsymbol{r}, t) = \mathcal{L}(v^{2}) + \frac{\partial f}{\partial \boldsymbol{r}} \cdot \boldsymbol{v} + \frac{\partial f}{\partial t}
+\mathcal{L}(v^{\prime 2}) = \mathcal{L}(v^{2}) + \frac{\mathrm{d}}{\mathrm{d} t} f(\mathbf{r}, t) = \mathcal{L}(v^{2}) + \frac{\partial f}{\partial \mathbf{r}} \cdot \mathbf{v} + \frac{\partial f}{\partial t}
 $$
 即式 $(16)$ 中的第二项要作为时间的全导数存在, 而且惯性系中的拉格朗日量不显含时间, 那么我们有:
 
 $$
 \begin{equation}
     \begin{aligned}
-        2 \frac{\partial \mathcal{L}}{\partial v^{2}} \boldsymbol{\epsilon} = \frac{\partial f}{\partial \boldsymbol{r}}
+        2 \frac{\partial \mathcal{L}}{\partial v^{2}} \mathbf{\epsilon} = \frac{\partial f}{\partial \mathbf{r}}
     \end{aligned}
 \end{equation}
 $$
 
-这个式子左边不含有 $\boldsymbol{r}$, 右边不含有 $\boldsymbol{v}$, 还要求左右相等, 只能是两边都等于一个常数, 令这个常数为: $m \epsilon$, 则可以得到自由质点的拉格朗日量为:
+这个式子左边不含有 $\mathbf{r}$, 右边不含有 $\mathbf{v}$, 还要求左右相等, 只能是两边都等于一个常数, 令这个常数为: $m \epsilon$, 则可以得到自由质点的拉格朗日量为:
 
 $$
 \begin{equation}
@@ -281,7 +288,36 @@ $$
 $$
 \begin{equation}
     \begin{aligned}
-        \mathcal{L} = \sum_{\alpha}\frac{1}{2} m_{\alpha} v_{\alpha}^{2} + V(\boldsymbol{r}_1, \boldsymbol{r}_2, \boldsymbol{r}_3, \cdots, \boldsymbol{r}_{N}, t)
+        \mathcal{L} = \sum_{\alpha}\frac{1}{2} m_{\alpha} v_{\alpha}^{2} + G(\mathbf{r}_1, \mathbf{r}_2, \mathbf{r}_3, \cdots, \mathbf{r}_{N}, t)
     \end{aligned}
 \end{equation}
 $$
+
+其中, 我们将第一部分无相互作用质点系的拉格朗日函数表示为 $T$, 根据之前牛顿力学的结论我们知道这实际上就是质点系的动能, 后续我们将给出它的一般含义. 而后面相互作用对拉格朗日量的影响我们设定为只和所有质点在同一时刻的位置有关, 并且这种相互作用时瞬时传递的, 只有这样才能满足伽利略相对性原理, 这在朗道的书中有更详细的描述, 同时由于时间的各向同性, 证明我们的力学系统是可逆的, 这一点是所有经典力学成立的前提.
+
+通过上面的拉格朗日函数的形式, 结合运动满足的拉格朗日方程, 有:
+
+$$
+\begin{equation}
+    \begin{aligned}
+        \frac{\partial \mathcal{L}}{\partial \mathbf{r}_{\alpha}} &= \frac{\mathrm{d}}{\mathrm{d}t}\frac{\partial \mathcal{L}}{\partial \mathbf{v}_{\alpha}} \\
+        \implies \frac{\partial G}{\partial \mathbf{r}_{\alpha}} &= m_{\alpha} \mathbf{a}_{\alpha} = \mathbf{F}_{\alpha}
+    \end{aligned}
+\end{equation}
+$$
+
+对上述过程如果令 $G = -V$, 那就直接回到了之前牛顿力学的形式, 即:
+$$
+\mathbf{F} = - \frac{\partial V}{\partial \mathbf{r}}
+$$
+其中, $V$ 就是势能函数, 表示质点系中的相互作用. 同时拉格朗日函数形式变成了:
+
+$$
+\begin{equation}
+    \begin{aligned}
+        \mathcal{L} = T - V
+    \end{aligned}
+\end{equation}
+$$
+
+这就是我们常见的拉格朗日函数形式了.
