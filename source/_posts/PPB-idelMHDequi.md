@@ -62,9 +62,7 @@ $$\begin{equation}
 
 这两个方程的解分别对应了两个三维空间中的曲面，曲面的交线（两个曲面方向导数的叉乘 $\mathbfit{B} = \nabla \alpha \times \nabla \beta$ ，这就正好对应了前面提到的描述磁场只需要两个独立的变量，即曲面 $C_{\alpha}, C_{\beta}$ ）即是磁力线。
 
-![PPB-idelMHDequi-f1](https://hexo-1301133429.cos.ap-chengdu.myqcloud.com/post/PPB-idelMHDequi-EBC5A2913971E69F7D1376D20F6F7EF4.jpg)
-
-<center id='f1'><span style='font-weight:bold'>Fig 1 上述过程的几何描述</span></center>
+<img src="https://hexo-1301133429.cos.ap-chengdu.myqcloud.com/post/PPB-idelMHDequi-EBC5A2913971E69F7D1376D20F6F7EF4.jpg" alt = "PPB-idelMHDequi-f1" width = "300"><center id='f1'><span style='font-weight:bold'>Fig 1 上述过程的几何描述</span></center>
 
 这两个曲面的选择可以是任意的，所以同一个磁场可能对应多种不同的选择进行描述。因此，我们进一步可以把磁场写成：
 
@@ -151,6 +149,7 @@ $$\begin{equation}
     \begin{aligned}
         \nabla_{\perp} \left(p + \frac{B^2}{8\pi}\right) = \pmb{\kappa} \frac{B^{2}}{4\pi},\ \nabla_{\parallel} p = 0
     \end{aligned}
+    \label{eq:15}
 \end{equation}$$
 
 ## 磁面和磁通函数
@@ -161,4 +160,69 @@ $$\begin{equation}
     \begin{aligned}
         \mathbfit{B} = -F(\psi) \hat{z} + \hat{z} \times \nabla \psi \equiv B_z(\psi) \hat{z} + \hat{z} \times \nabla \psi
     \end{aligned}
+    \label{eq:B2}
 \end{equation}$$
+
+这里我们可以看到, $z$ 方向是和 $\psi$ 有关的量, 同时垂直与 $z$ 方向的矢量取到的是 $\nabla \psi$, 这样很明显可以看出 $\psi = \psi(x, y)$ 是磁矢势的 $z$ 方向分量, 我们可以将其称为**磁通函数**. 
+
+{% note info %}
+关于为什么要这样取值, 我们考虑磁场表示形式公式 $\ref{eq:bfield}$, $\psi$ 和 $\zeta$ 所表示的定义于 $(x, y, z)$ 坐标上的两个曲面是相互垂直的, 平板模型中一个曲面定义在 $(x, y)$ 坐标上, 另一个必然定义于 $z$ 坐标. 而 $\zeta$ 在两项中都是梯度项 $\nabla \zeta$, 这样自然是将 $\zeta$ 取成和 $z$ 相关, 至于正负号的选择就直接带进去试一试, 然后取简单的那一种形式就OK了. <span class='mohu'>个人理解, 仅供参考!</span>
+{% endnote %}
+
+然后我们再回到原本的"正交磁力线坐标", 即 $(x, y, z) \to (\psi, \chi, z)$. 这里 $\chi$ 坐标满足 $\nabla \chi \parallel \hat{z} \times \nabla \psi$ (之前说过 $\psi, \chi, \zeta = -z$ 之间是相互垂直的). 那么很显然地必然会有磁场的分量在 $\nabla \chi$ 方向上, 即 $\mathbfit{B}_{\chi}$. 换句话说, 在 $(x, y)$ 平面内必然会有磁力线在 $\psi(x, y) = C(\text{常数})$ 的曲线上(三维空间中这条曲线沿着 $z$ 方向延伸成一个曲面, 实际上就是类似于等势面, 只不过只是磁势的一个分量的等势). 这样, 在两条曲线 $\psi = \psi_{1}, \psi = \psi_{2}$ 上随便找两个点连起来, 穿过这条连线(同样在三维空间中是一个曲面)的磁力线根数被定义为**极向磁通量**:
+
+$$\begin{equation}
+    \begin{aligned}
+        \iint_{\psi_{1} \to \psi_{2}} \mathbfit{B}_{x} \cdot \mathrm{\,d}\mathbfit{S}_{\psi, z} = \Psi_{\psi, \chi}
+    \end{aligned}
+\end{equation}$$
+
+固定的 $\psi_{1}, \psi_{2}$ 之间的任意连线的极向磁通量一定相等. 这样我们在 $\psi_{1}$ 上选取 $x_{1}$, 在 $\psi_{2}$ 上选取 $x_{2}$, 完成对 $z$ 方向的积分后可以得到:
+
+$$\begin{equation}
+    \begin{aligned}
+        \iint _{\psi_{1} \to \psi_{2}} \mathbfit{B}_{x} \cdot \mathrm{\,d}\mathbfit{S}_{\psi, z} &= \underbrace{L_{z} \int_{x_{1}}^{x_{2}} B_y \mathrm{\,d}x = L_{z} \int_{x_{1}}^{x_{2}} \frac{\partial \psi}{\partial y} \mathrm{\,d}x}_{\text{因为}\psi\text{是磁势的}\hat{z}\text{分量}} \\
+        &= L_{z} \int _{\psi_{1}}^{\psi_{2}} \mathrm{\,d}\psi = L_{z} (\psi_{2}-\psi_{1})
+    \end{aligned}
+\end{equation}$$
+
+很显然我们可以得出结论: 磁通函数 $\psi(x, y)$ 是 $\hat{z}$ 方向上单位长度上的极向磁通量.
+
+根据Maxwell方程组以及之前得到的理想磁流体平衡方程, 结合磁场表示式 $\ref{eq:B2}$ 还可以得到:
+
+$$\begin{equation}
+    \begin{aligned}
+        \mathbfit{J} &= \frac{c}{4\pi} \nabla \times \mathbfit{B} = \frac{c}{4\pi} \left(\frac{\mathrm{d}F}{\mathrm{d}\psi} \hat{z} \times \nabla \psi + \hat{z} \nabla ^{2} \psi\right), \\
+        \nabla p &= \frac{\mathbfit{J} \times \mathbfit{B}}{c} = -\left(\nabla ^{2} \psi + F \frac{\mathrm{d}F}{\mathrm{d}\psi}\right) \frac{\nabla \psi}{4\pi}
+    \end{aligned}
+\end{equation}$$
+
+可以看到, $\nabla p$ 仅仅只与 $\psi$ 有关, 上述方程的解应该有着 $p = p(\psi)$ 的形式, 那么在 $p = \text{常数}$ 的"面"上, 我们有磁通函数 $\psi = \text{常数}$ 的结论. 所以我们可以将这个曲面称为 **"磁面"**.
+
+<img src="https://hexo-1301133429.cos.ap-chengdu.myqcloud.com/post/PPB-idelMHDequi-510bfbf51e28127ee5780c63602a27a.jpg" alt="PPB-idelMHDequi-磁通量" width = "300">
+<center id='f2'><span style='font-weight:bold'>Fig 2. 上述过程的图像表示</span></center>
+
+利用 $p = p(\psi)$, 上述的方程可以进一步化简:
+
+$$\begin{equation}
+    \begin{aligned}
+        &\frac{4\pi \nabla p(\psi)}{\nabla \psi} = -\nabla ^{2} \psi - F(\psi) \frac{\mathrm{d}F(\psi)}{\mathrm{d}\psi} \\
+        &\implies \nabla ^{2} \psi = -4\pi \left(\frac{\nabla p(\psi)}{\nabla \psi} + F(\psi)\frac{\mathrm{d}F(\psi)}{4\pi \mathrm{d}\psi}\right) \\
+        &\because \nabla p(\psi) = \frac{\mathrm{d}p}{\mathrm{d}\psi} \nabla \psi, F(\psi)\frac{\mathrm{d}F(\psi)}{\mathrm{d}\psi} = \frac{\mathrm{d}}{\mathrm{d}\psi} \frac{F(\psi)^{2}}{2} \\ 
+        &\implies \nabla ^{2} \psi = -4\pi \frac{\mathrm{d}}{\mathrm{d}\psi} \left(p(\psi) + \frac{F(\psi)^{2}}{8\pi}\right) \\
+    \end{aligned}
+\end{equation}$$
+
+再加上 $F(\psi)$ 是磁场的 $-z$ 分量(式 $\ref{eq:B2}$), 有:
+
+$$\begin{equation}
+    \begin{aligned}
+        \nabla ^{2} \psi = -4\pi \frac{\mathrm{d}}{\mathrm{d}\psi} \left[p + \frac{B_{z}^{2}}{8\pi}\right]
+    \end{aligned}
+\end{equation}$$
+
+我们称这个方程为 **磁面方程**, 其适用于各种坐标系.
+
+事实上, 从式 $\ref{eq:15}$ 中我们可以得到: 沿着一条磁力线有 $p = \text{常数}$. 如果这个磁力线卷曲成一个曲面, 曲面上处处都有同一个 $p$, 曲面的法线由 $\nabla p = \nabla _{\perp} p$ 给出. 同时, 根据静态平衡的方程我们可以有: $\mathbfit{B} \perp \nabla p, \mathbfit{J} \perp \nabla p$, 所以电流也在这个表面上, 也就是磁面上.
+
+<img src="https://hexo-1301133429.cos.ap-chengdu.myqcloud.com/post/PPB-idelMHDequi-f3.jpg" alt="PPB-idelMHDequi-f3" width = "300">
