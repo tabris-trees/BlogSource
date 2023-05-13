@@ -226,3 +226,95 @@ $$\begin{equation}
 事实上, 从式 $\ref{eq:15}$ 中我们可以得到: 沿着一条磁力线有 $p = \text{常数}$. 如果这个磁力线卷曲成一个曲面, 曲面上处处都有同一个 $p$, 曲面的法线由 $\nabla p = \nabla _{\perp} p$ 给出. 同时, 根据静态平衡的方程我们可以有: $\mathbfit{B} \perp \nabla p, \mathbfit{J} \perp \nabla p$, 所以电流也在这个表面上, 也就是磁面上.
 
 <img src="https://hexo-1301133429.cos.ap-chengdu.myqcloud.com/post/PPB-idelMHDequi-f3.jpg" alt="PPB-idelMHDequi-f3" width = "300">
+<center id='f3'><span style='font-weight:bold'>Fig 3. 磁面, 压强梯度以及电流分布</span></center>
+
+## 磁冻结
+
+在流体力学中存在涡旋方程: $\partial \mathbfit{\omega}/\partial t = \nabla \times (\mathbfit{u} \times \mathbfit{\omega})$, 同时我们可以证明"涡旋"是冻结在流体中的, 即涡旋是和流体一起运动的. 在理想磁流体模型中, 磁场满足的磁感应方程具有和涡旋方程一致的形式: $\partial \mathbfit{B}/\partial t = \nabla \times (\mathbfit{u} \times \mathbfit{B})$. 我们可以合理的做出推测磁力线也是"冻结"在等离子当中的.
+
+{% hideToggle 王晓刚老师书中磁冻结效应的推导(没怎么看明白),bg,color %}
+
+将磁场的一般表示形式带入到磁感应方程中可以得到, 方程左边：
+
+$$\begin{equation}
+    \begin{aligned}
+        \frac{\partial \mathbfit{B}}{\partial t} = \nabla \frac{\partial \alpha}{\partial t} \times \nabla \beta + \nabla \alpha \times \nabla \frac{\partial \beta}{\partial t} = \nabla \times \left(\frac{\partial \alpha}{\partial t} \nabla \beta - \frac{\partial \beta}{\partial t}\nabla \alpha\right)
+    \end{aligned}
+\end{equation}$$
+
+方程右边: 
+
+$$\begin{equation}
+    \begin{aligned}
+        \nabla \times (\mathbfit{u} \times \mathbfit{B}) &= \nabla \times \left[\mathbfit{u} \times \left(\nabla \alpha \times \nabla \beta\right)\right] \\
+        &= \nabla \times \left[\nabla \alpha (\mathbfit{u} \cdot \nabla \beta) - \nabla \beta (\mathbfit{u} \cdot \nabla \alpha)\right]
+    \end{aligned}
+\end{equation}$$
+
+其中 $\mathbfit{u} \cdot \nabla \alpha(\beta)$ 得到一个标量, 再乘上 $\alpha$, 上式实际上是对一个标量的梯度做叉乘, 最终的结果为 0(很容易证明, 基础的高等数学场论知识). 于是有:
+
+$$\begin{equation}
+    \begin{aligned}
+        \nabla \times \left(\frac{\mathrm{d} \alpha}{\mathrm{d} t} \nabla \beta - \frac{\mathrm{d}  \beta}{\mathrm{d} t} \nabla \alpha\right) = 0
+    \end{aligned}
+\end{equation}$$
+
+也就是说:
+
+$$\begin{equation}
+    \begin{aligned}
+        \frac{\mathrm{d} \alpha}{\mathrm{d} t} \nabla \beta - \frac{\mathrm{d}  \beta}{\mathrm{d} t} \nabla \alpha = \nabla \Psi
+    \end{aligned}
+\end{equation}$$
+
+<span class='mohu'>因为对一个标量的梯度求旋度必然等于零.</span>
+
+这里我们选择合适的度规, 使得 $\nabla \Psi = 0$. 此时由于 $\nabla \beta$ 以及 $\nabla \alpha$ 不会为零, 则必然会有:
+
+$$\begin{equation}
+    \begin{aligned}
+        \frac{\mathrm{d} \alpha}{\mathrm{d} t} = \frac{\mathrm{d} \beta}{\mathrm{d} t} = 0
+    \end{aligned}
+\end{equation}$$
+
+这也就表明确定磁力线的两组曲面 $\alpha(x, y, z) = C_\alpha, \beta(x, y, z) = C_{\beta}$ 都是随着流体元运动的守恒量, 因此其交线----磁力线也随着流体元运动不变.
+
+{% endhideToggle %}
+
+由于上述的这个方式对于我们这种物理小白来说实在是不太友好, 所以我们这里考虑另外一种磁冻结效应的证明方式:
+
+根据 $\partial \mathbfit{B}/\partial t = \nabla \times (\mathbfit{u} \times \mathbfit{B})$, 我们知道:
+
+$$\begin{equation}
+    \begin{aligned}
+        \frac{\partial \mathbfit{B}}{\partial t} - \nabla \times (\mathbfit{u} \times \mathbfit{B}) = 0
+    \end{aligned}
+\end{equation}$$
+
+同时, 磁通量可以通过磁场的面积分(即通过的磁力线的多少)得到, 也就是: $\Phi = \iint_{S} \mathbfit{B} \cdot  \mathrm{\,d}\mathbfit{S}$, 于是我们考虑对 $(27)$ 式的两边做一个面积分:
+
+$$\begin{equation}
+    \begin{aligned}
+        \iint_{S} \frac{\partial \mathbfit{B}}{\partial t} \cdot \mathrm{\,d}\mathbfit{S} = \frac{\partial \iint_{S} \mathbfit{B} \cdot \mathrm{\,d}\mathbfit{S}}{\partial t} = \frac{\partial \Phi}{\partial t}
+    \end{aligned}
+\end{equation}$$
+
+$$\begin{equation}
+    \begin{aligned}
+        \iint_{S} \nabla \times (\mathbfit{u} \times \mathbfit{B}) \cdot \mathrm{\,d}S = -\oint _{\partial S} (\mathbfit{B} \times \mathbfit{u}) \cdot \mathrm{\,d}\mathbfit{l} = -\oint _{\partial S} \mathbfit{B} \cdot  \mathbfit{u} \times  \mathrm{\,d}\mathbfit{l}
+    \end{aligned}
+\end{equation}$$
+
+<img src="https://hexo-1301133429.cos.ap-chengdu.myqcloud.com/post/PPB-idelMHDequi-F76F245C16BE2A5CDE7D336666709101.png" alt="磁冻结示意图" width = "500">
+<center id='f4'><span style='font-weight:bold'>Fig 4. 磁冻结示意图</span></center>
+
+根据上图我们可以知道 $(29)$ 式实际上是磁流体流动引起的磁通量变化, 加上 $(28)$ 式表示的原本的磁通量就是理想磁流体中总的磁通量随时间的变化. 即:
+
+$$\begin{equation}
+    \begin{aligned}
+        \frac{\mathrm{d}\Phi}{\mathrm{d}t} &= \frac{\partial \Phi}{\partial t} + \oint _{\partial S} \mathbfit{B} \cdot  \mathbfit{u} \times  \mathrm{\,d}\mathbfit{l} \\
+        &=\iint _{S} \frac{\partial \mathbfit{B}}{\partial t} - \nabla \times (\mathbfit{u} \times \mathbfit{B}) \cdot \mathrm{\,d}S \\ &= 0
+    \end{aligned}
+\end{equation}$$
+
+这就证明了一个固定的流体元的磁通量是随时间不变的, 也就是磁场冻结在流体中.
