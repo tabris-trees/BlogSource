@@ -62,7 +62,9 @@ $$\begin{equation}
 
 这两个方程的解分别对应了两个三维空间中的曲面，曲面的交线（两个曲面方向导数的叉乘 $\mathbfit{B} = \nabla \alpha \times \nabla \beta$ ，这就正好对应了前面提到的描述磁场只需要两个独立的变量，即曲面 $C_{\alpha}, C_{\beta}$ ）即是磁力线。
 
-<img src="https://hexo-1301133429.cos.ap-chengdu.myqcloud.com/post/PPB-idelMHDequi-EBC5A2913971E69F7D1376D20F6F7EF4.jpg" alt = "PPB-idelMHDequi-f1" width = "300"><center id='f1'><span style='font-weight:bold'>Fig 1 上述过程的几何描述</span></center>
+<img src="https://hexo-1301133429.cos.ap-chengdu.myqcloud.com/post/PPB-idelMHDequi-EBC5A2913971E69F7D1376D20F6F7EF4.jpg" alt = "PPB-idelMHDequi-f1" width = "300">
+
+<center id='f1'><span style='font-weight:bold'>Fig 1 上述过程的几何描述</span></center>
 
 这两个曲面的选择可以是任意的，所以同一个磁场可能对应多种不同的选择进行描述。因此，我们进一步可以把磁场写成：
 
@@ -118,11 +120,11 @@ $$\begin{equation}
     \label{eq:1}
 \end{equation}$$
 
-这个时候我们看到这种两个叉乘在一起的一般都会利用矢量恒等式进行化简, 回去翻翻矢量恒等式的列表, 发现有 $\nabla (\mathbfit{A} \cdot \mathbfit{B}) = \mathbfit{A} \times (\nabla \mathbfit{B}) + \mathbfit{B} \times (\nabla \times \mathbfit{A}) + \mathbfit{A} \cdot \nabla \mathbfit{B} + \mathbfit{B} \cdot \nabla \mathbfit{A}$. 把这里的磁场带进去就有:
+这个时候我们看到这种两个叉乘在一起的一般都会利用矢量恒等式进行化简, 回去翻翻矢量恒等式的列表, 发现有 $\nabla (\mathbfit{A} \cdot \mathbfit{B}) = \mathbfit{A} \times (\nabla \times \mathbfit{B}) + \mathbfit{B} \times (\nabla \times \mathbfit{A}) + \mathbfit{A} \cdot \nabla \mathbfit{B} + \mathbfit{B} \cdot \nabla \mathbfit{A}$. 把这里的磁场带进去就有:
 
 $$\begin{equation}
     \begin{aligned}
-        (\nabla \times \mathbfit{B}) \times \mathbfit{B} = \frac{\nabla B^2}{2} + \mathbfit{B} \cdot \nabla \mathbfit{B}
+        (\nabla \times \mathbfit{B}) \times \mathbfit{B} = - \frac{\nabla B^2}{2} + \mathbfit{B} \cdot \nabla \mathbfit{B}
     \end{aligned}
 \end{equation}$$
 
@@ -318,3 +320,206 @@ $$\begin{equation}
 \end{equation}$$
 
 这就证明了一个固定的流体元的磁通量是随时间不变的, 也就是磁场冻结在流体中.
+
+从微观角度来看, 一般来说磁冻结意味着带电粒子沿着磁力线作回旋运动. 然而系统中存在的各种物理量的梯度会导致粒子在不同的磁力线之间作横越磁力线的漂移运动, 那么磁冻结的图像应该怎么理解就是一个需要仔细讨论的问题. 从静态平衡的方程出发:
+
+$$
+\begin{equation}
+    \begin{aligned}
+        \nabla _{\perp p} = \frac{\mathbfit{J}_{\perp} \times \mathbfit{B}}{c}
+    \end{aligned}
+\end{equation}
+$$
+
+或者是:
+
+$$
+\begin{equation}
+    \begin{aligned}
+        \mathbfit{J}_{\perp} = - \frac{c \nabla _{\perp p} \times \mathbfit{B}}{B^{2}}
+    \end{aligned}
+\end{equation}
+$$
+
+也就是说, 等离子体电流是由静态平衡下的压强梯度漂移导致的. 很明显这个电流的存在会减弱原本的磁场, 因此被称为**抗磁漂移**. 前面的讨论我们已经知道电流是在磁面上存在的, 所以带电粒子实际上是在磁面上被 "冻结" 的. 而磁面是磁力线卷曲而成的曲面, 所以我们也可以说带电粒子实际上还是被冻结在同一条磁力线上.
+
+要说的是, 磁流体近似下的电流是由压强梯度引起的, 而各种梯度运动的本质都是 Larmor 半径效应引起的, 所以磁流体电流的物理图像是 Larmor 半径的最低阶近似.
+
+## Z - 箍缩, $\theta$ - 箍缩
+
+磁约束平衡问题是理想磁流体平衡的一个重要的应用研究, 下面针对几个简单的几何位型作一些介绍, 比如类似单个直线导体中的电流或者螺线管线圈中电流产生的磁场对等离子体的约束.
+
+### Z - 箍缩
+
+首先是第一种情况, 电流沿着柱对称几何的轴向(z 方向), 产生的磁场可以表示为 $\mathbfit{B} = \hat{\theta}B_{\theta}(r)$, 即图5所示. 根据之前的平衡方程我们可以得到:
+
+$$
+\begin{equation}
+    \begin{aligned}
+        &\frac{\mathrm{d}}{\mathrm{d}r}\left(p + \frac{B_{\theta}^{2}}{8\pi}\right) = -\frac{B_{\theta}^{2}}{4 \pi r} \\
+        &\frac{\mathrm{d}p}{\mathrm{d}r} = -\frac{1}{8 \pi r^{2}}\frac{\mathrm{d}}{\mathrm{d}r}(r^{2} B_{\theta}^{2})
+    \end{aligned}
+\end{equation}
+$$
+
+<img src="https://hexo-1301133429.cos.ap-chengdu.myqcloud.com/post/PPB-idelMHDequi-20230908170735.png" alt="Z - 箍缩" width = "500">
+<center id='f5'><span style='font-weight:bold'>Fig 5. Z - 箍缩</span></center>
+
+这样, 我们就可以更具需要的等离子体压强分布计算应该采用什么样的电流分布, 或者根据已有的电流分布计算会得到什么样的等离子体压强分布.
+
+在这种位型下, $B_{z} = 0$, 这意味着等离子体是不稳定的(后面会讨论). 在强电工程技术的研究中会需要利用这种不稳定性来设计具有"自然"的快速响应性质的过载保护开关. 惯性约束聚变中, 也可以采用这种方案: 在非常细的丝状导线上同非常强的电流使导线融化成等离子体, 电流产生的洛伦兹力 $\mathbfit{J} \times \mathbfit{B}$ 会朝着中心来"箍缩"这些等离子体, 从而产生高能量粒子和 X 射线引发聚变. 这种装置作为强 X 射线源以及强脉冲聚变中子源也有着广泛的应用前景.
+
+### $\theta$ 箍缩
+
+如果电流方向在 $\theta$ 方向, 则产生的磁场为 $\mathbfit{B} = \hat{z}B_{z}(r)$, 如图6所示.
+
+<img src="https://hexo-1301133429.cos.ap-chengdu.myqcloud.com/post/PPB-idelMHDequi-20230908190542.png" alt="θ - 箍缩" width="300">
+<center id='f6'><span style='font-weight:bold'>Fig 6. θ - 箍缩</span></center>
+
+同样的, 我们可以利用平衡方程得到以下的关系:
+
+$$
+\begin{equation}
+    \begin{aligned}
+        \left(p + \frac{B^{2}}{8 \pi}\right)_{r < a} = \frac{B^{2}(a)}{8 \pi}
+    \end{aligned}
+\end{equation}
+$$
+
+$r = a$ 表示等离子体的边界, 同样的我们需要从电流分布计算压强分布, 或者根据压强分布计算所需的电流分布. 同时, 在这种位型下 $B_{\theta} = 0$, 等离子体"非常安全(稳定)", 其稳定性我们也放到下一节中论述. 这也意味着该位型下没有轴向的约束(单粒子运动中平行于磁场方向是不会受到力的), 磁镜和环形约束可以用来解决这一问题.
+
+### 磁镜
+
+将 $\theta$ - 箍缩中等离子体柱两端的磁场 $B_{z}$, 我们就可以得到一个"磁镜"位型, 如图7所示.
+
+<img src="https://hexo-1301133429.cos.ap-chengdu.myqcloud.com/post/PPB-idelMHDequi-20230908195732.png" alt="磁镜" width="300">
+<center id='f7'><span style='font-weight:bold'>Fig 7. 磁镜</span></center>
+
+这种位型通常被称为"线性装置", 曾经是磁约束等离子体研究的最重要装置. 伴随磁镜装置的还有一个很重要的概念, "绝热不变量". 磁镜装置的第一个不变量是"磁矩不变量", 即带电粒子在围绕磁力线做高频回旋运动时, 在长时间尺度上我们可以认为粒子单位质量的回旋运动产生的磁矩
+
+$$
+\begin{equation}
+    \begin{aligned}
+        \mu = \frac{v_{\perp}^2}{2 B}
+    \end{aligned}
+\end{equation}
+$$
+
+是一个近似的守恒量, 沿着磁力线 $l$, 粒子单位质量的动能可以写成:
+
+$$
+\begin{equation}
+    \begin{aligned}
+        \varepsilon = \mu B(l) + \frac{1}{2} v_{\parallel}^{2}
+    \end{aligned}
+\end{equation}
+$$
+
+这可以看成带电粒子沿着磁力线在"磁势阱" $\mu B(l)$ 中的运动. 在磁场的极小值 $B_{\min }$ 两侧如果有一个极大值 $B_{\max }$, 那么对于 $\varepsilon \leq \mu B(l)$ 的粒子会被磁势阱捕获, 从而在两个极大值之间"弹跳(bounce)". 对于更长的时间, 这个弹跳的周期运动会给我们第二个绝热不变量:"弹跳不变量". 再加上磁场曲率的存在, 带电粒子会在跨越磁力线的方向上存在漂移, 这个运动近似是一个围绕磁镜圆形截面的周期运动. 在非常长的时间尺度下, 我们将得到有关漂移的第三个绝热不变量. 一般来说, 磁约束等离子体中很少用到后面一种不变量. 另外, 地球磁场的偶极磁场也可以近似地看成是一个磁镜系统, 并且这三种绝热不变量在地球磁层等离子体中的研究是非常重要的. 由于磁势阱的存在, 这种磁约束位型下, 带电粒子的速度空间存在"损失锥(loss cone)"不稳定性, 这将大大影响等离子体约束的时间.
+
+### 环形约束和托卡马克
+
+为了解决轴向上没有约束的问题, 我们将 $\theta$ - 约束中的环形线圈围成一个圆环(图8绿色部分), 但此时由 $B_{z}$ 弯成的环向场在环内侧比环外侧强, 导致指向环内测的磁场梯度. 根据单粒子运动的结论, 这会导致垂直于这个梯度方向的漂移. 因此, 为了消除这个漂移, 我们需要在原本的场上叠加一个极向场(图8的中心螺管线). 这就是托卡马克装置的设计思路.
+
+<img src="https://hexo-1301133429.cos.ap-chengdu.myqcloud.com/post/PPB-idelMHDequi-tokamak.png" alt="托卡马克(绿色的是环形线圈)" width="300">
+<center id='f8'><span style='font-weight:bold'>Fig 8. 托卡马克(绿色的是环形线圈)</span></center>
+
+很显然的, 环向场要比极向场强得多, 极向场的引入使得磁面拓扑呈环状, 每条磁力线都会经历环的内侧和外侧, 而因为向环内的磁场梯度的存在, 使得一条磁力线上会有环内侧的强场区和环外侧的弱场区, 这构成了一个"磁镜"位型, 这种特殊的磁镜效应对粒子的捕获是托卡马克等离子体的一个非常重要的性质. 这种环形约束的平衡是一种二维平衡, 接下来就讨论二维平衡位型满足的条件.
+
+## 一维平衡, 螺旋箍缩
+
+### 一维圆柱等离子体的平衡
+
+我们知道轴对称的柱状等离子体($\theta$ - 箍缩)的物理量具有 $f = f(r)$ 的形式, 并且 $B_{r} = 0$. 因此, 磁面方程可以写成 $r = r_{0}$ 的形式. 根据静态平衡方程我们可以得到:
+
+$$
+\begin{equation}
+    \begin{aligned}
+        \frac{\mathrm{d}}{\mathrm{d}r} \left(p + \frac{B^{2}}{8 \pi}\right) = \frac{B^{2}}{4 \pi} \kappa(r) = -\frac{B_{\theta}^{2}}{4 \pi r} \left(\text{因为圆的曲率为} -\frac{1}{r}\right)
+    \end{aligned}
+\end{equation}
+$$
+
+如果既有环向场($\theta$), 又有极向场($z$), 也就是说磁场可以被写成: $\mathbfit{B} = \hat{\theta} B_{\theta}(r) + \hat{z} B_{z}(r)$, 那么静态平衡得到的结果将会变成:
+
+$$
+\begin{equation}
+    \begin{aligned}
+        \frac{\mathrm{d}}{\mathrm{d}r} \left(p + \frac{B_{\theta}^{2}}{8 \pi} + \frac{B_{z}^{2}}{8 \pi}\right) = \frac{B_{\theta}^{2}}{4 \pi r}
+    \end{aligned}
+\end{equation}
+$$
+
+由于这种位型的磁力线和电流都是螺旋形的, 所以我们一般称之为"螺旋箍缩". 在这种平衡下, $\nabla \cdot \mathbfit{B} = 0$ 显然是满足的(因为没有 $B_{r}$, 即没有向外发射的无法闭合的磁力线). 因此我们需要通过一个方程(式 38)来决定三个未知函数($p, B_{\theta}, B_{z}$), 其中轴向(z 方向)和环向(θ 方向)自由度由周期条件来确定; 另外一个则可以用 r 的两个边界条件($r = 0$ 和 $r = a$)来确定.
+
+### 安全因子
+
+现在我们来看磁场的两个分量是如何绕成磁面的, 在这样的螺旋形磁场位型中, 一根磁力线需要同时经过大小两个半径(主半径 R 以及小半径 r)的圆(图9所示, 红色为小圆, 蓝色为大圆, 这两个圆分别对应着极向和环向的磁场, 大小半径的概念在托卡马克核聚变的研究中也经常使用).
+
+<img src="https://hexo-1301133429.cos.ap-chengdu.myqcloud.com/post/PPB-idelMHDequi-螺旋箍缩.png" alt="螺旋箍缩" width="500">
+<center id='f9'><span style='font-weight:bold'>Fig 9. 螺旋箍缩</span></center>
+
+根据最开始的托卡马克坐标(θ, r, z)磁力线的方程, 我们可以得到:
+
+$$
+\begin{equation}
+    \begin{aligned}
+        \frac{r \mathrm{d}\theta}{\mathrm{d}z} &= \frac{B_{\theta}}{B_{z}} \\
+        \Rightarrow \frac{r \mathrm{d}\theta}{\mathrm{d}z} &= \frac{B_{\theta} 2 \pi R}{B_{z} 2 \pi R} \\
+        \Rightarrow \frac{2 \pi R \mathrm{\,d}\theta}{\mathrm{\,d}z} &= \frac{B_{\theta} 2 \pi R}{B_{z} r} \\
+        \Rightarrow \frac{\mathrm{\,d}z}{2 \pi R} &= \frac{B_{z} r}{B_{\theta} 2 \pi R \mathrm{\,d}\theta}
+    \end{aligned}
+\end{equation}
+$$
+
+这里我们一个叫"安全因子(safety factor)"的量, 也就是:
+
+$$
+\begin{equation}
+    \begin{aligned}
+        q(r) \equiv \frac{r B_{z}(r)}{R B_{\theta}(r)}
+    \end{aligned}
+\end{equation}
+$$
+
+其中由于 $B_{\theta}$ 以及 $B_{z}$ 都会随着 r 变化, 所以安全因子也会随着 r 进行变化. 有了安全因子的定义之后我们可以得到: 
+
+$$(\Delta z)_{\Delta \theta = 2 \pi} = q(r) 2 \pi R$$
+
+这也就意味着实际上安全因子表示磁力线在 $\hat{\theta}$ 方向上转完一整圈时在 $\hat{z}$ 方向上转过的圈数(也可以说是走过的周期数). 在下一节中我们可以看到安全因子和等离子体平衡的稳定性有关系, 这也是安全因子这个名字的原因. 在 z - 箍缩中, 由于 $B_{z} = 0$, 安全因子为 0, 等离子体是不安全的, 也就是说不稳定的. 而在 θ - 箍缩下, $B_{\theta} = 0$, $q \to  \infty$, 等离子体是很安全的, 也就是说是"绝对稳定"的.
+
+另外, 由于 $q(r)$ 是连续变化的, 因此对于 $q(r)$ 我们可以取到无穷多分段连续的无理数, 也可以取到无穷多个"分立"的有理数(也就是有理数在数轴上的分布是分立的). 当我们取到有理数 $q(r) = m/n$ 的磁面(有理磁面)时, 磁力线环绕大圆 m 圈, 绕小圆 n 圈后会回到最开始的地方首尾相接, 这也就意味着此时的磁力线是无法铺满整个磁面的. 实际上就是有理磁面上的磁力线总是在重复之前的轨迹, 一条磁力线是没法遍历磁面上所有的点, 但无理磁面上的磁力线因为不会回到原来的起点, 不会重复之前走过的路, 所以会在磁面上遍历所有的位置. 从测度上来说, 有理磁面上的磁力线所占据的区域测度为零, 物理上来说这个磁面是"软"的, 容易出现不稳定性. 因此相对来说, 无理磁面具有很好的物理性质. 关于这个问题, 王晓钢老师的[博客](https://blog.sciencenet.cn/blog-39346-286012.html)有更详细的解释(<span class='mohu'>实际上也差不多, 哈哈哈哈哈</span>).
+
+## Grad - Shafranov 方程
+
+接下来考虑更复杂的环形约束等离子体的二维平衡分布及其性质, 二维平衡满足的方程为 Grad - Shafranov 方程, 用来研究托卡马克等离子体, 这里我们先进一步引入托卡马克坐标系.
+
+### 托卡马克(Tokamak)坐标系
+
+一般由于托卡马克甜甜圈形状的特征我们可以采用柱坐标($R, \zeta, Z$)或者环坐标($r, \theta, z$)来描述托卡马克位型, 其中 $\hat{z}$ 为弧长的方向.
+
+<img src="https://hexo-1301133429.cos.ap-chengdu.myqcloud.com/post/PPB-idelMHDequi-托卡马克坐标系.png" alt="托卡马克坐标系" width="400">
+<center id='f10'><span style='font-weight:bold'>Fig 10. 托卡马克坐标系</span></center>
+
+我们可以很轻松地给出这两个坐标系之间的关系:
+
+$$
+\begin{equation}
+    \begin{aligned}
+        R &= R_{0} + r \cos \theta \\
+        \zeta &= -\frac{z}{R_{0}} \\
+        Z &= r \sin \theta
+    \end{aligned}
+\end{equation}
+$$
+
+很显然的, 这样的平衡是轴对称的, 也就是 $\mathrm{d}/\mathrm{d}\zeta = 0$. 取磁通量 $\psi = \psi(R, Z)$, 根据磁场的表达式 $\ref{eq:bfield}$, $\ref{eq:B2}$ (用 $\hat{\zeta}/R$ 取代 $\hat{z}$),我们可以得到:
+
+$$
+\begin{equation}
+    \begin{aligned}
+        \mathbfit{B} &= \frac{F(\psi)}{R} \hat{\zeta} - \frac{\hat{\zeta}}{R} \times \nabla \psi \\
+        &= \mathbfit{B}_{\zeta} - \frac{\hat{\zeta}}{R} \times \nabla \psi
+    \end{aligned}
+\end{equation}
+$$
