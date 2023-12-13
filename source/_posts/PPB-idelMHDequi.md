@@ -1,7 +1,7 @@
 ---
 title: 理想磁流体平衡
-date: 2023-02-07 14:31:45
-cover: https://hexo-1301133429.cos.ap-chengdu.myqcloud.com/post/MHD-E-20221013234420.png
+date: 2023-02-13 14:31:45
+cover: https://hexo-1301133429.cos.ap-chengdu.myqcloud.com/post/PPB-idelMHDequi-tokamak.png
 tags:
 - 等离子体物理
 - 磁流体力学
@@ -513,13 +513,218 @@ $$
 \end{equation}
 $$
 
-很显然的, 这样的平衡是轴对称的, 也就是 $\mathrm{d}/\mathrm{d}\zeta = 0$. 取磁通量 $\psi = \psi(R, Z)$, 根据磁场的表达式 $\ref{eq:bfield}$, $\ref{eq:B2}$ (用 $\hat{\zeta}/R$ 取代 $\hat{z}$),我们可以得到:
+很显然的, 这样的平衡是轴对称的, 也就是 $\mathrm{d}/\mathrm{d}\zeta = 0$. 取磁面 $\psi = \psi(R, Z)$, 此时有 $\frac{\partial \psi}{\partial \zeta}=0$, 前面提到过磁力线可以看成是两个曲面的交线, 将这两个曲面选择成相互正交的曲面可以得到一个正交坐标系, 对应到托卡马克中, 我们可以选择磁面 $\psi$ 和 $-\hat{z}$ 方向对应的曲面, 根据磁场的表达式 $\ref{eq:bfield}$, $\ref{eq:B2}$, 我们可以得到:
+
+$$
+\begin{equation}
+    \begin{aligned}
+        \mathbfit{B} = -F(\psi)\hat{z} + \hat{z} \times \nabla \psi
+    \end{aligned}
+\end{equation}
+$$
+
+由于 $\hat{\zeta}$ 和 $\hat{z}$ 是相互对应的, (用 $\hat{\zeta}/R$ 取代 $\hat{z}$), 可以得到: 
 
 $$
 \begin{equation}
     \begin{aligned}
         \mathbfit{B} &= \frac{F(\psi)}{R} \hat{\zeta} - \frac{\hat{\zeta}}{R} \times \nabla \psi \\
-        &= \mathbfit{B}_{\zeta} - \frac{\hat{\zeta}}{R} \times \nabla \psi
+        &= \mathbfit{B}_{\zeta} - \frac{\hat{\zeta}}{R} \times \nabla \psi \\
+        &= \mathbfit{B}_{\zeta} - \frac{\hat{\zeta}}{R} \times \left(\frac{\partial \psi}{\partial R} + \frac{\partial \psi}{\partial Z}\right) \\
+        &= \mathbfit{B}_{\zeta} + \frac{1}{R} \frac{\partial \psi}{\partial R} \hat{Z} - \frac{1}{R} \frac{\partial \psi}{\partial Z} \hat{R}
     \end{aligned}
 \end{equation}
 $$
+
+也就是说:
+
+$$
+\begin{equation}
+    \begin{aligned}
+        B_{\zeta} &= \frac{F(\psi)}{R} \\
+        B_{R} &= -\frac{1}{R} \frac{\partial \psi}{\partial Z} \\
+        B_{Z} &= \frac{1}{R} \frac{\partial \psi}{\partial R}
+    \end{aligned}
+\end{equation}
+$$
+
+我们假设磁轴在 $R = R_{a}$, $Z = 0$ 的位置, 并且 $\psi(R_{a}, 0) = 0$. 计算极向磁通(可以理解为穿过 $z = 0$ 平面的磁通量):
+
+$$
+\begin{equation}
+    \begin{aligned}
+        \Psi_{p} = \iint_{Z = 0} B_{z} \mathrm{d}S = \int_{0}^{2 \pi}\mathrm{\,d}\zeta \int _{R_{a}}^{R} R \left[\frac{1}{R} \frac{\partial \psi}{\partial R}\right] \mathrm{\,d}R = 2 \pi \psi
+    \end{aligned}
+\end{equation}
+$$
+
+### Grad - Shafranov 方程
+
+#### 等离子体电流密度
+
+在等离子体平衡的小节中, 我们知道一些基本的关系式(切换成国际单位制)
+
+$$
+\begin{equation}
+    \begin{aligned}
+        \mu_0\mathbfit{J}&=\nabla \times \mathbfit{B} \\
+        \nabla p &= \mathbfit{J}\times \mathbfit{B}
+    \end{aligned}
+\end{equation}
+$$
+
+通过简单的推导我们可以得到（注意我们采用的坐标系的正交关系是：R, $\zeta$, Z 是一种极向圆柱坐标系, 相关信息可以在[此处找到](https://prefetch.eu/know/concept/polar-cylindrical-coordinates/)）：
+
+$$
+\begin{equation}
+    \begin{aligned}
+        \mu_{0} \mathbf{J}=\nabla \times \mathbf{B}=-\frac{\partial B_{\zeta}}{\partial Z} \hat{\mathbf{R}}+\left(\frac{\partial B_{R}}{\partial Z}-\frac{\partial B_{Z}}{\partial R}\right) \hat{\zeta}+ \left(\frac{\partial B_{\zeta}}{\partial R}+\frac{B_{\zeta}}{R} \right)\hat{\mathbf{Z}}
+    \end{aligned}
+\end{equation}
+$$
+
+由于 $F(\psi) = R B_{\zeta}$, 因此极向的电流密度就可以直接得到：
+
+$$
+\begin{equation}
+    \begin{aligned}
+        \mu_0 J_{R} &= - \frac{1}{R} \frac{\partial F(\psi)}{\partial R} \\
+        \mu_0 J_{Z} &= \frac{1}{R}\frac{\partial \left(R B_{\zeta}\right)}{\partial R} = \frac{1}{R} \frac{\partial F(\psi)}{\partial R}
+    \end{aligned}
+\end{equation}
+$$
+
+在我们感兴趣的大部分情况中极向电流都比较小从而可以忽略. 同样的, 环向电流也可以从上面的式子中得到:
+
+$$
+\begin{equation}
+    \begin{aligned}
+        \mu_{0} J_{\zeta} & =\frac{\partial B_{R}}{\partial Z}-\frac{\partial B_{Z}}{\partial R} \\ & =-\frac{1}{R} \frac{\partial^{2} \psi}{\partial Z^{2}}-\frac{\partial}{\partial R}\left(\frac{1}{R} \frac{\partial \psi}{\partial R}\right)
+    \end{aligned}
+\end{equation}
+$$
+
+由方程(46)的第二项可以得到:
+
+$$
+\begin{equation}
+    \begin{aligned}
+        \nabla P=\mathbfit{J} \times \mathbfit{B}=\left[\begin{array}{c}J_{\zeta} B_{z}-J_{z} B_{\zeta} \\ J_{z} B_{r}-J_{r} B_{z} \\ J_{r} B_{\zeta}-J_{\zeta} B_{r}\end{array}\right]
+    \end{aligned}
+\end{equation}
+$$
+
+现在我们考虑平行于磁场方向上的力是平衡的, 也就是说在上述方程的基础上点乘磁场我们可以得到:
+
+$$
+\begin{equation}
+    \begin{aligned}
+        0=\mathbfit{B} \cdot \nabla P
+    \end{aligned}
+\end{equation}
+$$
+
+这暗示沿着磁场线 $P$ 将会是一个常数值(这样的形式可以满足该方程的解, 也许还有其他形式的解, 但已有证明可以说明对称位型下这个解确实是满足的). 也就是前面提到的 $P=P(\psi)$. 于是上式变成了:
+
+$$
+\begin{equation}
+    \begin{aligned}
+        0=\mathbfit{B} \cdot \frac{\mathrm{d} P}{\mathrm{d} \psi} \nabla \psi
+    \end{aligned}
+\end{equation}
+$$
+
+再考虑环向上的平衡, 根据方程(50)我们有:
+
+$$
+\begin{equation}
+    \begin{aligned}
+        J_{Z} B_{R}-J_{R}B_{Z}=\frac{1}{R} \frac{\partial P}{\partial \zeta}=0\ (P=P(\psi) \rightarrow \partial P/\partial \zeta=0)
+    \end{aligned}
+\end{equation}
+$$
+
+将极向电流密度依次代入, 得到:
+
+$$
+\begin{equation}
+    \begin{aligned}
+        \frac{\partial F}{\partial R} B_{R}+\frac{\partial F}{\partial Z} B_{Z}=0
+    \end{aligned}
+\end{equation}
+$$
+
+$$
+\begin{equation}
+    \begin{aligned}        
+        \mathbfit{B} \cdot \nabla g=0\ (\partial F(\psi)/\partial \zeta=0)
+    \end{aligned}
+\end{equation}
+$$
+
+基于上述相同的原因, 我们也可以说明 $F=F(\psi)$ 的成立. 这个函数通常被称为 **极向电流密度函数**, 具体的原因可以从参考文献中找到.
+
+最后我们来讨论沿着主半径方向的力学平衡:
+
+$$
+\begin{equation}
+    \begin{aligned}
+        \frac{\partial P}{\partial R}&=J_{\zeta} B_{Z}-J_{Z} B_{\zeta} \\
+        &=\frac{1}{\mu_{0}}\left(\frac{\partial B_{R}}{\partial Z}-\frac{\partial B_{Z}}{\partial R}\right) B_{Z}-\frac{1}{\mu_{0} R} \frac{\partial\left(R B_{\zeta}\right)}{\partial R} B_{\zeta} \\ 
+        &=-\frac{1}{\mu_{0}}\left(\frac{\partial}{\partial Z}\left(\frac{1}{R} \frac{\partial \psi}{\partial Z}\right)+\frac{\partial}{\partial R}\left(\frac{1}{R} \frac{\partial \psi}{\partial R}\right)\right) \frac{1}{R} \frac{\partial \psi}{\partial R}-\frac{1}{\mu_{0} R} \frac{\partial\left(R B_{\zeta}\right)}{\partial R} B_{\zeta} \\ 
+        &=-\frac{1}{\mu_{0} R}\left(\frac{1}{R} \frac{\partial^{2} \psi}{\partial Z^{2}}+\frac{\partial}{\partial R}\left(\frac{1}{R} \frac{\partial \psi}{\partial R}\right)\right) \frac{\partial \psi}{\partial R}-\frac{1}{\mu_{0} R} \frac{\partial\left(R B_{\zeta}\right)}{\partial R} B_{\zeta} \\
+        \Longrightarrow &\frac{\partial P}{\partial \psi} \frac{\partial \psi}{\partial R}=-\frac{1}{\mu_{0} R}\left(\frac{1}{R} \frac{\partial^{2} \psi}{\partial Z^{2}}+\frac{\partial}{\partial R}\left(\frac{1}{R} \frac{\partial \psi}{\partial R}\right)\right) \frac{\partial \psi}{\partial R}-\frac{1}{\mu_{0} R} \frac{\partial\left(R B_{\zeta}\right)}{\partial \psi} \frac{\partial \psi}{\partial R} B_{\zeta}
+    \end{aligned}
+\end{equation}
+$$
+
+将最后得到的方程两边同时除上 $\partial \psi/\partial R$ 乘上 $\mu_{0} r^{2}$, 我们就可以得到 **Grad-Shafranov 方程**, 它可以给出环形位型下的等离子体平衡条件:
+
+$$
+\begin{equation}
+    \begin{aligned}
+        \frac{\partial^{2} \psi}{\partial Z^{2}}+R \frac{\partial}{\partial R}\left(\frac{1}{R} \frac{\partial \psi}{\partial R}\right)=-\mu_{0} R^{2} \frac{\mathrm{d} P}{\mathrm{d} \psi}-F(\psi) \frac{\mathrm{d} F(\psi)}{\mathrm{d} \psi}
+    \end{aligned}
+\end{equation}
+$$
+
+我们将与坐标系相关的部分抽取出来, 即令: 
+
+$$
+\begin{equation}
+    \begin{aligned}
+        \Delta^{*} \equiv \frac{\partial^{2}}{\partial Z^{2}}+R \frac{\partial}{\partial R}\left(\frac{1}{R} \frac{\partial}{\partial R}\right)
+    \end{aligned}
+\end{equation}
+$$
+
+原方程可以简化为:
+
+$$
+\begin{equation}
+    \begin{aligned}
+        \Delta^{*} \psi=-\mu_{0} R^{2} \frac{\mathrm{d} P}{\mathrm{d} \psi}-F \frac{\mathrm{d} F}{\mathrm{d} \psi}
+    \end{aligned}
+\end{equation}
+$$
+
+在环形坐标系 $(r, \theta, z)$ 下, 平衡状态下有 $\partial/\partial \zeta=-R_{0} \partial/\partial z=0$, 我们得到:
+
+$$
+\begin{equation}
+    \begin{aligned}
+        \Delta^{*}=\nabla^{2}-\frac{2}{R_{0}+r \cos{\theta}} \left(\cos{\theta}\frac{\partial}{\partial r}-\sin{\theta}\frac{1}{r} \frac{\partial }{\partial \theta} \right)
+    \end{aligned}
+\end{equation}
+$$
+
+有关此方程的解以及平衡控制的问题都是磁约束聚变领域的前沿问题, 很多论文对此进行研究, 在此就不在赘述.
+
+# 参考文献
+
+{% note info %}
+1. https://prefetch.eu/know/concept/grad-shafranov-equation/
+2. https://www.questjournals.org/jram/papers/v7-i4/E07043438.pdf
+3. https://en.wikipedia.org/wiki/Grad%E2%80%93Shafranov_equation
+4. https://youjunhu.github.io/research_notes/tokamak_equilibrium_htlatex/tokamak_equilibrium.html
+{% endnote %}

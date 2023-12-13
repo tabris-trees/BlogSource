@@ -63,11 +63,11 @@ fi
 
 # User specific aliases and functions
 #######module for transp singularity container
-export SINGULARITY_TMPDIR=/scratch/users/transp/tmp
+export SINGULARITY_TMPDIR=/scratch/lijc/transp/tmp
 ulimit -l unlimited
 ulimit -s unlimited
 ```
-其中 `users` 记得换成自己的账号名。这个意思是将 `singularity` 的临时文件保存到有自己可操作权限的文件夹中。
+其中 `lijc` 记得换成自己的账号名。这个意思是将 `singularity` 的临时文件保存到有自己可操作权限的文件夹中。
 
 ---
 
@@ -81,7 +81,7 @@ ssh login110
 ```
 然后进入存放数据的文件夹，加载需要使用的 modules 并进入容器配置：
 ```shell
-cd /gpfs/scratch/users/transp/Runs/XXXX/XXXXX
+cd /gpfs/scratch/lijc/transp/Runs/XXXX/XXXXX
 module use /gpfs/fuyun/modules/all
 module load singularity/3.8.1-Go-1.14.1
 singularity run --app environ /gpfs/fuyun/containers/singularity/transp_21.2.sif
@@ -115,9 +115,9 @@ ERROR:   failed to delete container image tempDir /scratch/lijc/transp/tmp/rootf
 随后将这个环境配置文件以当前目录并进入容器内部：
 ```shell
 mv ~/transp-bashrc .
-singularity run   -B `pwd`:`pwd` -B /opt/tsce4/:/opt/tsce4  -B /project/transp/public/transp/codesys/pbs:/opt/transp/codesys/pbs -B  /scratch/users/transp:/scratch/users/transp -B /scratch/transp/result:/scratch/transp/result /gpfs/fuyun/containers/singularity/transp_21.2.sif
+singularity run   -B `pwd`:`pwd` -B /opt/tsce4/:/opt/tsce4  -B /project/transp/public/transp/codesys/pbs:/opt/transp/codesys/pbs -B  /scratch/lijc/transp:/scratch/lijc/transp -B /scratch/transp/result:/scratch/transp/result /gpfs/fuyun/containers/singularity/transp_21.2.sif
 ```
-记得将 `users` 改成自己的用户名。此时，如果还没有转换过平衡文件需要用 `scrunch2` 转化平衡文件。
+记得将 `lijc` 改成自己的用户名。此时，如果还没有转换过平衡文件需要用 `scrunch2` 转化平衡文件。
 
 <center><img src="https://hexo-1301133429.cos.ap-chengdu.myqcloud.com/post/transp-fig5.gif" alt="transp-fig5"></center><center id='f5'><span style='font-weight:bold'>Fig 5. scrunch2 工具的使用示例。</span></center>
 
