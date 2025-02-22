@@ -5,8 +5,8 @@ tags:
   - 地统计
   - GMS
 date: 2021-05-19 02:16:26
-index_img: https://hexo-1301133429.cos.ap-chengdu.myqcloud.com/20210110170550.png
-cover: https://hexo-1301133429.cos.ap-chengdu.myqcloud.com/20210110170550.png
+# index_img: https://hexo-1301133429.cos.ap-chengdu.myqcloud.com/20210110170550.png
+cover: https://image.tabirstrees.top/images/2025/02/22/20250222191508613.png
 categories:
 - [科研,地下水数值模拟]
 description: '在T-PROGS中提供了五种方法方便我们构建马尔科夫链的转移概率矩阵，这五种方法各自适用于不同的情况，并且在操作上有着比较大的区别，现在通过对T-PROGS操作手册的翻译来大致介绍一下每一种方法的情况。'
@@ -95,7 +95,7 @@ $$
 $$
 其中第2各分类被设置为背景类别，这就是为什么含有该类别的元素被设定成了任意值，由此建立的马尔科夫链如下图所示：
 
-![image-20210518114127505](https://hexo-1301133429.cos.ap-chengdu.myqcloud.com/20210518114127.png)
+![很遗憾，图片丢失了(┬┬﹏┬┬)](https://hexo-1301133429.cos.ap-chengdu.myqcloud.com/20210518114127.png)
 
 可以看到，由内嵌转移概率方法对测量转移概率的拟合相对初试模型（最大熵因子法）来说稍稍更好一点。
 

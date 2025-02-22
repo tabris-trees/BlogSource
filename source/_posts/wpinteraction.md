@@ -224,8 +224,4 @@ $$
 
 这样, 我们就从理论上推导出了在低频阿尔芬波对离子流进行加热时相同离子内的温度各向异性以及不同离子之间的垂直温度差异性.
 
-这与模拟得到的结果以及在探测器数据中分析出来的结果是吻合的:
-
-![wpinteraction-anisotropy1](https://hexo-1301133429.cos.ap-chengdu.myqcloud.com/post/wpinteraction-anisotropy1.png)
-
-![wpinteraction-anisotropy2](https://hexo-1301133429.cos.ap-chengdu.myqcloud.com/post/wpinteraction-anisotropy2.png)
+这与模拟得到的结果以及在探测器数据中分析出来的结果基本上是吻合的

@@ -1,7 +1,7 @@
 ---
 date: 2023-06-27 21:54:09
 title: CPP-PPPL 暑期学校课程 1 计算等离子体物理简介
-cover: https://hexo-1301133429.cos.ap-chengdu.myqcloud.com/post/CPP-PPPL1-20230627221336.png
+cover: https://image.tabirstrees.top/images/2025/02/22/20250222183345445.png
 tags:
 - 等离子体
 - 计算等离子体物理
@@ -153,7 +153,7 @@ $$
 
 但是这是连续的情况下得到结论, 当我们做数值离散的时候保持能量守恒这个特性是需要面对的一个问题.
 
-<img src="https://hexo-1301133429.cos.ap-chengdu.myqcloud.com/post/Compute methods in plasma-20230625210600.png" alt="Compute methods in plasma-20230625210600">
+<img src="https://pica.zhimg.com/v2-bdf801a74f6d9fa46148ce50847cbd46_1440w.jpg" alt="Compute methods in plasma-20230625210600">
 <center id='f1'><span style='font-weight:bold'>Fig 1. Energy conserving scheme for Maxwell equations (purple) compared to non-conservative scheme (black). Conservation of energy means there is no damping of spurious high-k modes.</span></center>
 
 如果将 Vlasov 方程考虑进去能量守恒还需要加上粒子的动能, 同时体系变成封闭体系, 即:
@@ -488,7 +488,7 @@ $$
 
 也就是说事实上, 我们正在处理两个不同几何类型的物体, 这表明离散麦克斯韦方程组也应该以某种方式继承这一点. Yee 算法, 或者说 **有限差分时域算法** 是目前在考虑几何结构方面最成功也是最简单的算法, 这种方法被应用在大部分的 PIC 模拟中 <span class='mohu'>尽管最近人们开始研究保结构有限元算法以及一些其他的方法</span>.
 
-<img src="https://hexo-1301133429.cos.ap-chengdu.myqcloud.com/post/Compute methods in plasma-20230627201409.png" alt="Compute methods in plasma-20230627201409" style="zoom:50%;" >
+<img src="https://pic3.zhimg.com/v2-1a84e0ceb38c2bd3d5807ca1d7bf6b78_1440w.jpg" alt="Compute methods in plasma-20230627201409" style="zoom:50%;" >
 
 <center id='f2'><span style='font-weight:bold'>Fig 2. Illustration of the Yee-cell.</span></center>
 

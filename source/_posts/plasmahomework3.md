@@ -241,7 +241,7 @@ $$
 
 the figure of the dispersion is:
 
-![plasmahomework3-dispersion](https://hexo-1301133429.cos.ap-chengdu.myqcloud.com/post/plasmahomework3-dispersion.png)
+![plasmahomework3-dispersion](https://image.tabirstrees.top/images/2025/02/22/20250222193827442.png)
 
 <span style='background: yellow'>the difference between the ideal MHD and Hall MHD dispersion relations is the x, y component contribute a Fast Magnetic wave which is coincident with the Alfven wave at the low frequency but the Ideal MHD has only the Alfven wave term.</span> It has three positive solution roots for the dispersion equations that we can draw three curve to illustrate it. Besides this, we can also find a resonant phenomenon when the $\mathbf{k}$ is sufficient large. <span style='background: pink'>The Red dotted line</span> is the false root because of the general division operation in solving process.
 

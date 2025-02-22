@@ -1,8 +1,8 @@
 ---
 title: Latex 论文排版相关学习
 date: 2020-08-28 10:20:48
-index_img: https://hexo-1301133429.cos.ap-chengdu.myqcloud.com/20200828160435.png
-cover: https://hexo-1301133429.cos.ap-chengdu.myqcloud.com/20161123111920_M2RkP.thumb.700_0.jpeg
+# index_img: https://hexo-1301133429.cos.ap-chengdu.myqcloud.com/20200828160435.png
+cover: https://image.tabirstrees.top/images/2025/02/22/20250222191738896.png
 math: ture
 tags:
 - Latex
@@ -14,7 +14,7 @@ description: LaTex简介
 
 # 1. 一点点关于Latex的介绍
 
-![20200828160435](https://hexo-1301133429.cos.ap-chengdu.myqcloud.com/20200828160435.png)
+<!-- ![20200828160435](https://hexo-1301133429.cos.ap-chengdu.myqcloud.com/20200828160435.png) -->
 
 Latex是一款排版软件，诸如教材、报纸、书信等纸质印刷相关的排版都是可以做的。一般人使用Latex最多的地方是论文的写作，特别是涉及到大量公式的数学物理方面的科技论文，这方面目前有很多网上流行的模板，我们只需要在了解简单的Latex基础操作的基础上带入模板就好，所以还是非常方便的。
 > 有很多 Geeks 或者 LaTeX's Fanatical Fans 过分地强调了 LaTeX 的一些并非重点的特性，以至于很多初学者会觉得 LaTeX 很神秘很复杂，从而引发了初学者的畏难情绪甚至是负面情绪。尽管这些 Fans 说得并没有错，我是说在事实上，但是他们的表达方式和内心态度却间接阻碍了 LaTeX 的发展，我想这也是和他们的初衷相悖的。————Liam Huang[^1]
@@ -24,7 +24,7 @@ Latex是一款排版软件，诸如教材、报纸、书信等纸质印刷相关
 ## 2.1 准备知识
 
 Latex中以`%`作为注释开头，也就是不会输出`%`后直到行末的所有内容，同时不会影响最终的排版效果，仅供人们在阅读源代码是的注释。至于数学意义上的“%”字符，需要在`%`之前加上`\`进行转义（escape）。即：`\%`。除此之外还有很多特殊字符的使用需要各位注意:
->![20200828115548](https://hexo-1301133429.cos.ap-chengdu.myqcloud.com/20200828115548.png)
+<!-- >![20200828115548](https://hexo-1301133429.cos.ap-chengdu.myqcloud.com/20200828115548.png) -->
 
 当我们需要对我们的内容做出明确控制时，我们需要调用控制序列来解决问题，类似于其他编程语言中的函数。比如我们需要在第一行指明文档类型，需要使用:`\documentclass[]{article}`，这就是一个控制序列（命令、标记），以`\`开头，以第一个**空格或者非字母的字符**结束的一串文字。`{}`中是这个控制序列的必要参数(此处为‘article’，其作用是调用名为“article”的文档类），部分控制序列还会有方括号`[]`，表示可选参数。
 >所谓的文档类，是TeX系统预设或者用户自己给定的一些格式的集合，不同的文档类对应了不同的输出效果。
@@ -44,7 +44,7 @@ $$\frac{a}{b}$$
 * 除此之外还涉及到标题、作者以及日期等等分别用以下的控制序列进行控制：`\title{}`、`\author{}`、`\date{}`，这些内容在导言区设置好后可以利用`\maketitle`控制序列在环境区域内按照特定格式输出
 
 以下是演示：
-```
+```Latex {cmd=true}
 \documentclass[UTF8]{ctexart}
 \title{你好，world!}
 \author{Liam}
@@ -54,7 +54,7 @@ $$\frac{a}{b}$$
 你好，world!
 \end{document}
 ```
-![20200828144122](https://hexo-1301133429.cos.ap-chengdu.myqcloud.com/20200828144122.png)
+![20200828144122](https://image.tabirstrees.top/images/2025/02/22/20250222192258900.png)
 
 ## 2.3 章节和段落
 
@@ -69,7 +69,7 @@ $$\frac{a}{b}$$
 在"report/ctexrep"文档类中，还有`\chapter{·}`；"book/ctexbook"文档类中，还定义了`\part{·}`。取决于各种文档类（模板）中所定义的章节控制序列。
 
 以下是演示：
-```
+```Latex {cmd=true}
 \documentclass[UTF8]{ctexart}
 \title{你好，world!}
 \author{Liam}
@@ -89,7 +89,7 @@ is in the center of 天安门广场。
 \paragraph{山东大学} is one of the best university in 山东。
 \end{document}
 ```
-![20200828145319](https://hexo-1301133429.cos.ap-chengdu.myqcloud.com/20200828145319.png)
+![20200828145319](https://image.tabirstrees.top/images/2025/02/22/20250222192445010.png)
 
 ## 2.4 插入数学公式、图片或表格
 
@@ -142,7 +142,12 @@ LaTex相对于Word最优秀的地方莫过于他对于数学公式的渲染非�
 tabular 环境提供了最简单的表格功能。它用 \hline 命令表示横线，在列格式中用 | 表示竖线；用 & 来分列，用 \\ 来换行；每列可以采用居左、居中、居右等横向对齐方式，分别用 l、c、r 来表示[^1]。
 
 以下是演示：
-```
+```Latex {cmd=true}
+\documentclass[UTF8]{ctexart}
+\title{你好，world!}
+\author{Liam}
+\date{\today}
+\begin{document}
 \begin{tabular}{|l|c|r|}
  \hline
 操作系统& 发行版& 编辑器\\
@@ -156,8 +161,9 @@ Mac OS & MacTeX & TeXShop \\
 通用& TeX Live & TeXworks \\
  \hline
 \end{tabular}
+\end{document}
 ```
-![20200828153609](https://hexo-1301133429.cos.ap-chengdu.myqcloud.com/20200828153609.png)
+![20200828153609](https://image.tabirstrees.top/images/2025/02/22/20250222192829115.png)
 
 有时候我们会遇到表格或者图片的位置不好确定，这个时候我们可以把它们设置为“浮动体”，具体可以参见[此处](https://liam.page/2014/09/08/latex-introduction/#%E6%B5%AE%E5%8A%A8%E4%BD%93)
 
@@ -191,4 +197,4 @@ Mac OS & MacTeX & TeXShop \\
 
 哈哈哈哈哈O(∩_∩)O😎😎😎
 
-![1598496066545](https://hexo-1301133429.cos.ap-chengdu.myqcloud.com/1598496066545.jpeg)
+![1598496066545](https://image.tabirstrees.top/images/2025/02/22/20250222193102530.png)

@@ -1,7 +1,7 @@
 ---
 title: T-PROGS
-index_img: 'https://hexo-1301133429.cos.ap-chengdu.myqcloud.com/20210110170339.png'
-cover: https://hexo-1301133429.cos.ap-chengdu.myqcloud.com/20210110170339.png
+# index_img: 'https://hexo-1301133429.cos.ap-chengdu.myqcloud.com/20210110170339.png'
+cover: https://image.tabirstrees.top/images/2025/02/22/20250222191508613.png
 tags:
   - GMS
   - 地下水溶质运移模型

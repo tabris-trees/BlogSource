@@ -1,7 +1,7 @@
 ---
 title: 理想磁流体平衡
 date: 2023-02-13 14:31:45
-cover: https://hexo-1301133429.cos.ap-chengdu.myqcloud.com/post/PPB-idelMHDequi-tokamak.png
+cover: https://image.tabirstrees.top/images/2025/02/22/20250222191317713.png
 tags:
 - 等离子体物理
 - 磁流体力学
@@ -62,7 +62,7 @@ $$\begin{equation}
 
 这两个方程的解分别对应了两个三维空间中的曲面，曲面的交线（两个曲面方向导数的叉乘 $\mathbfit{B} = \nabla \alpha \times \nabla \beta$ ，这就正好对应了前面提到的描述磁场只需要两个独立的变量，即曲面 $C_{\alpha}, C_{\beta}$ ）即是磁力线。
 
-<img src="https://hexo-1301133429.cos.ap-chengdu.myqcloud.com/post/PPB-idelMHDequi-EBC5A2913971E69F7D1376D20F6F7EF4.jpg" alt = "PPB-idelMHDequi-f1" width = "300">
+<img src="https://pica.zhimg.com/v2-ebc5a2913971e69f7d1376d20f6f7ef4_1440w.jpg" alt = "PPB-idelMHDequi-f1" width = "300">
 
 <center id='f1'><span style='font-weight:bold'>Fig 1 上述过程的几何描述</span></center>
 
@@ -201,7 +201,7 @@ $$\begin{equation}
 
 可以看到, $\nabla p$ 仅仅只与 $\psi$ 有关, 上述方程的解应该有着 $p = p(\psi)$ 的形式, 那么在 $p = \text{常数}$ 的"面"上, 我们有磁通函数 $\psi = \text{常数}$ 的结论. 所以我们可以将这个曲面称为 **"磁面"**.
 
-<img src="https://hexo-1301133429.cos.ap-chengdu.myqcloud.com/post/PPB-idelMHDequi-510bfbf51e28127ee5780c63602a27a.jpg" alt="PPB-idelMHDequi-磁通量" width = "300">
+<img src="https://pic1.zhimg.com/v2-107fd6fca2ee4205fed6074157b0b48a_1440w.jpg" alt="PPB-idelMHDequi-磁通量" width = "300">
 <center id='f2'><span style='font-weight:bold'>Fig 2. 上述过程的图像表示</span></center>
 
 利用 $p = p(\psi)$, 上述的方程可以进一步化简:
@@ -227,7 +227,7 @@ $$\begin{equation}
 
 事实上, 从式 $\ref{eq:15}$ 中我们可以得到: 沿着一条磁力线有 $p = \text{常数}$. 如果这个磁力线卷曲成一个曲面, 曲面上处处都有同一个 $p$, 曲面的法线由 $\nabla p = \nabla _{\perp} p$ 给出. 同时, 根据静态平衡的方程我们可以有: $\mathbfit{B} \perp \nabla p, \mathbfit{J} \perp \nabla p$, 所以电流也在这个表面上, 也就是磁面上.
 
-<img src="https://hexo-1301133429.cos.ap-chengdu.myqcloud.com/post/PPB-idelMHDequi-f3.jpg" alt="PPB-idelMHDequi-f3" width = "300">
+<img src="https://pic1.zhimg.com/v2-669e2ae15df9031231f9ca46243080dc_1440w.jpg" alt="PPB-idelMHDequi-f3" width = "300">
 <center id='f3'><span style='font-weight:bold'>Fig 3. 磁面, 压强梯度以及电流分布</span></center>
 
 ## 磁冻结
@@ -307,7 +307,7 @@ $$\begin{equation}
     \end{aligned}
 \end{equation}$$
 
-<img src="https://hexo-1301133429.cos.ap-chengdu.myqcloud.com/post/PPB-idelMHDequi-F76F245C16BE2A5CDE7D336666709101.png" alt="磁冻结示意图" width = "500">
+<img src="https://picx.zhimg.com/v2-f76f245c16be2a5cde7d336666709101_1440w.jpg" alt="磁冻结示意图" width = "500">
 <center id='f4'><span style='font-weight:bold'>Fig 4. 磁冻结示意图</span></center>
 
 根据上图我们可以知道 $(29)$ 式实际上是磁流体流动引起的磁通量变化, 加上 $(28)$ 式表示的原本的磁通量就是理想磁流体中总的磁通量随时间的变化. 即:
@@ -362,7 +362,7 @@ $$
 \end{equation}
 $$
 
-<img src="https://hexo-1301133429.cos.ap-chengdu.myqcloud.com/post/PPB-idelMHDequi-20230908170735.png" alt="Z - 箍缩" width = "500">
+<img src="https://pic4.zhimg.com/v2-76ed48af14b1bbdca228420549f05ae1_1440w.jpg" alt="Z - 箍缩" width = "500">
 <center id='f5'><span style='font-weight:bold'>Fig 5. Z - 箍缩</span></center>
 
 这样, 我们就可以更具需要的等离子体压强分布计算应该采用什么样的电流分布, 或者根据已有的电流分布计算会得到什么样的等离子体压强分布.
@@ -373,7 +373,7 @@ $$
 
 如果电流方向在 $\theta$ 方向, 则产生的磁场为 $\mathbfit{B} = \hat{z}B_{z}(r)$, 如图6所示.
 
-<img src="https://hexo-1301133429.cos.ap-chengdu.myqcloud.com/post/PPB-idelMHDequi-20230908190542.png" alt="θ - 箍缩" width="300">
+<img src="https://picx.zhimg.com/v2-026dbd8b175609dd5a25c3b415f8e0a3_1440w.jpg" alt="θ - 箍缩" width="300">
 <center id='f6'><span style='font-weight:bold'>Fig 6. θ - 箍缩</span></center>
 
 同样的, 我们可以利用平衡方程得到以下的关系:
@@ -392,7 +392,7 @@ $r = a$ 表示等离子体的边界, 同样的我们需要从电流分布计算�
 
 将 $\theta$ - 箍缩中等离子体柱两端的磁场 $B_{z}$, 我们就可以得到一个"磁镜"位型, 如图7所示.
 
-<img src="https://hexo-1301133429.cos.ap-chengdu.myqcloud.com/post/PPB-idelMHDequi-20230908195732.png" alt="磁镜" width="300">
+<img src="https://pic1.zhimg.com/v2-cc96c7bf6aa441183545a8f4e9751b9a_1440w.jpg" alt="磁镜" width="300">
 <center id='f7'><span style='font-weight:bold'>Fig 7. 磁镜</span></center>
 
 这种位型通常被称为"线性装置", 曾经是磁约束等离子体研究的最重要装置. 伴随磁镜装置的还有一个很重要的概念, "绝热不变量". 磁镜装置的第一个不变量是"磁矩不变量", 即带电粒子在围绕磁力线做高频回旋运动时, 在长时间尺度上我们可以认为粒子单位质量的回旋运动产生的磁矩
@@ -421,7 +421,7 @@ $$
 
 为了解决轴向上没有约束的问题, 我们将 $\theta$ - 约束中的环形线圈围成一个圆环(图8绿色部分), 但此时由 $B_{z}$ 弯成的环向场在环内侧比环外侧强, 导致指向环内测的磁场梯度. 根据单粒子运动的结论, 这会导致垂直于这个梯度方向的漂移. 因此, 为了消除这个漂移, 我们需要在原本的场上叠加一个极向场(图8的中心螺管线). 这就是托卡马克装置的设计思路.
 
-<img src="https://hexo-1301133429.cos.ap-chengdu.myqcloud.com/post/PPB-idelMHDequi-tokamak.png" alt="托卡马克(绿色的是环形线圈)" width="300">
+<img src="https://pic1.zhimg.com/v2-09c3c196a580129d68506d4787a6f3ea_1440w.jpg" alt="托卡马克(绿色的是环形线圈)" width="300">
 <center id='f8'><span style='font-weight:bold'>Fig 8. 托卡马克(绿色的是环形线圈)</span></center>
 
 很显然的, 环向场要比极向场强得多, 极向场的引入使得磁面拓扑呈环状, 每条磁力线都会经历环的内侧和外侧, 而因为向环内的磁场梯度的存在, 使得一条磁力线上会有环内侧的强场区和环外侧的弱场区, 这构成了一个"磁镜"位型, 这种特殊的磁镜效应对粒子的捕获是托卡马克等离子体的一个非常重要的性质. 这种环形约束的平衡是一种二维平衡, 接下来就讨论二维平衡位型满足的条件.
@@ -456,7 +456,7 @@ $$
 
 现在我们来看磁场的两个分量是如何绕成磁面的, 在这样的螺旋形磁场位型中, 一根磁力线需要同时经过大小两个半径(主半径 R 以及小半径 r)的圆(图9所示, 红色为小圆, 蓝色为大圆, 这两个圆分别对应着极向和环向的磁场, 大小半径的概念在托卡马克核聚变的研究中也经常使用).
 
-<img src="https://hexo-1301133429.cos.ap-chengdu.myqcloud.com/post/PPB-idelMHDequi-螺旋箍缩.png" alt="螺旋箍缩" width="500">
+<img src="https://pica.zhimg.com/v2-510c267e6acce7dce0a9698ca33d78ae_1440w.jpg" alt="螺旋箍缩" width="500">
 <center id='f9'><span style='font-weight:bold'>Fig 9. 螺旋箍缩</span></center>
 
 根据最开始的托卡马克坐标(θ, r, z)磁力线的方程, 我们可以得到:
@@ -498,7 +498,7 @@ $$(\Delta z)_{\Delta \theta = 2 \pi} = q(r) 2 \pi R$$
 
 一般由于托卡马克甜甜圈形状的特征我们可以采用柱坐标($R, \zeta, Z$)或者环坐标($r, \theta, z$)来描述托卡马克位型, 其中 $\hat{z}$ 为弧长的方向.
 
-<img src="https://hexo-1301133429.cos.ap-chengdu.myqcloud.com/post/PPB-idelMHDequi-托卡马克坐标系.png" alt="托卡马克坐标系" width="400">
+<img src="https://pic2.zhimg.com/v2-064b1be573f3a6254e349ae4f62c06fd_1440w.jpg" alt="托卡马克坐标系" width="400">
 <center id='f10'><span style='font-weight:bold'>Fig 10. 托卡马克坐标系</span></center>
 
 我们可以很轻松地给出这两个坐标系之间的关系:

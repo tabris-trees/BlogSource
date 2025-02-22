@@ -1,7 +1,7 @@
 ---
 title: 磁流体力学方程组的推导
 date: 2022-10-13 23:39:17
-cover: https://hexo-1301133429.cos.ap-chengdu.myqcloud.com/post/MHD-E-20221013234420.png
+cover: https://image.tabirstrees.top/images/2025/02/22/20250222191317713.png
 tags:
 - 等离子体物理
 - 磁流体力学

@@ -6,13 +6,13 @@ tags:
   - 拉格朗日力学
 date: 2022-12-06 15:56:31
 title: 理论物理速成——经典力学 I
-cover: https://hexo-1301133429.cos.ap-chengdu.myqcloud.com/post/classical-mechanics-1-cover.jpg
+cover: https://image.tabirstrees.top/images/2025/02/22/20250222234654041.png
 categories: [笔记, 理论物理, 经典力学]
 description: 1. 最小作用量原理是怎么来的; 2. 拉格朗日函数是怎么来的; 3. 最小作用量原理、拉格朗日函数、牛顿经典力学原理之间的自洽
 math: true
 ---
 
-![classical-mechanics-1-cover](https://hexo-1301133429.cos.ap-chengdu.myqcloud.com/post/classical-mechanics-1-cover.jpg)
+<!-- ![classical-mechanics-1-cover](https://hexo-1301133429.cos.ap-chengdu.myqcloud.com/post/classical-mechanics-1-cover.jpg) -->
 
 # <center>第一部分 拉格朗日力学原理</center>
 
@@ -76,7 +76,7 @@ $$
 
 时称作平衡态, 按照极大值点和极小值点又可以分为"非稳定平衡态"和"稳定平衡态". 同时一个系统可能具有多个平衡态(势能函数具有多个极值点), 平衡态之间的位置称为"势阱"和"势垒".
 
-![classical-mechanics-1-6f5a7e35fb603e7701495747f03c17b](https://hexo-1301133429.cos.ap-chengdu.myqcloud.com/post/classical-mechanics-1-6f5a7e35fb603e7701495747f03c17b.jpg)
+![classical-mechanics-1-6f5a7e35fb603e7701495747f03c17b](https://pic4.zhimg.com/v2-6e9e0cc48b1e957edbd1b119adc94d7f_1440w.jpg)
 
 经验告诉我们, 物体总是趋向于处于能量更低的状态, 换句话说就是, 如果暂时不考虑物体从一个状态变化到另一个状态的中间过程(运动过程), 物体下一个时刻的状态可以完全自由选择的话, 物体总是会倾向于选择能量最低的那一种状态, 对人来说就相当于是选择最轻松的状态. 这么说来, 宇宙也喜欢躺平(<span class='heimu'>躺平是在遵循自然地法则O(∩_∩)O哈哈~</span>).
 
@@ -86,7 +86,7 @@ $$
 
 换成一个最简单的力学问题, 上面的这个问题被表述为: <span style='background: yellow'>如果我们知道初始时刻 $t_0$ 和运动之后某一时刻 $t_1$ 的位置 $x_0$, $x_1$, 在不知道其他条件的情况下有办法确定出物体在这个时间段内的运动吗?</span> 从牛顿力学的观点来看这几乎是一个不可能的问题, 牛顿力学需要知道初始状态( $x_0$ )以及受力( $F$, 实际上是 $\ddot{x}$ )然后对未来甚至是过去进行预测或者回溯, 相当于在 $x-t$ 坐标下知道曲线上的一个点和曲线(上每一个点)的方向, 也就是已经知道该怎么画出这条曲线了. 而现在的问题是确定一条连接已知两个点的曲线, 我们可以有无数种选择方式, 但大自然最终只会有一条确定的曲线, 我们想知道的就是造物主是如何确定这条曲线的!
 
-![classical-mechanics-1-2](https://hexo-1301133429.cos.ap-chengdu.myqcloud.com/post/classical-mechanics-1-2.jpg)
+![classical-mechanics-1-2](https://pic4.zhimg.com/v2-bd9836c914b97b2015655faec699a3e3_1440w.jpg)
 
 对比之前不同状态之间的选择, 加上各种自然现象给我们的暗示, 我们可以很自然的做出那个从哲学上来说是如此的优美的假设. 既然我们的造物主这么喜欢极值, 说不定对于路径的选择也是遵循某种极值法则来的. 也就是说, 每一种运动方式, 即每一条路径都对应了一个数(这个数被我们称作 **"作用量"**), 在上面的图中, 很显然这个数是 $x(t_0)$ 和 $x(t_1)$ 之间的运动的积分. 这个不同运动对应的数, 或者说运动对应的函数我们用 $\mathcal{L}$ 来表示, 描述空间中的运动需要两个量: 位置 $q$ 和速度 $\dot{q}$, 再加上单独的时间维, 我们可以确定出一个描述力学体系运动的函数:
 

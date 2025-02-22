@@ -5,7 +5,7 @@ tags:
   - 行星内部结构
   - 行星科学
 date: 2022-02-12 18:38:37
-index_img: https://pic4.zhimg.com/v2-e3b6288242b3a98ac70516a38d00fb57_r.jpg
+# index_img: https://pic4.zhimg.com/v2-e3b6288242b3a98ac70516a38d00fb57_r.jpg
 cover: https://pic4.zhimg.com/v2-e3b6288242b3a98ac70516a38d00fb57_r.jpg
 categories: [科研,行星内部结构]
 description: 利用Python程序研究木卫二可能的内部结构(*^_^*)
@@ -29,13 +29,13 @@ description: 利用Python程序研究木卫二可能的内部结构(*^_^*)
 
 <center><font size="2">表一 Sheng Jin 等人的研究模型及其结果</font></center>
 
-![image-20220113161028705](https://hexo-1301133429.cos.ap-chengdu.myqcloud.com/post/image-20220113161028705.png)
+![image-20220113161028705](https://image.tabirstrees.top/images/2025/02/22/20250222230357313.png)
 
 ​		近年来，伴随着朱诺探测器对木星的深入研究，Luis等人对伽利略探测器的射电跟踪数据进行了再分析，重新探讨了木卫二的引力场数据和内部结构，结果如表二所示：
 
 <center><font size="2">表二 Luis 等人的研究与前人研究的对比</font></center>
 
-<img src="https://hexo-1301133429.cos.ap-chengdu.myqcloud.com/post/image-20211229224059297.png" alt="image-20211229224059297" style="zoom: 100%;" />
+<img src="https://image.tabirstrees.top/images/2025/02/22/20250222231401929.png" style="zoom: 100%;" />
 
 ​		本文将按照 JIN 等人使用的方法对木卫二的内部结构进行进一步的探讨，根据已有的研究以及观测数据对木卫二的内部结构给出更为合理的假设，并对该假设进行建模，将模型得到的结果与 Luis 等人对射电数据再分析的结果进行比对，判断假设的适用性。
 
@@ -72,7 +72,7 @@ m_{i+1}=m_i−4\pi 𝑅_{i}^2 \rho_i \\
 𝑃_{i+1}^{核}=𝑃_i+4\pi𝐺𝑅_i \rho_i^2
 $$
 
-![迭代模式](https://hexo-1301133429.cos.ap-chengdu.myqcloud.com/post/迭代模式.png)
+![迭代模式](https://image.tabirstrees.top/images/2025/02/22/20250222233408888.png)
 
 <center><font size="2">图一 模型迭代过程示意图</font></center>
 
@@ -84,13 +84,13 @@ $$
 
 <center><font size="2">表三 行星内部物质的热力学参数</font></center>
 
-![](https://hexo-1301133429.cos.ap-chengdu.myqcloud.com/post/image-20220113152046921.png)
+![](https://image.tabirstrees.top/images/2025/02/22/20250222233718849.png)
 
 ​		图二给出了模型计算的地球双层模型质量、压力以及密度随半径的变化。从图中可以看到模型计算出来的核幔边界在 3555 $\rm{km}$ 处，中心压力大致为370 $\rm{GPa}$，这两个结果与地球的实际情况（核幔边界 3470 $\rm{km}$，中心压力 379 $\rm{GPa}$）都可以较好地吻合。由此判断该模型结果比较可靠，可以用来对木卫二进行内部结构建模。
 
-![地球质量压力](https://hexo-1301133429.cos.ap-chengdu.myqcloud.com/post/%E5%9C%B0%E7%90%83%E8%B4%A8%E9%87%8F%E5%8E%8B%E5%8A%9B.png)
+![地球质量压力](https://image.tabirstrees.top/images/2025/02/22/20250222234008430.png)
 
-![地球密度](https://hexo-1301133429.cos.ap-chengdu.myqcloud.com/post/地球密度.png)
+![地球密度](https://image.tabirstrees.top/images/2025/02/22/20250222234053580.png)
 
 <center><font size="2">图二 地球双层模型的计算结果</font></center>
 
@@ -98,17 +98,17 @@ $$
 
 ​		在验证模型的准确性之后，开始对木卫二内部结构的建模，假设木卫二深部具有与地球类似的物质组成：即整体由水冰壳（$\rm{H_2O}$）、硅酸盐地幔( $\rm{(Mg,Fe)_2SiO_4}$)以及铁核（$\rm{Fe}$）组成，其各自的热力学参数在地球双层模型中已经给出；同时为了准确的研究木卫二的内部结构，假设表面的水冰层的质量分数是固定的（表面比较容易测量，本文中确定为 10% ），用二分法求解内部的核、幔厚度以及其各自的质量分数。模型结果见图三：
 
-![木卫二质量压力](https://hexo-1301133429.cos.ap-chengdu.myqcloud.com/post/木卫二质量压力.png)
+![木卫二质量压力](https://image.tabirstrees.top/images/2025/02/22/20250222234236919.png)
 
-![木卫二密度](https://hexo-1301133429.cos.ap-chengdu.myqcloud.com/post/木卫二密度.png)
+![木卫二密度](https://image.tabirstrees.top/images/2025/02/22/20250222234327078.png)
 
 <center><font size="2">图三 木卫二三层模型在水冰层质量分数为 10% 时的计算结果</font></center>
 
 ​		模型计算出来木卫二的壳幔边界在1398.5 $\rm{km}$处，幔占总质量的 76% ；核幔边界在597 $\rm{km}$处，核占总质量的 14%；木卫二中心压力大致为6.6 $\rm{GPa}$，与Sheng Jin等人在2012年用从内向外积分的模型结果非常接近。另外 luis 等人在 2021 年对木卫二表面的射电数据进行了贝叶斯反演，得到木卫二的水冰层占木卫二质量的 7.5% 左右，我们将该质量分数代入到模型中计算出其内部结构为 380 $\rm{km}$处为核幔边界，1442 $\rm{km}$处为壳幔边界，其中核占总质量的 3.6% ，幔占质量的 88.9% 左右，中心压力 4.9 $\rm{GPa}$，与张鸿等在2002年采用的双层模型的结果基本一致。
 
-![木卫二质量压力2](https://hexo-1301133429.cos.ap-chengdu.myqcloud.com/post/木卫二质量压力2.png)
+![木卫二质量压力2](https://image.tabirstrees.top/images/2025/02/22/20250222234414368.png)
 
-![木卫二密度2](https://hexo-1301133429.cos.ap-chengdu.myqcloud.com/post/木卫二密度2.png)
+![木卫二密度2](https://image.tabirstrees.top/images/2025/02/22/20250222234520178.png)
 
 <center><font size="2">图四 木卫二三层模型在水冰层质量分数为 7.5% 时的计算结果</font></center>
 

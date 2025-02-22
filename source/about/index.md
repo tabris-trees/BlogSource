@@ -31,28 +31,27 @@ EVA，永远的神！！！
 ![xingchendagai](https://trees-1301133429.cos.ap-nanjing.myqcloud.com/%E6%98%9F%E8%BE%B0%E5%A4%A7%E6%B5%B7.jpeg)
 
 ---
-# 🎇星系爆炸💥以来形成历史🎇
+# 🎇星系演化历史🎇
 
-{% note info %}
-- 2021/10/02
-  
-	换了新主题Butterfly，准备抽时间一点点的美化，这一次尽量走简单的风格，不整那些花里胡哨的东西。(*^_^*)
-{% endnote %}
+{% timeline 2021, green %}
+<!-- timeline 2021/10/02 -->
+换了新主题Butterfly，准备抽时间一点点的美化，这一次尽量走简单的风格，不整那些花里胡哨的东西。(^_^)
+<!-- endtimeline -->
+{% endtimeline %}
 
-{% note info %}
-- 2022/07/08
+{% timeline 2022  %}
+<!-- timeline 2022/07/08 -->
+Butterfly 主题升级到4.3.0
+<!-- endtimeline -->
+<!-- timeline 2022/07/30 -->
+更改了网站的字体(文字:`GenSen R`, `justfont`, `Nowar m`; 代码:`Fira code`)
 
-	Butterfly 主题升级到4.3.0
-{% endnote %}
+更新 `hexo-theme-butterfly 3.8.0` —> `hexo-theme-butterfly 4.4.0`
+<!-- endtimeline -->
+{% endtimeline %}
 
-{% note info %}
-- 2022/07/30
-
-	更改了网站的字体(文字:`GenSen R`, `justfont`, `Nowar m`; 代码:`Fira code`)<span class='mohu'>似乎并没有起到效果(⊙o⊙)…</span>
-{% endnote %}
-
-{% note info %}
-- 2022/07/30
-
-	更新 `hexo-theme-butterfly 3.8.0` --> `hexo-theme-butterfly 4.4.0`
-{% endnote %}
+{% timeline 2024, pink %}
+<!-- timeline 2024/06/?? -->
+网站图片存在腾讯云的 COS 桶中，流量被盗刷几个 T，欠费 **好几百** ，没钱给所以图片全崩了 😅
+<!-- endtimeline -->
+{% endtimeline %}

@@ -1,7 +1,7 @@
 ---
 date: 2023-06-22 14:59:07
 title: TORIC 简单介绍
-cover: https://hexo-1301133429.cos.ap-chengdu.myqcloud.com/post/TORIC-20230622161043.png
+cover: https://image.tabirstrees.top/images/2025/02/22/20250222161021840.png
 tags: 
 - 聚变
 - 离子回旋加热
@@ -357,8 +357,8 @@ TORIC 程序是一个计算模拟 ICRF(离子回旋频段) 甚至可以模拟低
 
 <center>
 <table><tr>
-<td><img src="https://hexo-1301133429.cos.ap-chengdu.myqcloud.com/post/TORIC-manulgfile.png" width="400" border=1/></td>
-<td><img src="https://hexo-1301133429.cos.ap-chengdu.myqcloud.com/post/TORIC-manulequigs.png" width="400" border=1/></td>
+<td><img src="https://image.tabirstrees.top/images/2025/02/22/20250222161430848.png" width="400" border=1/></td>
+<td><img src="https://image.tabirstrees.top/images/2025/02/22/20250222161519050.png" width="400" border=1/></td>
 </tr></table>
 </center>
 
@@ -527,7 +527,7 @@ pf.close()
 
 最终得到的文件形式如图所示:
 
-<img alt="picture 3" src="https://hexo-1301133429.cos.ap-chengdu.myqcloud.com/post/TORIC-manulprofnt.png" />
+<img alt="picture 3" src="https://image.tabirstrees.top/images/2025/02/22/20250222161641831.png"/>
 
 <center id='f2'><span style='font-weight:bold'>Fig 2. The preview of profile data used in TORIC</span></center>
 
@@ -537,7 +537,7 @@ pf.close()
 
 此处为了简单起见, 我们仅针对 <span style='background: yellow'>和龙-2</span> 的天线频率以及网格划分进行修改, 根据 <span style='background: yellow'>和龙-2</span> 的基本参数估算各离子的共振线, 得到得结果如图所示:
 
-![picture 4](https://hexo-1301133429.cos.ap-chengdu.myqcloud.com/post/TORIC-resonanceline.png)
+![picture 4](https://image.tabirstrees.top/images/2025/02/22/20250222162300591.png)
 <center id='f3'><span style='font-weight:bold'>Fig 3. The resonance line of different particles.</span></center>
 
 可以看到对于 H(B11) 体系要保证在中心位置处吸收需要频率大概位于 50MHz(H 基频) 或者 30MHz(B11 谐频), 这里我们先选取 30MHz 作为天线的发射频率. 因此在上面的输入文件中我们只修改以下几个部分:
@@ -571,15 +571,15 @@ pf.close()
 
 通过读取 `fort.21` 中的结果绘制图件, 我们可以得到以下的结果:
 
-<img alt="picture 4" src="https://hexo-1301133429.cos.ap-chengdu.myqcloud.com/post/TORIC-manulEplusandabsor.png" />
+<img alt="picture 4" src="https://image.tabirstrees.top/images/2025/02/22/20250222164700655.png" />
 <!-- <img alt="picture 4" src="images/manulEplusandabsor_main.png" />   -->
 <center id='f4'><span style='font-weight:bold'>Fig 4. The contour plot of the result.</span></center>
 
-<img alt="picture 5" src="https://hexo-1301133429.cos.ap-chengdu.myqcloud.com/post/TORIC-manulabsor_profile.png" />  
+<img alt="picture 5" src="https://image.tabirstrees.top/images/2025/02/22/20250222165855947.png" />  
 <center id='f5'><span style='font-weight:bold'>Fig 5. Power absorption by different
 particles along the radius direction.</span></center>
 
-<img alt="picture 6" src="https://hexo-1301133429.cos.ap-chengdu.myqcloud.com/post/TORIC-manulcurrentdrive.png" />  
+<img alt="picture 6" src="https://image.tabirstrees.top/images/2025/02/22/20250222165947053.png" />  
 <center id='f6'><span style='font-weight:bold'>Fig 6. Current Density Induced by Waves.</span></center>
 
 这里可以看到离子吸收并没有在中心位置, 结合图3考虑可能是波频率设置的不太恰当, 因为这里只是运行 TORIC 程序的一个简单示例, 就不对此展开深入的分析.
@@ -592,13 +592,13 @@ particles along the radius direction.</span></center>
 
 由于我们此前对 <span style='background: yellow'>和龙-2</span> 的计算中离子没有产生超热尾端的分布(<span class='heimu'>也有可能是计算过程中出现了失误</span>), 所以这里采用做程序 BENCHMARK 时所用的 <span style='background: yellow'>CFETR</span> (He3)-D-T 加热体系(Chengyi Song et al. 2021)来举例. 模拟使用的参数以及结果如图7~图9所示:
 
-<center><img alt="picture 1" src="https://hexo-1301133429.cos.ap-chengdu.myqcloud.com/post/TORIC-manulcfetr_parameters.png" /></center>  
+<center><img alt="picture 1" src="https://image.tabirstrees.top/images/2025/02/22/20250222170239706.png" /></center>  
 <center id='f7'><span style='font-weight:bold'>Fig 7. The parameters of simulation for CFETR.</span></center>
 
-<img alt="picture 2" src="https://hexo-1301133429.cos.ap-chengdu.myqcloud.com/post/TORIC-manulcfetr_eplus.png"/>
+<img alt="picture 2" src="https://image.tabirstrees.top/images/2025/02/22/20250222170757395.png"/>
 <center id='f8'><span style='font-weight:bold'>Fig 8. The contour plot of the results for CFETR.</span></center>  
 
-<center><img alt="picture 3" src="https://hexo-1301133429.cos.ap-chengdu.myqcloud.com/post/TORIC-manulcfetr_absor.png"/></center>  
+<center><img alt="picture 3" src="https://image.tabirstrees.top/images/2025/02/22/20250222170937314.png"/></center>  
 <center id='f9'><span style='font-weight:bold'>Fig 9. Power absorption by different particles along the radius direction for CFETR.</span></center>
 
 ### 通过 `SSFPQL` 计算离子分布
@@ -674,8 +674,8 @@ toricmode = ssfpql,
 
 <center>
 <table><tr>
-<td><img src="https://hexo-1301133429.cos.ap-chengdu.myqcloud.com/post/TORIC-manulfort8left.png" width="400" border=1/></td>
-<td><img src="https://hexo-1301133429.cos.ap-chengdu.myqcloud.com/post/TORIC-manulfort8right.png" width="400" border=1/></td>
+<td><img src="https://image.tabirstrees.top/images/2025/02/22/20250222171007327.png" width="400" border=1/></td>
+<td><img src="https://image.tabirstrees.top/images/2025/02/22/20250222171025853.png" width="400" border=1/></td>
 </tr></table>
 </center>
 <center id='f10'><span style='font-weight:bold'>Fig 10. The input file for 'isol = 2' to read the minority non-maxwellian profile.</span></center>
@@ -707,13 +707,13 @@ toricmode = ssfpql,
 
 重新运行之后得到三个文件(`fort.9/10/21`), 并利用 `fort.21` 画图, 如图所示:
 
-<center><img alt="picture 6" src="https://hexo-1301133429.cos.ap-chengdu.myqcloud.com/post/TORIC-manulcfetreplustail.png"/></center> 
+<center><img alt="picture 6" src="https://image.tabirstrees.top/images/2025/02/22/20250222171114778.png"/></center> 
 <center id='f11'><span style='font-weight:bold'>Fig 11. The contour plot of the results for CFETR when the minority superthermal tail has been considered.</span></center> 
 
-<center><img alt="picture 7" src="https://hexo-1301133429.cos.ap-chengdu.myqcloud.com/post/TORIC-manulcfetrabsortail.png"/></center>  
+<center><img alt="picture 7" src="https://image.tabirstrees.top/images/2025/02/22/20250222171137116.png"/></center>  
 <center id='f12'><span style='font-weight:bold'>Fig 12. Power absorption by different particles along the radius direction for CFETR when the minority superthermal tail has been considered.</span></center>
 
-<center><img alt="picture 8" src="https://hexo-1301133429.cos.ap-chengdu.myqcloud.com/post/TORIC-manulcfetrcdtail.png"/></center>  
+<center><img alt="picture 8" src="https://image.tabirstrees.top/images/2025/02/22/20250222171154509.png"/></center>  
 <center id='f13'><span style='font-weight:bold'>Fig 13. Current Driven by different waves along the radius direction for CFETR when the minority superthermal tail has been considered.</span></center>
 
 由于只是作为演示, 这里的结果就不做具体分析.

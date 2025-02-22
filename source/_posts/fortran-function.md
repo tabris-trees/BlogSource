@@ -5,8 +5,8 @@ tags:
   - Fortran
   - 函数语法
 date: 2021-09-13 22:49:53
-index_img: https://hexo-1301133429.cos.ap-chengdu.myqcloud.com/20210707235432.png
-cover: https://hexo-1301133429.cos.ap-chengdu.myqcloud.com/20210707235432.png
+# index_img: https://hexo-1301133429.cos.ap-chengdu.myqcloud.com/20210707235432.png
+cover: https://image.tabirstrees.top/images/2025/02/22/20250222222723121.png
 categories: [笔记,编程,Fortran]
 description: 在Fortran中使用函数！！！
 ---
@@ -602,5 +602,5 @@ include 'sub.f90'
 {% note seccess %}
 五百多行，四天时间，这大概是我写的最多的一次了
 
-![我顶得住](https://file.tabirstrees.top/blogfile/EMO-wodingdezhu.jpg)
+<!-- ![我顶得住](https://file.tabirstrees.top/blogfile/EMO-wodingdezhu.jpg) -->
 {% endnote %}

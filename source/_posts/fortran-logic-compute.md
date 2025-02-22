@@ -4,14 +4,14 @@ tags:
   - 编程
   - Fortran
 date: 2021-07-07 22:20:40
-index_img: https://hexo-1301133429.cos.ap-chengdu.myqcloud.com/20210707235432.png
-cover: https://hexo-1301133429.cos.ap-chengdu.myqcloud.com/20210707235432.png
+# index_img: https://hexo-1301133429.cos.ap-chengdu.myqcloud.com/20210707235432.png
+cover: https://image.tabirstrees.top/images/2025/02/22/20250222222723121.png
 categories:
 - [笔记,编程,Fortran]
 description: Fortran的流程判断,给自己看的
 ---
 
-![Fortran](https://hexo-1301133429.cos.ap-chengdu.myqcloud.com/20210707235432.png)
+<!-- ![Fortran](https://hexo-1301133429.cos.ap-chengdu.myqcloud.com/20210707235432.png) -->
 
 {% note primary %}
 我们假设大家都有一定的编程基础，至少知道编程过程中流程控制是什么意思（<span class="heimu">其实也没啥意思，就是条件语句之类的</span>）。另外把实际的例子的代码省去，这样更加精简的作为字典或者文档查询更加方便。
@@ -67,19 +67,19 @@ end if
 另外补充以下在Fortran中表示逻辑判断以及集合判断的方式:
 
 
-代码 | 表示含义 
-:-------:|:--------:
- `==` | 相等 
- `/=` | 不等于 
- `>` | 大于 
- `>=` | 大于等于 
- `<` | 小于 
- `<=` | 小于等于 
- `.and.` | 交集 
- `.or.` | 并集 
- `.not.` | 不成立 
- `.eqv.` | 逻辑运算相等 
- `.neqv.` | 逻辑运算不相等 
+|   代码   |    表示含义    |
+| :------: | :------------: |
+|   `==`   |      相等      |
+|   `/=`   |     不等于     |
+|   `>`    |      大于      |
+|   `>=`   |    大于等于    |
+|   `<`    |      小于      |
+|   `<=`   |    小于等于    |
+| `.and.`  |      交集      |
+|  `.or.`  |      并集      |
+| `.not.`  |     不成立     |
+| `.eqv.`  |  逻辑运算相等  |
+| `.neqv.` | 逻辑运算不相等 |
 
 
 以上，逻辑判断的运算等级高于集合运算的等级，同时出现时先执行逻辑判断（大于小于等于之类的）的语句。
@@ -202,5 +202,5 @@ STOP 停止，很明显，执行完该代码程序就停止了，可以用来作
 
 ---
 
-研究生通知书到了，趁这里没人，独自高兴一波hahaha！
-![1625667151163](https://hexo-1301133429.cos.ap-chengdu.myqcloud.com/1625667151163.jpg)
+<!-- 研究生通知书到了，趁这里没人，独自高兴一波hahaha！
+![1625667151163](https://hexo-1301133429.cos.ap-chengdu.myqcloud.com/1625667151163.jpg) -->

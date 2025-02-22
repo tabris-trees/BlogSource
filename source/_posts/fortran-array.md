@@ -4,8 +4,8 @@ tags:
   - 编程
   - Fortran
 date: 2021-09-03 11:16:48
-index_img: https://hexo-1301133429.cos.ap-chengdu.myqcloud.com/fortran-array-20210903111923.png
-cover: https://hexo-1301133429.cos.ap-chengdu.myqcloud.com/fortran-array-20210903111923.png
+# index_img: https://hexo-1301133429.cos.ap-chengdu.myqcloud.com/fortran-array-20210903111923.png
+cover: https://image.tabirstrees.top/images/2025/02/22/20250222222723121.png
 categories: [笔记,编程,Fortran]
 description: Fortran中数组（array）的操作！
 

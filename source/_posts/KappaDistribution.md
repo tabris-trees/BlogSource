@@ -1,7 +1,7 @@
 ---
 title: Kappa 分布简单介绍
 date: 2022-07-08 17:20:05
-cover: https://hexo-1301133429.cos.ap-chengdu.myqcloud.com/post/4.jpg
+cover: https://image.tabirstrees.top/images/2025/02/22/20250222194503366.png
 tags:
 - 等离子体物理
 - Kappa分布
@@ -37,15 +37,15 @@ $$
 
 我们把这个分布称作 <span style='background: pink'>**Kappa 分布** 或者 **广义洛伦兹速度分布** </span> ，Kappa 分布相对 Maxwellian 分布来说在尾部的能量更高，并且粒子的速度呈幂方衰减。
 
-![KappaDistribution-20220623170840](https://hexo-1301133429.cos.ap-chengdu.myqcloud.com/post/KappaDistribution-20220623170840.png)
+![KappaDistribution-20220623170840](https://pic1.zhimg.com/v2-e4f398f591ffab215af1cf434cd88e78_1440w.jpg)
 
 <span style='font-weight:bold' id='t1'>Tab 1. </span> Comparison of different analytical expressions for a Maxwellian and a Kappa VDF
 
-Parameter | Maxwellian | Kappa
-----------|------------|------
-Number density | $n(r) = n_0 \exp{-\frac{R(r)}{\theta^2}}$ | $ n(r)=n_{0}\left(1+\frac{R(r)}{\kappa \theta^{2}}\right)^{-\kappa+1 / 2} $
-Temperature | $T(r) = T_0$ | $ T(r)=T_{0} \frac{\kappa}{K-3 / 2}\left(1+\frac{R(r)}{\kappa \theta^{2}}\right) $
-Escaping flux | $ F(r)=\frac{n_{0} \theta\left(1+v_{\mathrm{e}}^{2} / \theta^{2}\right)}{2 \pi^{1 / 2}} \exp \left(-\frac{v_{\mathrm{e}}^{2}}{\theta^{2}}\right) $ | $ F(r)=\frac{n_{0} A_{\mathrm{k}} \theta\left(1+v_{\mathrm{e}}^{2} / \theta^{2}\right)}{4(\kappa-1) \kappa^{1 / 2}\left[1+v_{\mathrm{e}}^{2} /\left(\kappa \theta^{2}\right)\right]^{\kappa}} $
+| Parameter      | Maxwellian                                                                                                                                         | Kappa                                                                                                                                                                                           |
+| -------------- | -------------------------------------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Number density | $n(r) = n_0 \exp{-\frac{R(r)}{\theta^2}}$                                                                                                          | $ n(r)=n_{0}\left(1+\frac{R(r)}{\kappa \theta^{2}}\right)^{-\kappa+1 / 2} $                                                                                                                     |
+| Temperature    | $T(r) = T_0$                                                                                                                                       | $ T(r)=T_{0} \frac{\kappa}{K-3 / 2}\left(1+\frac{R(r)}{\kappa \theta^{2}}\right) $                                                                                                              |
+| Escaping flux  | $ F(r)=\frac{n_{0} \theta\left(1+v_{\mathrm{e}}^{2} / \theta^{2}\right)}{2 \pi^{1 / 2}} \exp \left(-\frac{v_{\mathrm{e}}^{2}}{\theta^{2}}\right) $ | $ F(r)=\frac{n_{0} A_{\mathrm{k}} \theta\left(1+v_{\mathrm{e}}^{2} / \theta^{2}\right)}{4(\kappa-1) \kappa^{1 / 2}\left[1+v_{\mathrm{e}}^{2} /\left(\kappa \theta^{2}\right)\right]^{\kappa}} $ |
 
 在了解这些之后实际上就可以开始关于Kappa分布的相关研究了，我们关注的是这样的速度分布函数的粒子和各种等离子体波相互作用的结果。但是，实际上这种速度分布的形成也与这个相互作用的过程有很大的关系。
 
@@ -221,9 +221,9 @@ plot(v2,fp2,v,fp);
 legend('Maxwellian','Kappa');
 ```
 
-![maxwellian](https://hexo-1301133429.cos.ap-chengdu.myqcloud.com/post/3.jpg)
+![maxwellian](https://pic2.zhimg.com/v2-adfbaf5168804826c938446da1567999_1440w.jpg)
 
-![kappa](https://hexo-1301133429.cos.ap-chengdu.myqcloud.com/post/4.jpg)
+![kappa](https://pic1.zhimg.com/v2-f0d928ff6762a3d61c16eb13c4f1eeb2_1440w.jpg)
 
 三维形式和一维情况类似，这里直接贴出代码，具体的可以在参考文献中找到：
 

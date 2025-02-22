@@ -5,18 +5,18 @@ tags:
   - 编程
   - 循环语法
 date: 2021-08-12 10:19:52
-index_img: https://i.loli.net/2021/08/12/EL1VYP8nebFrvdS.png
-cover: https://i.loli.net/2021/08/12/EL1VYP8nebFrvdS.png
+# index_img: https://i.loli.net/2021/08/12/EL1VYP8nebFrvdS.png
+cover: https://image.tabirstrees.top/images/2025/02/22/20250222222723121.png
 categories:
 - [笔记,编程,Fortran]
 description: 在Fortran中使用循环语法
 ---
 
-![logo-fortran](https://file.tabirstrees.top/blogfile/logo-fortran.png)
+<!-- ![logo-fortran](https://file.tabirstrees.top/blogfile/logo-fortran.png) -->
 
 # 🎉DO结构
 
-![DO结构](https://hexo-1301133429.cos.ap-chengdu.myqcloud.com/20210710211357.png)
+<!-- ![DO结构](https://hexo-1301133429.cos.ap-chengdu.myqcloud.com/20210710211357.png) -->
 
 在我们的程序编写过程中，经常会遇到需要将一部分代码重复很多遍的情况，为了使得代码简单提高可读性，可以用循环结构来进行处理，在Fortran中最常见的循环结构就是如上图所示的DO循环.
 

@@ -1,8 +1,8 @@
 ---
 title: hexo+fluid主题添加二级导航
 date: 2020-05-14 15:32:02
-index_img: https://hexo-1301133429.cos.ap-chengdu.myqcloud.com/6418A1E7501871AF561B89A22AB13D3F.png
-cover: https://hexo-1301133429.cos.ap-chengdu.myqcloud.com/6418A1E7501871AF561B89A22AB13D3F.png
+# index_img: https://hexo-1301133429.cos.ap-chengdu.myqcloud.com/6418A1E7501871AF561B89A22AB13D3F.png
+cover: https://image.tabirstrees.top/images/2025/02/22/833023209331777119.png
 tags:
 - hexo
 - web技术
@@ -11,7 +11,7 @@ categories:
 description: 为fluid主题添加二级导航
 ---
 
-![6418A1E7501871AF561B89A22AB13D3F](https://hexo-1301133429.cos.ap-chengdu.myqcloud.com/6418A1E7501871AF561B89A22AB13D3F.png)
+<!-- ![6418A1E7501871AF561B89A22AB13D3F](https://hexo-1301133429.cos.ap-chengdu.myqcloud.com/6418A1E7501871AF561B89A22AB13D3F.png) -->
 
 ---
 {% note info %}
@@ -143,9 +143,9 @@ navbar:
 ```
 这样我们就完成了一个主题的二级导航自定义，当然这样其实还是不太好看，可以自己用css进行调整。此外，针对不同的主题配置`config.yml`的不同写法情况，其实都是大同小异的，[可以点我去往某个大佬的空间看看，以作参考！！！<(￣︶￣)↗[GO!]](https://www.hojun.cn/2019/01/08/ck8irvkwx009qdwtu8ejla2mg/)。
 
-以我的网站为例最终实现就是这样的效果：
+<!-- 以我的网站为例最终实现就是这样的效果：
 ![20200514170113](https://hexo-1301133429.cos.ap-chengdu.myqcloud.com/20200514170113.png)
-![20200514170146](https://hexo-1301133429.cos.ap-chengdu.myqcloud.com/20200514170146.png)
+![20200514170146](https://hexo-1301133429.cos.ap-chengdu.myqcloud.com/20200514170146.png) -->
 
 哈哈哈哈，我觉得还是可以的！！！😁😁😁
 {% note success %}
