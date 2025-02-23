@@ -39,7 +39,7 @@ EVA，永远的神！！！
 <!-- endtimeline -->
 {% endtimeline %}
 
-{% timeline 2022  %}
+{% timeline 2022 %}
 <!-- timeline 2022/07/08 -->
 Butterfly 主题升级到4.3.0
 <!-- endtimeline -->
@@ -53,5 +53,11 @@ Butterfly 主题升级到4.3.0
 {% timeline 2024, pink %}
 <!-- timeline 2024/06/?? -->
 网站图片存在腾讯云的 COS 桶中，流量被盗刷几个 T，欠费 **好几百** ，没钱给所以图片全崩了 😅
+<!-- endtimeline -->
+{% endtimeline %}
+
+{% timeline 2025, blue %}
+<!-- timeline 2025/02/23 -->
+恢复了文章中的图片，删除了部分废稿。
 <!-- endtimeline -->
 {% endtimeline %}

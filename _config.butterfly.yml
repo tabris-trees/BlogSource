@@ -81,7 +81,7 @@ katex:
 # --------------------------------------
 
 # Favicon（網站圖標）
-favicon: https://hexo-1301133429.cos.ap-chengdu.myqcloud.com/1.png
+favicon: https://image.tabirstrees.top/images/2025/02/22/tabirstrees.png
 
 # Avatar (頭像)
 avatar:
@@ -92,13 +92,14 @@ avatar:
 disable_top_img: false
 
 # The banner image of home page
-index_img: https://hexo-1301133429.cos.ap-chengdu.myqcloud.com/19s_by_wlop-dbsw09i.jpg
+index_img: https://image.tabirstrees.top/images/2025/02/22/space.jpg
 
 # If the banner of page not setting, it will show the top_img
-default_top_img: https://hexo-1301133429.cos.ap-chengdu.myqcloud.com/post/图片-龙与少年.jpg
+default_top_img: https://image.tabirstrees.top/images/2025/02/22/space2.jpg
 
 # The banner image of archive page
-archive_img: https://trees-1301133429.cos.ap-nanjing.myqcloud.com/blogweb/%E5%BD%92%E6%A1%A3.jpg
+# archive_img: https://image.tabirstrees.top/images/2025/02/22/bingimg_20241110_UHD.jpg
+archive_img:
 
 # If the banner of tag page not setting, it will show the top_img
 # note: tag page, not tags page (子標籤頁面的 top_img)
@@ -111,12 +112,12 @@ tag_per_img:
 
 # If the banner of category page not setting, it will show the top_img
 # note: category page, not categories page (子分類頁面的 top_img)
-category_img: https://trees-1301133429.cos.ap-nanjing.myqcloud.com/blogweb/%E8%A1%97%E5%8F%A3.jpeg
+category_img: https://image.tabirstrees.top/images/2025/02/22/251323d19b4386d94d3848833bfeb633.jpg
 
 # The banner image of category page
 # format:
 #  - category name: xxxxx
-category_per_img: https://trees-1301133429.cos.ap-nanjing.myqcloud.com/blogweb/%E8%A1%97%E5%8F%A3.jpeg
+category_per_img: https://image.tabirstrees.top/images/2025/02/22/page.jpg
 
 cover:
   # display the cover or not (是否顯示文章封面)

@@ -1,7 +1,7 @@
 ---
 date: 2024-10-12 18:32:18
 title: vscode 配置过程记录
-cover: 
+cover: https://image.tabirstrees.top/images/2025/02/22/20250223001802383.png
 tags:
 - vscode
 - 环境配置
