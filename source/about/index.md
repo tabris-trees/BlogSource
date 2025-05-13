@@ -14,13 +14,15 @@ Severus来自霍格沃兹魔法学校的斯内普教授的名字
 # 关于本人
 南科大地空系空间物理研究生，研究兴趣应该靠近太阳物理的方向，具体一点的话可能涉及到太阳风的加热机制。
 
+目前在上海交通大学李政道研究所读博士，研究方向为实验室天体物理，主要关注宇宙磁场放大、磁螺旋度、喷流以及激光与结构靶等离子体相互作用。
+
 2.5次元，OTAKU，不太喜欢追新番，旧世纪宅社以及庵野秀明的死忠粉。
 
 {% note primary %}
 EVA，永远的神！！！
 {% endnote %}
 
-![EVA萌](https://hexo-1301133429.cos.ap-chengdu.myqcloud.com/post/20200414104326211.png)
+![EVA萌](https://image.tabirstrees.top/images/2025/05/13/918677.jpg)
 
 虽然是想做自然科学的研究，但同样很喜欢看些社会学，哲学方面的书籍，经常对某些事情有一些自己的想法，同样希望把自己的生活能够过得比较诗意。很喜欢阿瑟·克拉克的科幻小说，算是最终学习空间物理的一大动力吧。
 
@@ -28,7 +30,7 @@ EVA，永远的神！！！
 
 希望各位访客能够在此体会到星辰大海的浪漫！！！
 
-![xingchendagai](https://trees-1301133429.cos.ap-nanjing.myqcloud.com/%E6%98%9F%E8%BE%B0%E5%A4%A7%E6%B5%B7.jpeg)
+![星辰大海](https://image.tabirstrees.top/images/2025/05/13/cc775f02c21a72ce3e4c85cdaed46ef4.jpg)
 
 ---
 # 🎇星系演化历史🎇
@@ -39,7 +41,7 @@ EVA，永远的神！！！
 <!-- endtimeline -->
 {% endtimeline %}
 
-{% timeline 2022 %}
+{% timeline 2022 yellow %}
 <!-- timeline 2022/07/08 -->
 Butterfly 主题升级到4.3.0
 <!-- endtimeline -->
@@ -59,5 +61,12 @@ Butterfly 主题升级到4.3.0
 {% timeline 2025, blue %}
 <!-- timeline 2025/02/23 -->
 恢复了文章中的图片，删除了部分废稿。
+<!-- endtimeline -->
+<!-- timeline 2025/05/13 -->
+更新了部分信息，准备重新开始更新文章。
+计划如下：
+- [] 数学物理方法
+- [] PENCIL代码的使用
+- [] VScode以及一些远程连接的心得和配置的更新
 <!-- endtimeline -->
 {% endtimeline %}

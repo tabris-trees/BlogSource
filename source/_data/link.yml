@@ -11,6 +11,11 @@ class:
       link: https://physnya.top
       avatar: https://physnya.top/img/physics_nya.jpg
       descr: Eclipse first, the rest nowhere.
+    3:
+      name: Weichky’s Blog
+      link: https://blog.weichky.com
+      avatar: https://assets.weichky.com/imgs/favicon.png
+      descr: 物不可穷也，故受之以未济。
 
 # class2:
 #   class_name: 链接无效

@@ -7,8 +7,7 @@ tags:
   - Alfven wave
   - 等离子体波动
 date: 2022-04-15 15:33:09
-index_img: https://hexo-1301133429.cos.ap-chengdu.myqcloud.com/post/plasmahomework3-![dispersion](3.png).png
-cover: https://hexo-1301133429.cos.ap-chengdu.myqcloud.com/post/plasmahomework3-![dispersion](3.png).png
+cover: https://image.tabirstrees.top/images/2025/02/22/20250222193827442.png
 categories: [笔记,等离子体物理]
 description: 磁流体力学推导等离子体物理波动色散关系
 math: true
