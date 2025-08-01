@@ -1,10 +1,21 @@
-# Main menu navigation (導航目錄)
+# --------------------------------------
+# Hexo Butterfly Theme Configuration
+# If you have any questions, please refer to the documentation
+# Chinese: https://butterfly.js.org/
+# English: https://butterfly.js.org/en/
 # --------------------------------------
 
-# format: name: link || icon
-# sub-menu
-# name || icon:
-#   name: link || icon
+# --------------------------------------
+# Navigation Settings
+# --------------------------------------
+
+nav:
+  # Navigation bar logo image
+  logo:
+  display_title: true
+  display_post_title: true
+  # Whether to fix navigation bar
+  fixed: false
 
 menu:
   首页: / || fas fa-home
@@ -19,65 +30,36 @@ menu:
   开往: https://www.travellings.cn/go.html || fas fa-subway
 
 # Hide the child menu items in mobile sidebar
-hide_sidebar_menu_child: true
+# hide_sidebar_menu_child: true
 
-# Code Blocks (代碼相關)
+# --------------------------------------
+# Code Blocks Settings
 # --------------------------------------
 
-highlight_theme: darker #  darker / pale night / light / ocean / mac / mac light / false
-highlight_copy: true # copy button
-highlight_lang: true # show the code language
-highlight_shrink: false # true: shrink the code blocks / false: expand the code blocks | none: expand code blocks and hide the button
-highlight_height_limit: false # unit: px
-code_word_wrap: true
+code_blocks:
+  # Code block theme: darker / pale night / light / ocean / false
+  theme: ocean
+  macStyle: false
+  # Code block height limit (unit: px)
+  height_limit: false
+  word_wrap: false
 
-# copy settings
-# copyright: Add the copyright information after copied content (複製的內容後面加上版權信息)
-copy:
-  enable: true
-  copyright:
-    enable: false
-    limit_count: 50
+  # Toolbar
+  copy: true
+  language: true
+  # true: shrink the code blocks | false: expand the code blocks | none: expand code blocks and hide the button
+  shrink: false
+  fullpage: false
 
-# social settings (社交圖標設置)
-# formal:
-#   icon: link || the description
+# Social media links
+# Formal:
+#   icon: link || the description || color
 social:
   fab fa-github: https://github.com/tabris-trees || Github
   fas fa-envelope: mailto:tabristrees@gmail.com || Email
 
-# search (搜索)
 # --------------------------------------
-
-# Algolia search
-algolia_search:
-  enable: false
-  hits:
-    per_page: 6
-
-# Local search
-local_search:
-  enable: true
-
-# Math (數學)
-# --------------------------------------
-# About the per_page
-# if you set it to true, it will load mathjax/katex script in each page (true 表示每一頁都加載js)
-# if you set it to false, it will load mathjax/katex script according to your setting (add the 'mathjax: true' in page's front-matter)
-# (false 需要時加載，須在使用的 Markdown Front-matter 加上 mathjax: true)
-
-# MathJax
-mathjax:
-  enable: true
-  per_page: true
-
-# KaTeX
-katex:
-  enable: false
-  per_page: true
-  hide_scrollbar: true
-
-# Image (圖片設置)
+# Image Settings
 # --------------------------------------
 
 # Favicon（網站圖標）
@@ -85,27 +67,26 @@ favicon: https://image.tabirstrees.top/images/2025/02/22/tabirstrees.png
 
 # Avatar (頭像)
 avatar:
-  img: https://hexo-1301133429.cos.ap-chengdu.myqcloud.com/20200429094050.jpg
+  img: https://image.tabirstrees.top/images/2025/07/28/f0b536d8b179a68d95e49740ad445252.jpg
   effect: false
 
 # Disable all banner image
 disable_top_img: false
 
-# The banner image of home page
-index_img: https://image.tabirstrees.top/images/2025/02/22/space.jpg
-
-# If the banner of page not setting, it will show the top_img
+# If the banner of page not setting, it will show the default_top_img
 default_top_img: https://image.tabirstrees.top/images/2025/02/22/space2.jpg
 
+# The banner image of index page
+index_img: https://image.tabirstrees.top/images/2025/02/22/space.jpg
+
 # The banner image of archive page
-# archive_img: https://image.tabirstrees.top/images/2025/02/22/bingimg_20241110_UHD.jpg
-archive_img:
+archive_img: https://image.tabirstrees.top/images/2025/02/22/bingimg_20241110_UHD.jpg
 
 # If the banner of tag page not setting, it will show the top_img
 # note: tag page, not tags page (子標籤頁面的 top_img)
-tag_img:
+tag_img: https://image.tabirstrees.top/images/2025/02/22/page.jpg
 
-# The banner image of tag page
+# The banner image of tag page, you can set the banner image for each tag
 # format:
 #  - tag name: xxxxx
 tag_per_img:
@@ -117,7 +98,14 @@ category_img: https://image.tabirstrees.top/images/2025/02/22/251323d19b4386d94d
 # The banner image of category page
 # format:
 #  - category name: xxxxx
-category_per_img: https://image.tabirstrees.top/images/2025/02/22/page.jpg
+category_per_img:
+
+# The background image of footer
+footer_img: true
+
+# Website Background
+# Can set it to color or image url
+background: https://image.tabirstrees.top/images/2025/07/27/578d27eb53eacd7e936ccc54d865fca6.png
 
 cover:
   # display the cover or not (是否顯示文章封面)
@@ -126,7 +114,7 @@ cover:
   archives_enable: true
   # the position of cover in home page (封面顯示的位置)
   # left/right/both
-  position: both
+  # position: both
   # When cover is not set, the default cover is displayed (當沒有設置cover時，默認的封面顯示)
   default_cover:
     # - https://i.loli.net/2020/05/01/gkihqEjXxJ5UZ1C.jpg
@@ -150,18 +138,60 @@ post_meta:
     tags: true # true or false 主頁是否顯示標籤
     label: true # true or false 顯示描述性文字
   post:
+    # Choose: left / center
+    position: left
     date_type: both # created or updated or both 文章頁日期是創建日或者更新日或都顯示
     date_format: date # date/relative 顯示日期還是相對日期
     categories: true # true or false 文章頁是否顯示分類
     tags: true # true or false 文章頁是否顯示標籤
     label: true # true or false 顯示描述性文字
 
-# wordcount (字數統計)
-wordcount:
+# # wordcount (字數統計)
+# wordcount:
+#   enable: true
+#   post_wordcount: true
+#   min2read: true
+#   total_wordcount: true
+
+# --------------------------------------
+# Index page settings
+# --------------------------------------
+
+# The top_img settings of home page
+# default: top img - full screen, site info - middle
+# The position of site info, eg: 300px/300em/300rem/10%
+index_site_info_top:
+# The height of top_img, eg: 300px/300em/300rem
+index_top_img_height:
+
+# The subtitle on homepage
+subtitle:
   enable: true
-  post_wordcount: true
-  min2read: true
-  total_wordcount: true
+  # Typewriter Effect
+  effect: true
+  # Customize typed.js
+  # https://github.com/mattboldt/typed.js/#customization
+  typed_option:
+  # Source - Call the third-party service API (Chinese only)
+  # It will show the source first, then show the content of sub
+  # Choose: false/1/2/3
+  # false - disable the function
+  # 1 - hitokoto.cn
+  # 2 - https://api.aa1.cn/doc/yiyan.html
+  # 3 - jinrishici.com
+  source: false
+  # If you close the typewriter effect, the subtitle will only show the first line of sub
+  sub: 灵槎准拟泛银河 剩摘天星几个
+
+# Article layout on the homepage
+# 1: Cover on the left, info on the right
+# 2: Cover on the right, info on the left
+# 3: Cover and info alternate between left and right
+# 4: Cover on top, info on the bottom
+# 5: Info displayed on the cover
+# 6: Masonry layout - Cover on top, info on the bottom
+# 7: Masonry layout - Info displayed on the cover
+index_layout: 3
 
 # Display the article introduction on homepage
 # 1: description
@@ -170,26 +200,33 @@ wordcount:
 # false: do not show the article introduction
 index_post_content:
   method: 2
-  length: 100 # if you set method to 2 or 3, the length need to config
+  length: 500 # if you set method to 2 or 3, the length need to config
 
-# Post
+# --------------------------------------
+# Post Settings
 # --------------------------------------
 
 # toc (目錄)
 toc:
-  enable: true
+  post: true
+  page: false
   number: true
+  expand: false
+  # Only for post
   style_simple: false
+  scroll_percent: true
 
 post_copyright:
   enable: true
   decode: false
+  author_href: https://www.tabirstrees.top
   license: CC BY-NC-SA 4.0
   license_url: https://creativecommons.org/licenses/by-nc-sa/4.0/
 
 # Sponsor/reward
 reward:
   enable: false
+  text:
   QR_code:
     # - img: /img/wechat.jpg
     #   link:
@@ -209,14 +246,12 @@ post_edit:
 # Related Articles
 related_post:
   enable: true
-  limit: 3 # Number of posts displayed
-  date_type: updated # or created or updated 文章日期顯示創建日或者更新日
+  # Number of posts displayed
+  limit: 3
+  # Choose: created / updated
+  date_type: updated
 
-# figcaption (圖片描述文字)
-photofigcaption: false
-
-# post_pagination (分頁)
-# value: 1 || 2 || false
+# Choose: 1 / 2 / false
 # 1: The 'next post' will link to old post
 # 2: The 'next post' will link to new post
 # false: disable pagination
@@ -224,7 +259,7 @@ post_pagination: 1
 
 # anchor
 # when you scroll in post, the URL will update according to header id.
-anchor: false
+# anchor: false
 
 # Displays outdated notice for a post (文章過期提醒)
 noticeOutdate:
@@ -235,68 +270,311 @@ noticeOutdate:
   message_prev: It has been
   message_next: days since the last update, the content of the article may be outdated.
 
-# Share System (分享功能)
+# --------------------------------------
+# Footer Settings
+# --------------------------------------
+footer:
+  nav:
+  owner:
+    enable: true
+    since: 2020
+  # Copyright of theme and framework
+  copyright:
+    enable: true
+    version: true
+  custom_text: 灵槎准拟泛银河，剩摘天星几个
+
+# --------------------------------------
+# Aside Settings
 # --------------------------------------
 
-# AddThis
-# https://www.addthis.com/
-addThis:
+aside:
+  enable: true
+  hide: false
+  # Show the button to hide the aside in bottom right button
+  button: true
+  mobile: true
+  # Position: left / right
+  position: right
+  display:
+    archive: true
+    tag: true
+    category: true
+  card_author:
+    enable: true
+    description: 晴耕雨读
+    button:
+      enable: false
+      icon: fab fa-github
+      text: Follow Me
+      link: https://github.com/xxxxxx
+  card_announcement:
+    enable: true
+    content: 装死中😇
+  card_recent_post:
+    enable: false
+    # If set 0 will show all
+    limit: 5
+    # Sort: date / updated
+    sort: date
+    sort_order:
+  card_newest_comments:
+    enable: false
+    sort_order:
+    limit: 6
+    # Unit: mins, save data to localStorage
+    storage: 10
+    avatar: true
+  card_categories:
+    enable: false
+    # If set 0 will show all
+    limit: 20
+    # Choose: none / true / false
+    expand: true
+    sort_order:
+  card_tags:
+    enable: true
+    # If set 0 will show all
+    limit: 20
+    color: true
+    # Order of tags, random/name/length
+    orderby: random
+    # Sort of order. 1, asc for ascending; -1, desc for descending
+    order: 1
+    sort_order:
+  card_archives:
+    enable: false
+    # Type: monthly / yearly
+    type: monthly
+    # Eg: YYYY年MM月
+    format: MMMM YYYY
+    # Sort of order. 1, asc for ascending; -1, desc for descending
+    order: -1
+    # If set 0 will show all
+    limit: 8
+    sort_order:
+  card_post_series:
+    enable: true
+    # The title shows the series name
+    series_title: false
+    # Order by title or date
+    orderBy: 'date'
+    # Sort of order. 1, asc for ascending; -1, desc for descending
+    order: -1
+  card_webinfo:
+    enable: true
+    post_count: true
+    last_push_date: true
+    sort_order:
+    # Time difference between publish date and now
+    # Formal: Month/Day/Year Time or Year/Month/Day Time
+    # Leave it empty if you don't enable this feature
+    runtime_date: 02/01/2020 00:00:00
+
+# --------------------------------------
+# Bottom right button
+# --------------------------------------
+
+# The distance between the bottom right button and the bottom (default unit: px)
+rightside_bottom:
+
+# Conversion between Traditional and Simplified Chinese
+translate:
   enable: false
-  pubid:
+  # The text of a button
+  default: 繁
+  # the language of website (1 - Traditional Chinese/ 2 - Simplified Chinese）
+  defaultEncoding: 2
+  # Time delay
+  translateDelay: 0
+  # The text of the button when the language is Simplified Chinese
+  msgToTraditionalChinese: '繁'
+  # The text of the button when the language is Traditional Chinese
+  msgToSimplifiedChinese: '簡'
+
+# Read Mode
+readmode: true
+
+# Dark Mode
+darkmode:
+  enable: true
+  # Toggle Button to switch dark/light mode
+  button: true
+  # Switch dark/light mode automatically
+  # autoChangeMode: 1  Following System Settings, if the system doesn't support dark mode, it will switch dark mode between 6 pm to 6 am
+  # autoChangeMode: 2  Switch dark mode between 6 pm to 6 am
+  # autoChangeMode: false
+  autoChangeMode: false
+  # Set the light mode time. The value is between 0 and 24. If not set, the default value is 6 and 18
+  start:
+  end:
+
+# Show scroll percent in scroll-to-top button
+rightside_scroll_percent: false
+
+# Don't modify the following settings unless you know how they work
+# Choose: readmode,translate,darkmode,hideAside,toc,chat,comment
+# Don't repeat the same value
+rightside_item_order:
+  enable: false
+  # Default: readmode,translate,darkmode,hideAside
+  hide:
+  # Default: toc,chat,comment
+  show:
+
+# Animation for the bottom right config button
+rightside_config_animation: true
+
+# --------------------------------------
+# Global Settings
+# --------------------------------------
+
+anchor:
+  # When you scroll, the URL will update according to header id.
+  auto_update: false
+  # Click the headline to scroll and update the anchor
+  click_to_scroll: false
+
+photofigcaption: false
+
+copy:
+  enable: true
+  # Add the copyright information after copied content
+  copyright:
+    enable: false
+    limit_count: 150
+
+# Need to install the hexo-wordcount plugin
+wordcount:
+  enable: false
+  # Display the word count of the article in post meta
+  post_wordcount: true
+  # Display the time to read the article in post meta
+  min2read: true
+  # Display the total word count of the website in aside's webinfo
+  total_wordcount: true
+
+# Busuanzi count for PV / UV in site
+busuanzi:
+  site_uv: true
+  site_pv: true
+  page_pv: true
+
+# --------------------------------------
+# Math
+# --------------------------------------
+
+# About the per_page
+# if you set it to true, it will load mathjax/katex script in each page
+# if you set it to false, it will load mathjax/katex script according to your setting (add the 'mathjax: true' or 'katex: true' in page's front-matter)
+math:
+  # Choose: mathjax, katex
+  # Leave it empty if you don't need math
+  use: mathjax
+  per_page: true
+  hide_scrollbar: true
+
+  mathjax:
+    # Enable the contextual menu
+    enableMenu: true
+    # Choose: all / ams / none, This controls whether equations are numbered and how
+    tags: ams
+
+  katex:
+    # Enable the copy KaTeX formula
+    copy_tex: false
+
+# --------------------------------------
+# Search
+# --------------------------------------
+
+search:
+  # Choose: algolia_search / local_search / docsearch
+  # leave it empty if you don't need search
+  use: local_search
+  placeholder: Search...
+
+  # Algolia Search
+  algolia_search:
+    # Number of search results per page
+    hitsPerPage: 6
+
+  # Local Search
+  local_search:
+    # Preload the search data when the page loads.
+    preload: true
+    # Show top n results per article, show all results by setting to -1
+    top_n_per_article: 1
+    # Unescape html strings to the readable one.
+    unescape: true
+    CDN:
+
+  # Docsearch
+  # https://docsearch.algolia.com/
+  docsearch:
+    appId:
+    apiKey:
+    indexName:
+    option:
+
+# --------------------------------------
+# Share System
+# --------------------------------------
+
+share:
+  # Choose: sharejs / addtoany
+  # Leave it empty if you don't need share
+  use: sharejs
 
 # Share.js
 # https://github.com/overtrue/share.js
 sharejs:
-  enable: true
+  # enable: true
   sites: facebook,twitter,wechat,weibo,qq
 
 # AddToAny
 # https://www.addtoany.com/
 addtoany:
-  enable: false
+  # enable: false
   item: facebook,twitter,wechat,sina_weibo,facebook_messenger,email,copy_link
 
+# --------------------------------------
 # Comments System
 # --------------------------------------
 
 comments:
   # Up to two comments system, the first will be shown as default
-  # Choose: Disqus/Disqusjs/Livere/Gitalk/Valine/Waline/Utterances/Facebook Comments/Twikoo
-  use:
-    # - Valine
-    # - Disqus
-    - Twikoo
-  text: true # Display the comment name next to the button
-  # lazyload: The comment system will be load when comment element enters the browser's viewport.
+  # Leave it empty if you don't need comments
+  # Choose: Disqus/Disqusjs/Livere/Gitalk/Valine/Waline/Utterances/Facebook Comments/Twikoo/Giscus/Remark42/Artalk
+  # Format of two comments system : Disqus,Waline
+  use: Twikoo
+# Display the comment name next to the button
+  text: true
+  # Lazyload: The comment system will be load when comment element enters the browser's viewport.
   # If you set it to true, the comment count will be invalid
   lazyload: true
   count: true # Display comment count in post's top_img
   card_post_count: false # Display comment count in Home Page
 
-# disqus
+# Disqus
 # https://disqus.com/
 disqus:
   shortname:
   apikey: # For newest comments widget
 
 # Alternative Disqus - Render comments with Disqus API
-# DisqusJS 評論系統，可以實現在網路審查地區載入 Disqus 評論列表，兼容原版
 # https://github.com/SukkaW/DisqusJS
 disqusjs:
   shortname:
-  siteName:
   apikey:
-  api:
-  nocomment: # display when a blog post or an article has no comment attached
-  admin:
-  adminLabel:
+  option:
 
-# livere (來必力)
+# Livere
 # https://www.livere.com/
 livere:
   uid:
 
-# gitalk
+# Gitalk
 # https://github.com/gitalk/gitalk
 gitalk:
   client_id:
@@ -304,14 +582,9 @@ gitalk:
   repo:
   owner:
   admin:
-  language: en # en, zh-CN, zh-TW, es-ES, fr, ru
-  perPage: 10 # Pagination size, with maximum 100.
-  distractionFreeMode: false # Facebook-like distraction free mode.
-  pagerDirection: last # Comment sorting direction, available values are last and first.
-  createIssueManually: false # Gitalk will create a corresponding github issue for your every single page automatically
   option:
 
-# valine
+# Valine
 # https://valine.js.org
 valine:
   appId: # leancloud application app id
@@ -330,7 +603,7 @@ valine:
   visitor: false
   option:
 
-# waline - A simple comment system with backend support fork from Valine
+# Waline - A simple comment system with backend support fork from Valine
 # https://waline.js.org/
 waline:
   serverURL: # Waline server address url
@@ -340,7 +613,7 @@ waline:
   visitor: false
   option:
 
-# utterances
+# Utterances
 # https://utteranc.es/
 utterances:
   repo:
@@ -349,15 +622,19 @@ utterances:
   # Theme: github-light/github-dark/github-dark-orange/icy-dark/dark-blue/photon-dark
   light_theme: github-light
   dark_theme: photon-dark
+  js:
+  option:
 
 # Facebook Comments Plugin
 # https://developers.facebook.com/docs/plugins/comments/
 facebook_comments:
   app_id:
-  user_id: # optional
-  pageSize: 10 # The number of comments to show
-  order_by: social # social/time/reverse_time
-  lang: en_US # Language en_US/zh_CN/zh_TW and so on
+  # optional
+  user_id:
+  pageSize: 10
+  # Choose: social / time / reverse_time
+  order_by: social
+  lang: en_US
 
 # Twikoo
 # https://github.com/imaegoo/twikoo
@@ -367,55 +644,78 @@ twikoo:
   visitor: true
   option: window.location.pathname
 
+# Giscus
+# https://giscus.app/
+giscus:
+  repo:
+  repo_id:
+  category_id:
+  light_theme: light
+  dark_theme: dark
+  js:
+  option:
+
+# Remark42
+# https://remark42.com/docs/configuration/frontend/
+remark42:
+  host:
+  siteId:
+  option:
+
+# Artalk
+# https://artalk.js.org/guide/frontend/config.html
+artalk:
+  server:
+  site:
+  # Use Artalk visitor count as the page view count
+  visitor: false
+  option:
+
+# --------------------------------------
 # Chat Services
 # --------------------------------------
 
+chat:
+  # Choose: chatra/tidio/crisp
+  # Leave it empty if you don't need chat
+  use:
 # Chat Button [recommend]
 # It will create a button in the bottom right corner of website, and hide the origin button
-chat_btn: true
-
+  rightside_button: true
 # The origin chat button is displayed when scrolling up, and the button is hidden when scrolling down
-chat_hide_show: true
+  button_hide_show: true
 
 # chatra
 # https://chatra.io/
 chatra:
-  enable: false
+  # enable: false
   id:
 
 # tidio
 # https://www.tidio.com/
 tidio:
-  enable: false
+  # enable: false
   public_key:
 
-# daovoice
-# http://daovoice.io/
-daovoice:
-  enable: true
-  app_id: "1f64a5e9"
+# # daovoice
+# # http://daovoice.io/
+# daovoice:
+#   enable: true
+#   app_id: "1f64a5e9"
 
-# gitter
-# https://gitter.im/
-gitter:
-  enable: false
-  room:
+# # gitter
+# # https://gitter.im/
+# gitter:
+#   enable: false
+#   room:
 
 # crisp
 # https://crisp.chat/en/
 crisp:
-  enable: false
+  # enable: false
   website_id:
 
-# Footer Settings
 # --------------------------------------
-footer:
-  owner:
-    enable: true
-    since: 2020
-  custom_text:
-  copyright: true # Copyright of theme and framework
-
 # Analysis
 # --------------------------------------
 
@@ -429,11 +729,11 @@ google_analytics: UA-166333226-1
 
 # Tencent Analytics ID
 # https://mta.qq.com
-tencent_analytics:
+# tencent_analytics:
 
 # CNZZ Analytics
 # https://www.umeng.com/
-cnzz_analytics:
+# cnzz_analytics:
 
 # Cloudflare Analytics
 # https://www.cloudflare.com/zh-tw/web-analytics/
@@ -443,6 +743,27 @@ cloudflare_analytics:
 # https://clarity.microsoft.com/
 microsoft_clarity:
 
+# https://umami.is/
+umami_analytics:
+  enable: false
+  # For self-hosted setups, configure the hostname of the Umami instance
+  serverURL:
+  website_id:
+  option:
+  UV_PV:
+    site_uv: false
+    site_pv: false
+    page_pv: false
+    # Umami Cloud (API key) / self-hosted Umami (token)
+    token:
+
+# https://www.googletagmanager.com/
+google_tag_manager:
+  tag_id:
+  # optional
+  domain:
+
+# --------------------------------------
 # Advertisement
 # --------------------------------------
 
@@ -454,13 +775,18 @@ google_adsense:
   client:
   enable_page_level_ads: true
 
-# Insert ads manually (手動插入廣告)
-# ad:
-#   index:
-#   aside:
-#   post:
+# Insert ads manually
+# Leave it empty if you don't need ads
+ad:
+  # Insert ads in the index (every three posts)
+  index:
+  # Insert ads in aside
+  aside:
+  # Insert ads in the post (before pagination)
+  post:
 
-# Verification (站長驗證)
+# --------------------------------------
+# Verification
 # --------------------------------------
 
 site_verification:
@@ -489,35 +815,82 @@ site_verification:
 #   toc_color: "#00c4b6"
 #   blockquote_padding_color: "#49b1f5"
 #   blockquote_background_color: "#49b1f5"
+#   scrollbar_color: "#49b1f5"
+#   meta_theme_color_light: "ffffff"
+#   meta_theme_color_dark: "#0d0d0d"
 
-# The top_img settings of home page
-# default: top img - full screen, site info - middle (默認top_img全屏，site_info在中間)
-# The position of site info, eg: 300px/300em/300rem/10% (主頁標題距離頂部距離)
-index_site_info_top:
-# The height of top_img, eg: 300px/300em/300rem (主頁top_img高度)
-index_top_img_height:
+# The user interface setting of category and tag page
+# Choose: index - same as Homepage UI / default - same as archives UI
+# leave it empty or index
+category_ui: index
+tag_ui: index
 
-# The user interface setting of category and tag page (category和tag頁的UI設置)
-# index - same as Homepage UI (index 值代表 UI將與首頁的UI一樣)
-# default - same as archives UI 默認跟archives頁面UI一樣
-category_ui: index # 留空或 index
-tag_ui: index # 留空或 index
+# Rounded corners for UI elements
+rounded_corners_ui: true
 
-# Website Background (設置網站背景)
-# can set it to color or image (可設置圖片 或者 顔色)
-# The formal of image: url(http://xxxxxx.com/xxx.jpg)
-background:
+# Stretches the lines so that each line has equal width
+text_align_justify: false
 
-# Footer Background
-footer_bg: false
+# Add a mask to the header and footer
+mask:
+  header: true
+  footer: true
 
-# the position of bottom right button/default unit: px (右下角按鈕距離底部的距離/默認單位為px)
-rightside-bottom:
+# Loading Animation
+preloader:
+  enable: true
+  # source
+  # 1. fullpage-loading
+  # 2. pace (progress bar)
+  source: 1
+  # pace theme (see https://codebyzach.github.io/pace/)
+  pace_css_url:
 
 # Enter transitions (開啓網頁進入效果)
 enter_transitions: true
 
-# Background effects (背景特效)
+# Default display mode - light (default) / dark
+display_mode: light
+
+# Configuration for beautifying the content of the article
+beautify:
+  enable: true
+  # Specify the field to beautify (site or post)
+  field: post
+  # Specify the icon to be used as a prefix for the title, such as '\f0c1'
+  title_prefix_icon: '\f0c1'
+  # Specify the color of the title prefix icon, such as '#F47466'
+  title_prefix_icon_color: '#F47466'
+
+# Global font settings
+# Don't modify the following settings unless you know how they work
+font:
+  global_font_size: 16px
+  code_font_size: 15px
+  font_family: GenSen R, justfont, Nowar m
+  code_font_family: "Fira Code"
+
+# Font settings for the site title and site subtitle
+blog_title_font:
+  font_link:
+  font_family:
+
+# The setting of divider icon
+hr_icon:
+  enable: true
+  # The unicode value of Font Awesome icon, such as '\3423'
+  icon:
+  icon_top:
+
+# Typewriter Effect
+# https://github.com/disjukr/activate-power-mode
+activate_power_mode:
+  enable: true
+  colorful: true
+  shake: false
+  mobile: false
+
+# Background effects
 # --------------------------------------
 
 # canvas_ribbon (靜止彩帶背景)
@@ -539,19 +912,16 @@ canvas_fluttering_ribbon:
 # https://github.com/hustcc/canvas-nest.js
 canvas_nest:
   enable: false
-  color: "0,0,255" #color of lines, default: '0,0,0'; RGB values: (R,G,B).(note: use ',' to separate.)
-  opacity: 0.7 # the opacity of line (0~1), default: 0.5.
-  zIndex: -1 # z-index property of the background, default: -1.
-  count: 99 # the number of lines, default: 99.
+  # Color of lines, default: '0,0,0'; RGB values: (R,G,B).(note: use ',' to separate.)
+  color: '0,0,255'
+  # The opacity of line (0~1)
+  opacity: 0.7
+  # The z-index property of the background
+  zIndex: -1
+  # The number of lines
+  count: 99
   mobile: false
 
-# Typewriter Effect (打字效果)
-# https://github.com/disjukr/activate-power-mode
-activate_power_mode:
-  enable: true
-  colorful: true # open particle animation (冒光特效)
-  shake: false #  open shake (抖動特效)
-  mobile: false
 
 # Mouse click effects: fireworks (鼠標點擊效果: 煙火特效)
 fireworks:
@@ -561,7 +931,7 @@ fireworks:
 
 # Mouse click effects: Heart symbol (鼠標點擊效果: 愛心)
 click_heart:
-  enable: true
+  enable: false
   mobile: false
 
 # Mouse click effects: words (鼠標點擊效果: 文字)
@@ -575,187 +945,66 @@ ClickShowText:
   random: false
   mobile: false
 
-# Default display mode (網站默認的顯示模式)
-# light (default) / dark
-display_mode: light
-
-# Beautify (美化頁面顯示)
-beautify:
-  enable: true
-  field: post # site/post
-  title-prefix-icon: '\f0c1'
-  title-prefix-icon-color: "#F47466"
-
-# Global font settings
-# Don't modify the following settings unless you know how they work (非必要不要修改)
-font:
-  global-font-size: 16px
-  code-font-size: 15px
-  font-family: GenSen R, justfont, Nowar m
-  code-font-family: "Fira Code"
-
-# Font settings for the site title and site subtitle
-# 左上角網站名字 主頁居中網站名字
-blog_title_font:
-  font_link:
-  font-family:
-
-# The setting of divider icon (水平分隔線圖標設置)
-hr_icon:
-  enable: true
-  icon: # the unicode value of Font Awesome icon, such as '\3423'
-  icon-top:
-
-# the subtitle on homepage (主頁subtitle)
-subtitle:
-  enable: false
-  # Typewriter Effect (打字效果)
-  effect: true
-  # loop (循環打字)
-  loop: false
-  # source調用第三方服務
-  # source: false 關閉調用
-  # source: 1  調用搏天api的隨機語錄（簡體）
-  # source: 2  調用一言網的一句話（簡體）
-  # source: 3  調用一句網（簡體）
-  # source: 4  調用今日詩詞（簡體）
-  # subtitle 會先顯示 source , 再顯示 sub 的內容
-  source: false
-  # 如果有英文逗號' , ',請使用轉義字元 &#44;
-  # 如果有英文雙引號' " ',請使用轉義字元 &quot;
-  # 開頭不允許轉義字元，如需要，請把整個句子用雙引號包住
-  # 如果關閉打字效果，subtitle只會顯示sub的第一行文字
-  sub: 灵槎准拟泛银河 剩摘天星几个
-
-# Loading Animation (加載動畫)
-preloader: true
-
-# aside (側邊欄)
+# --------------------------------------
+# Lightbox Settings
 # --------------------------------------
 
-aside:
-  enable: true
-  hide: true
-  button: true
-  mobile: true # display on mobile
-  position: right # left or right
-  card_author:
-    enable: false
-    description:
-    button:
-      enable: true
-      icon: fab fa-github
-      text: Follow Me
-      link: https://github.com/xxxxxx
-  card_announcement:
-    enable: true
-    content: 网站老家被抄了，正在努力恢复中...！/(ㄒoㄒ)/~~
-  card_recent_post:
-    enable: false
-    limit: 5 # if set 0 will show all
-    sort: date # date or updated
-    sort_order: # Don't modify the setting unless you know how it works
-  card_categories:
-    enable: false
-    limit: 8 # if set 0 will show all
-    expand: none # none/true/false
-    sort_order: # Don't modify the setting unless you know how it works
-  card_tags:
-    enable: true
-    limit: 10 # if set 0 will show all
-    color: false
-    sort_order: # Don't modify the setting unless you know how it works
-  card_archives:
-    enable: false
-    type: monthly # yearly or monthly
-    format: MMMM YYYY # eg: YYYY年MM月
-    order: -1 # Sort of order. 1, asc for ascending; -1, desc for descending
-    limit: 8 # if set 0 will show all
-    sort_order: # Don't modify the setting unless you know how it works
-  card_webinfo:
-    enable: true
-    post_count: true
-    last_push_date: true
-    sort_order: # Don't modify the setting unless you know how it works
-
-# busuanzi count for PV / UV in site
-# 訪問人數
-busuanzi:
-  site_uv: true
-  site_pv: true
-  page_pv: true
-
-# Time difference between publish date and now (網頁運行時間)
-# Formal: Month/Day/Year Time or Year/Month/Day Time
-runtimeshow:
-  enable: true
-  publish_date: 3/1/2020 0:00
-
-# Aside widget - Newest Comments
-newest_comments:
-  enable: true
-  sort_order: # Don't modify the setting unless you know how it works
-  limit: 6
-  storage: 10 # unit: mins, save data to localStorage
-  avatar: true
-
-# Bottom right button (右下角按鈕)
-# --------------------------------------
-
-# Change font size
-change_font_size: false
-
-# Conversion between Traditional and Simplified Chinese (簡繁轉換)
-translate:
-  enable: true
-  # The text of a button
-  default: 繁
-  # the language of website (1 - Traditional Chinese/ 2 - Simplified Chinese）
-  defaultEncoding: 2
-  # Time delay
-  translateDelay: 0
-  # The text of the button when the language is Simplified Chinese
-  msgToTraditionalChinese: "繁"
-  # The text of the button when the language is Traditional Chinese
-  msgToSimplifiedChinese: "簡"
-
-# Read Mode (閲讀模式)
-readmode: true
-
-# dark mode
-darkmode:
-  enable: true
-  # Toggle Button to switch dark/light mode
-  button: true
-  # Switch dark/light mode automatically (自動切換 dark mode和 light mode)
-  # autoChangeMode: 1  Following System Settings, if the system doesn't support dark mode, it will switch dark mode between 6 pm to 6 am
-  # autoChangeMode: 2  Switch dark mode between 6 pm to 6 am
-  # autoChangeMode: false
-  autoChangeMode: false
-
-# Lightbox (圖片大圖查看模式)
-# --------------------------------------
-# You can only choose one, or neither (只能選擇一個 或者 兩個都不選)
-
-# medium-zoom
+# Choose: fancybox / medium_zoom
 # https://github.com/francoischalifour/medium-zoom
-medium_zoom: false
+# https://fancyapps.com/fancybox/
+# Leave it empty if you don't need lightbox
+lightbox: fancybox
 
-# fancybox
-# http://fancyapps.com/fancybox/3/
-fancybox: true
-
-# Tag Plugins settings (標籤外掛)
+# --------------------------------------
+# Tag Plugins settings
 # --------------------------------------
 
-# mermaid
-# see https://github.com/mermaid-js/mermaid
-mermaid:
+# Series
+series:
   enable: true
-  # built-in themes: default/forest/dark/neutral
-  theme: default
+  # Order by title or date
+  orderBy: 'title'
+  # Sort of order. 1, asc for ascending; -1, desc for descending
+  order: 1
+  number: true
 
-# Note (Bootstrap Callout)
+# ABCJS - The ABC Music Notation Plugin
+# https://github.com/paulrosen/abcjs
+abcjs:
+  enable: false
+  per_page: true
+
+# Mermaid
+# https://github.com/mermaid-js/mermaid
+mermaid:
+  enable: false
+  # Write Mermaid diagrams using code blocks
+  code_write: false
+  # built-in themes: default / forest / dark / neutral
+  theme:
+    light: default
+    dark: dark
+
+# chartjs
+# see https://www.chartjs.org/docs/latest/
+chartjs:
+  enable: true
+  # Do not modify unless you understand how they work.
+  # The default settings are only used when the MD syntax is not specified.
+  # General font color for the chart
+  fontColor:
+    light: 'rgba(0, 0, 0, 0.8)'
+    dark: 'rgba(255, 255, 255, 0.8)'
+  # General border color for the chart
+  borderColor:
+    light: 'rgba(0, 0, 0, 0.1)'
+    dark: 'rgba(255, 255, 255, 0.2)'
+  # Background color for scale labels on radar and polar area charts
+  scale_ticks_backdropColor:
+    light: 'transparent'
+    dark: 'transparent'
+
+# Note - Bootstrap Callout
 note:
   # Note tag style values:
   #  - simple    bs-callout old alert style. Default.
@@ -769,65 +1018,74 @@ note:
   # Offset also applied to label tag variables. This option can work with disabled note tag.
   light_bg_offset: 0
 
-# other
+# --------------------------------------
+# Other Settings
 # --------------------------------------
 
-# Pjax
-# It may contain bugs and unstable, give feedback when you find the bugs.
 # https://github.com/MoOx/pjax
 pjax:
   enable: true
+  # Exclude the specified pages from pjax, such as '/music/'
   exclude:
-    # - xxxx
-    # - xxxx
+    # - /xxxxxx/
 
 # Inject the css and script (aplayer/meting)
 aplayerInject:
   enable: false
   per_page: true
 
-# Snackbar (Toast Notification 彈窗)
+# Snackbar - Toast Notification
 # https://github.com/polonel/SnackBar
-# position 彈窗位置
-# 可選 top-left / top-center / top-right / bottom-left / bottom-center / bottom-right
+# position: top-left / top-center / top-right / bottom-left / bottom-center / bottom-right
 snackbar:
-  enable: false
-  position: bottom-left
-  bg_light: "#49b1f5" # The background color of Toast Notification in light mode
-  bg_dark: "#121212" # The background color of Toast Notification in dark mode
+  enable: true
+  position: bottom-center
+  # The background color of Toast Notification in light mode and dark mode
+  bg_light: '#49b1f5'
+  bg_dark: '#1f1f1f'
 
+# Instant.page
 # https://instant.page/
-# prefetch (預加載)
 instantpage: true
-
-# https://github.com/vinta/pangu.js
-# Insert a space between Chinese character and English character (中英文之間添加空格)
-pangu:
-  enable: false
-  field: site # site/post
 
 # Lazyload (圖片懶加載)
 # https://github.com/verlok/vanilla-lazyload
 lazyload:
   enable: true
-  field: site # site/post
-  placeholder:
+  # Use browser's native lazyload instead of vanilla-lazyload
+  native: false
+  # Specify the field to use lazyload (site or post)
+  field: site
+  placeholder: /images/placeholder.gif
   blur: false
 
 # PWA
 # See https://github.com/JLHwung/hexo-offline
 # ---------------
-# pwa:
-#   enable: false
-#   manifest: /pwa/manifest.json
-#   apple_touch_icon: /pwa/apple-touch-icon.png
-#   favicon_32_32: /pwa/32.png
-#   favicon_16_16: /pwa/16.png
-#   mask_icon: /pwa/safari-pinned-tab.svg
+pwa:
+  enable: false
+  manifest:
+  apple_touch_icon:
+  favicon_32_32:
+  favicon_16_16:
+  mask_icon:
 
 # Open graph meta tags
-# https://developers.facebook.com/docs/sharing/webmasters/
-Open_Graph_meta: true
+# https://hexo.io/docs/helpers#open-graph
+Open_Graph_meta:
+  enable: true
+  option:
+    # twitter_card:
+    # twitter_image:
+    # twitter_id:
+    # twitter_site:
+    # google_plus:
+    # fb_admins:
+    # fb_app_id:
+
+# Structured Data
+# https://developers.google.com/search/docs/guides/intro-structured-data
+structured_data: true
 
 # Add the vendor prefixes to ensure compatibility
 css_prefix: true
@@ -837,14 +1095,10 @@ css_prefix: true
 # 插入代码到头部 </head> 之前 和 底部 </body> 之前
 inject:
   head:
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/tabris-trees/blogdepot/fonts.css" />
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/tabris-trees/blogdepot/styles.css" />
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/firacode@6.2.0/distr/fira_code.min.css" />
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/lxgw-wenkai-webfont@1.1.0/style.css" />
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/lxgw-wenkai-lite-webfont@1.1.0/style.css" />
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/lxgw-wenkai-tc-webfont@1.0.0/style.css" />
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/lxgw-wenkai-screen-webfont@1.1.0/style.css" />
     # - <link rel="stylesheet" href="/xxx.css">
+    - <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/tabris-trees/blogdepot/fonts.css">
+    # - <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/tabris-trees/blogdepot@2.0.1/styles.css">
+    - <link rel="stylesheet" href="/css/styles.css">
   bottom:
     # - <script src="xxxx"></script>
 
@@ -852,87 +1106,73 @@ inject:
 # Don't modify the following settings unless you know how they work
 # 非必要請不要修改
 CDN:
-  # main
-  main_css: /css/index.css
-  jquery: https://cdn.jsdelivr.net/npm/jquery@latest/dist/jquery.min.js
-  main: /js/main.js
-  utils: /js/utils.js
+  # The CDN provider for internal and third-party scripts
+  # Options for both: local/jsdelivr/unpkg/cdnjs/custom
+  # Note: Dev version can only use 'local' for internal scripts
+  # Note: When setting third-party scripts to 'local', you need to install hexo-butterfly-extjs
+  internal_provider: local
+  third_party_provider: jsdelivr
 
-  # pjax
-  pjax: https://cdn.jsdelivr.net/npm/pjax/pjax.min.js
+  # Add version number to url, true or false
+  version: false
 
-  # comments
-  gitalk: https://cdn.jsdelivr.net/npm/gitalk@latest/dist/gitalk.min.js
-  gitalk_css: https://cdn.jsdelivr.net/npm/gitalk/dist/gitalk.min.css
-  valine: https://cdn.jsdelivr.net/npm/valine/dist/Valine.min.js
-  disqusjs: https://cdn.jsdelivr.net/npm/disqusjs@1/dist/disqus.js
-  disqusjs_css: https://cdn.jsdelivr.net/npm/disqusjs@1/dist/disqusjs.css
-  utterances: https://utteranc.es/client.js
-  twikoo: https://cdn.jsdelivr.net/npm/twikoo@1.6.7/dist/twikoo.all.min.js
-  waline: https://cdn.jsdelivr.net/npm/@waline/client/dist/Waline.min.js
+  # Custom format
+  # For example: https://cdn.staticfile.org/${cdnjs_name}/${version}/${min_cdnjs_file}
+  custom_format:
 
-  # share
-  addtoany: https://static.addtoany.com/menu/page.js
-  sharejs: https://cdn.jsdelivr.net/npm/social-share.js/dist/js/social-share.min.js
-  sharejs_css: https://cdn.jsdelivr.net/npm/social-share.js/dist/css/share.min.css
-
-  # search
-  local_search: /js/search/local-search.js
-  algolia_js: /js/search/algolia.js
-  algolia_search: https://cdn.jsdelivr.net/npm/instantsearch.js@2.10.5/dist/instantsearch.min.js
-  algolia_search_css: https://cdn.jsdelivr.net/npm/instantsearch.js@2.10.5/dist/instantsearch.min.css
-
-  # math
-  mathjax: https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js
-  katex: https://cdn.jsdelivr.net/npm/katex@latest/dist/katex.min.css
-  katex_copytex: https://cdn.jsdelivr.net/npm/katex@latest/dist/contrib/copy-tex.min.js
-  katex_copytex_css: https://cdn.jsdelivr.net/npm/katex@latest/dist/contrib/copy-tex.css
-  mermaid: https://cdn.jsdelivr.net/npm/mermaid/dist/mermaid.min.js
-
-  # count
-  busuanzi: //busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js
-
-  # background effect
-  canvas_ribbon: https://cdn.jsdelivr.net/npm/butterfly-extsrc@1/dist/canvas-ribbon.min.js
-  canvas_fluttering_ribbon: https://cdn.jsdelivr.net/npm/butterfly-extsrc@1/dist/canvas-fluttering-ribbon.min.js
-  canvas_nest: https://cdn.jsdelivr.net/npm/butterfly-extsrc@1/dist/canvas-nest.min.js
-
-  lazyload: https://cdn.jsdelivr.net/npm/vanilla-lazyload/dist/lazyload.iife.min.js
-  instantpage: https://cdn.jsdelivr.net/npm/instant.page/instantpage.min.js
-  typed: https://cdn.jsdelivr.net/npm/typed.js/lib/typed.min.js
-  pangu: https://cdn.jsdelivr.net/npm/pangu/dist/browser/pangu.min.js
-
-  # photo
-  fancybox_css: https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@latest/dist/jquery.fancybox.min.css
-  fancybox: https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@latest/dist/jquery.fancybox.min.js
-  medium_zoom: https://cdn.jsdelivr.net/npm/medium-zoom/dist/medium-zoom.min.js
-
-  # snackbar
-  snackbar_css: https://cdn.jsdelivr.net/npm/node-snackbar/dist/snackbar.min.css
-  snackbar: https://cdn.jsdelivr.net/npm/node-snackbar/dist/snackbar.min.js
-
-  # effect
-  activate_power_mode: https://cdn.jsdelivr.net/npm/butterfly-extsrc@1/dist/activate-power-mode.min.js
-  fireworks: https://cdn.jsdelivr.net/npm/butterfly-extsrc@1/dist/fireworks.min.js
-  click_heart: https://cdn.jsdelivr.net/npm/butterfly-extsrc@1/dist/click-heart.min.js
-  ClickShowText: https://cdn.jsdelivr.net/npm/butterfly-extsrc@1/dist/click-show-text.min.js
-
-  # fontawesome
-  fontawesome: https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free/css/all.min.css
-
-  # Conversion between Traditional and Simplified Chinese
-  translate: /js/tw_cn.js
-
-  # justifiedGallery
-  justifiedGallery_js: https://cdn.jsdelivr.net/npm/justifiedGallery/dist/js/jquery.justifiedGallery.min.js
-  justifiedGallery_css: https://cdn.jsdelivr.net/npm/justifiedGallery/dist/css/justifiedGallery.min.css
-
-  # aplayer
-  aplayer_css: https://cdn.jsdelivr.net/npm/aplayer/dist/APlayer.min.css
-  aplayer_js: https://cdn.jsdelivr.net/npm/aplayer/dist/APlayer.min.js
-  meting_js: https://cdn.jsdelivr.net/gh/metowolf/MetingJS@1.2/dist/Meting.min.js
-
-  # Prism.js
-  prismjs_js: https://cdn.jsdelivr.net/npm/prismjs/prism.min.js
-  prismjs_lineNumber_js: https://cdn.jsdelivr.net/npm/prismjs/plugins/line-numbers/prism-line-numbers.min.js
-  prismjs_autoloader: https://cdn.jsdelivr.net/npm/prismjs/plugins/autoloader/prism-autoloader.min.js
+  option:
+    # abcjs_basic_js:
+    # activate_power_mode:
+    # algolia_js:
+    # algolia_search:
+    # aplayer_css:
+    # aplayer_js:
+    # artalk_css:
+    # artalk_js:
+    # blueimp_md5:
+    # busuanzi:
+    # canvas_fluttering_ribbon:
+    # canvas_nest:
+    # canvas_ribbon:
+    # chartjs:
+    # click_heart:
+    # clickShowText:
+    # disqusjs:
+    # disqusjs_css:
+    # docsearch_css:
+    # docsearch_js:
+    # egjs_infinitegrid:
+    # fancybox:
+    # fancybox_css:
+    # fireworks:
+    # fontawesome:
+    # gitalk:
+    # gitalk_css:
+    # giscus:
+    # instantpage:
+    # instantsearch:
+    # katex:
+    # katex_copytex:
+    # lazyload:
+    # local_search:
+    # main:
+    # main_css:
+    # mathjax:
+    # medium_zoom:
+    # mermaid:
+    # meting_js:
+    # prismjs_autoloader:
+    # prismjs_js:
+    # prismjs_lineNumber_js:
+    # pjax:
+    # sharejs:
+    # sharejs_css:
+    # snackbar:
+    # snackbar_css:
+    # translate:
+    # twikoo:
+    # typed:
+    # utils:
+    # valine:
+    # waline_css:
+    # waline_js:

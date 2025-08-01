@@ -1,0 +1,112 @@
+.heimu {
+    background-color: black;
+    color: black;
+    transition: background-color 0.5s
+}
+
+.heimu:hover {
+    background-color: #fff
+}
+
+.mohu {
+    transition: 0.3s;
+    filter: blur(3px)
+}
+
+.mohu:hover {
+    filter: blur(0px);
+}
+
+/* ----------------------------- avoid the rotating avatar ---------------------------- */
+
+.avatar-img img:hover {
+    transform: none !important;
+}
+
+/* ------------------------------------- checkbox ------------------------------------- */
+
+.checkbox-container {
+    display: flex;
+    align-items: center;
+    position: relative;
+    padding-left: 30px;
+    margin: 8px 0;
+    cursor: pointer;
+    font-size: 16px;
+    user-select: none;
+    gap: 10px;
+    /* margin: 8px 0; */
+}
+
+/* 隐藏默认 checkbox */
+.checkbox-container input[type="checkbox"] {
+    position: absolute;
+    opacity: 0;
+    height: 0;
+    width: 0;
+}
+
+.checkbox-container input[type="checkbox"],
+.checkmark {
+    width: 18px;
+    height: 18px;
+}
+
+/* 自定义 checkbox 外观 */
+.checkmark {
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 20px;
+    width: 20px;
+    background-color: #eee;
+    border-radius: 4px;
+    transition: background-color 0.3s ease;
+}
+
+/* hover 状态变色 */
+.checkbox-container:hover .checkmark {
+    background-color: #ccc;
+}
+
+/* 勾选时变色 */
+.checkbox-container input:checked~.checkmark {
+    background-color: #2196F3;
+}
+
+/* 打钩 */
+.checkmark::after {
+    content: "";
+    position: absolute;
+    display: none;
+    left: 6px;
+    top: 2px;
+    width: 6px;
+    height: 12px;
+    border: solid white;
+    border-width: 0 2px 2px 0;
+    transform: rotate(45deg);
+}
+
+/* 选中后显示打钩 */
+.checkbox-container input:checked~.checkmark::after {
+    display: block;
+}
+
+/* === 勾选后文本样式 === */
+.checkbox-container input:checked~.label-text {
+    color: #999;
+    text-decoration: line-through;
+}
+
+.label-text {
+    margin-left: 10px;
+    font-size: 16px;
+    line-height: 1.2;
+}
+
+.checkbox-group {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}

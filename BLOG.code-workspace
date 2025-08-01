@@ -2,6 +2,9 @@
 	"folders": [
 		{
 			"path": "."
+		},
+		{
+			"path": "../OneDrive - tabristrees/Programming Working/github_rep/blogdepot"
 		}
 	],
 	"settings": {}
