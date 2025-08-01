@@ -13,7 +13,7 @@ tags:
  - Helicity
 categories: 
  - [科研, (非)螺旋湍流衰减]
-description: 利用简单的数学推导螺旋或者非螺旋湍流的磁能衰减律
+description: 利用简单的数学推导螺旋或者非螺旋湍流的磁能衰减律。
 ---
 
 ## Dimensional analysis in Fluid Mechanism From Kolmogorov
